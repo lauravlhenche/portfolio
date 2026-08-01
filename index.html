@@ -32,40 +32,55 @@
             margin: auto;
         }
 
-        header {
-            border-bottom: 1px solid #e7eaf0;
-        }
+header {
+    background: #ffffff;
+}
 
-        .navigation {
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
+header .container {
+    width: calc(100% - 40px);
+    max-width: none;
+}
 
-        .logo {
-            color: #14213d;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
+.navigation {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
 
-        nav {
-            display: flex;
-            gap: 28px;
-        }
+.logo {
+    color: #14213d;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-        nav a {
-            color: #526078;
-            font-size: 0.95rem;
-            text-decoration: none;
-        }
+nav {
+    display: flex;
+    gap: 6px;
+}
 
-        nav a:hover {
-            color: #2563eb;
-        }
+nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: #252b35;
+    background: #ffffff;
+    border: 1px solid #e2e5e9;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
 
+nav a:hover {
+    color: #252b35;
+    background: #f5f6f8;
+    border-color: #d2d6dc;
+}
         .hero {
             min-height: 680px;
             display: flex;
@@ -233,9 +248,19 @@
         }
 
         @media (max-width: 750px) {
-            nav {
-                display: none;
-            }
+.navigation {
+    min-height: 80px;
+}
+
+nav {
+    display: flex;
+    gap: 4px;
+}
+
+nav a {
+    padding: 7px 10px;
+    font-size: 0.75rem;
+}
 
             .hero {
                 min-height: auto;
@@ -260,18 +285,17 @@
 
 <body>
 
-    <header>
-        <div class="container navigation">
-            <a class="logo" href="#">Laura.</a>
+<header>
+    <div class="container navigation">
+        <a class="logo" href="#">Laura.</a>
 
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#specialisms">Specialisms</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+        <nav>
+            <a href="#services">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
     <main>
 
