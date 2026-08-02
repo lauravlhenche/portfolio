@@ -763,6 +763,50 @@ nav a {
         padding-left: 22px;
     }
 }
+        /* Color suave para la presentación */
+.intro-card {
+    padding: 26px 28px 26px 36px;
+    background:
+        radial-gradient(
+            circle at 12% 10%,
+            rgba(36, 92, 255, 0.09),
+            rgba(36, 92, 255, 0) 48%
+        ),
+        radial-gradient(
+            circle at 92% 92%,
+            rgba(244, 180, 0, 0.10),
+            rgba(244, 180, 0, 0) 43%
+        );
+    border-radius: 28px;
+}
+
+/* Línea azul y amarilla */
+.intro-card::before {
+    top: 18px;
+    bottom: 18px;
+    background: linear-gradient(
+        to bottom,
+        #245cff 0%,
+        #a9bfff 55%,
+        #f4b400 100%
+    );
+}
+
+.intro-card::after {
+    top: 18px;
+}
+
+/* Separa el botón del párrafo */
+.intro-footer {
+    margin-top: 22px;
+}
+
+/* Reloj azul claro, sin repetir el verde */
+.reply-icon {
+    color: #245cff;
+    background: #f7f9ff;
+    border-color: #dbe4ff;
+}
 </style>
 
 </head>
@@ -813,7 +857,7 @@ nav a {
         Hello! If a Spanish player can tell your content was translated, something went wrong.
         I help casinos, sportsbooks, and affiliates create Spanish content that actually sounds
         like it belongs. Whether that means writing from scratch, translating, or localizing what
-        you already have, the goal is always the same: copy that uses the right industry terms,
+        you have, the goal is always the same: copy that uses the right industry terms,
         feels local, keeps players engaged, and is built to perform in search.
     </p>
 
