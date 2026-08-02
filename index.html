@@ -667,6 +667,102 @@ nav a {
     border: 1px solid #dbe4ff;
     border-radius: 999px;
 }
+        /* Nueva composición de la presentación */
+.hero-grid {
+    grid-template-columns: 380px 500px;
+    gap: 78px;
+}
+
+.intro-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 0 8px 27px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+/* Línea decorativa */
+.intro-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: #dbe4ff;
+    border-radius: 999px;
+}
+
+/* Pequeño detalle amarillo que conecta con las estrellas */
+.intro-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3px;
+    width: 8px;
+    height: 8px;
+    background: #f4b400;
+    border-radius: 50%;
+}
+
+.intro-copy {
+    margin: 0;
+    color: #344054;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* Dato de experiencia */
+.experience-mark {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    margin: 19px 0 21px;
+}
+
+.experience-number {
+    color: #245cff;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.experience-label {
+    max-width: 185px;
+    color: #667085;
+    font-size: 0.72rem;
+    line-height: 1.35;
+}
+
+/* Botón más visible */
+.intro-button {
+    padding: 11px 19px;
+    color: #ffffff;
+    background: #245cff;
+    border-radius: 999px;
+    box-shadow: 0 5px 14px rgba(36, 92, 255, 0.2);
+}
+
+.intro-button:hover {
+    background: #1748d1;
+}
+
+@media (max-width: 850px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-card {
+        max-width: 500px;
+        margin: 0 auto;
+        padding-left: 22px;
+    }
+}
 </style>
 
 </head>
@@ -713,28 +809,20 @@ nav a {
         </div>
 
 <article class="intro-card">
-    <p class="intro-lead">
-        <strong>Hello!</strong> If a Spanish player can tell your content was translated,
-        something went wrong.
+    <p class="intro-copy">
+        Hello! If a Spanish player can tell your content was translated, something went wrong.
+        I help casinos, sportsbooks, and affiliates create Spanish content that actually sounds
+        like it belongs. Whether that means writing from scratch, translating, or localizing what
+        you already have, the goal is always the same: copy that uses the right industry terms,
+        feels local, keeps players engaged, and is built to perform in search.
     </p>
 
-    <div class="intro-copy">
-        <p>
-            I help casinos, sportsbooks, and affiliates create Spanish content
-            that actually sounds like it belongs.
-        </p>
-
-        <p>
-            Whether that means writing from scratch, translating, or localizing
-            what you already have, the goal is always the same: copy that uses
-            the right industry terms, feels local, keeps players engaged, and
-            is built to perform in search.
-        </p>
+    <div class="experience-mark">
+        <span class="experience-number">7+</span>
+        <span class="experience-label">
+            years of experience in Spanish iGaming content
+        </span>
     </div>
-
-    <p class="credentials">
-        7+ years in iGaming · Translation · Localization · SEO
-    </p>
 
     <div class="intro-footer">
         <a class="intro-button" href="#contact">Let’s chat</a>
