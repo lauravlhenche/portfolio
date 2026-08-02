@@ -534,6 +534,139 @@ nav a {
         padding: 32px 25px;
     }
 }
+        /* Presentación derecha más ligera */
+.hero {
+    min-height: calc(100vh - 100px) !important;
+    padding: 35px 0 65px !important;
+    align-items: center !important;
+}
+
+.hero-grid {
+    grid-template-columns: 380px minmax(0, 580px);
+    gap: 68px;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-card {
+    width: 100%;
+    max-width: 580px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.intro-lead {
+    margin: 0 0 15px;
+    color: #101828;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.intro-lead strong {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.intro-copy {
+    color: #475467;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.intro-copy p {
+    margin: 0 0 13px;
+}
+
+.credentials {
+    margin: 19px 0 21px;
+    color: #245cff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.intro-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    border: 0;
+}
+
+.intro-button {
+    padding: 10px 18px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: #101828;
+    border-radius: 999px;
+}
+
+.reply-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #667085;
+    font-size: 0.72rem;
+}
+
+.reply-icon {
+    display: inline-flex;
+    width: 27px;
+    height: 27px;
+    align-items: center;
+    justify-content: center;
+    color: #667085;
+    border: 1px solid #e2e5e9;
+    border-radius: 50%;
+}
+
+.reply-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 850px) {
+    .hero {
+        padding: 45px 0 70px !important;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-card {
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    .intro-footer {
+        flex-wrap: wrap;
+    }
+}
+        .specialty-line {
+    width: fit-content;
+    margin: 14px auto 0;
+    padding: 7px 12px;
+    color: #245cff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid #dbe4ff;
+    border-radius: 999px;
+}
 </style>
 
 </head>
@@ -576,51 +709,47 @@ nav a {
                     </span>
                 </div>
             </div>
-
+<p class="specialty-line">EN → ES · iGaming content</p>
         </div>
 
-        <article class="intro-card">
+<article class="intro-card">
+    <p class="intro-lead">
+        <strong>Hello!</strong> If a Spanish player can tell your content was translated,
+        something went wrong.
+    </p>
 
-            <p class="intro-eyebrow">
-                EN → ES · iGaming content
-            </p>
+    <div class="intro-copy">
+        <p>
+            I help casinos, sportsbooks, and affiliates create Spanish content
+            that actually sounds like it belongs.
+        </p>
 
-            <h1>Hello!</h1>
+        <p>
+            Whether that means writing from scratch, translating, or localizing
+            what you already have, the goal is always the same: copy that uses
+            the right industry terms, feels local, keeps players engaged, and
+            is built to perform in search.
+        </p>
+    </div>
 
-            <p class="intro-copy">
-                If a Spanish player can tell your content was translated,
-                something went wrong.
-            </p>
+    <p class="credentials">
+        7+ years in iGaming · Translation · Localization · SEO
+    </p>
 
-            <p class="intro-copy">
-                I help casinos, sportsbooks, and affiliates create Spanish
-                content that actually sounds like it belongs.
-            </p>
+    <div class="intro-footer">
+        <a class="intro-button" href="#contact">Let’s chat</a>
 
-            <p class="intro-copy">
-                Whether that means writing from scratch, translating, or
-                localizing what you already have, the goal is always the same:
-                copy that uses the right industry terms, feels local, keeps
-                players engaged, and is built to perform in search.
-            </p>
-
-            <div class="experience-note">
-                <span>7+ years in iGaming</span>
-                <span>Translation · Localization · SEO</span>
-            </div>
-
-            <div class="intro-footer">
-                <a class="button button-primary" href="#contact">
-                    Let’s chat
-                </a>
-
-                <div class="intro-availability">
-                    <span class="status-dot"></span>
-                    Usually replies within one business day
-                </div>
-            </div>
-
-        </article>
+        <p class="reply-note">
+            <span class="reply-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                </svg>
+            </span>
+            Usually replies within one business day
+        </p>
+    </div>
+</article>
 
     </div>
 </section>
