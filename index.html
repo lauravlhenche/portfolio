@@ -965,6 +965,77 @@ header nav a {
         padding-left: 25px;
     }
 }
+        /* Fila de marcas iGaming */
+.clients-strip {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: -4px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(16, 24, 40, 0.1);
+}
+
+.clients-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 65px;
+}
+
+.client-logo {
+    display: flex;
+    width: 150px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-logo img {
+    display: block;
+    max-width: 145px;
+    max-height: 35px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    transition:
+        opacity 0.25s ease,
+        filter 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Recuperan su color al pasar el ratón */
+.client-logo:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Espacio entre los logotipos y la curva inferior */
+.hero {
+    padding-bottom: 145px !important;
+}
+
+@media (max-width: 850px) {
+    .clients-strip {
+        margin-top: 5px;
+        padding-top: 28px;
+    }
+
+    .clients-logos {
+        gap: 25px 30px;
+    }
+
+    .client-logo {
+        width: 125px;
+        height: 40px;
+    }
+
+    .client-logo img {
+        max-width: 120px;
+        max-height: 31px;
+    }
+}
 </style>
 
 </head>
@@ -1038,7 +1109,27 @@ header nav a {
         </p>
     </div>
 </article>
+<div class="clients-strip">
+    <div class="clients-logos">
 
+        <div class="client-logo">
+            <img src="1win-logo.png" alt="1Win">
+        </div>
+
+        <div class="client-logo">
+            <img src="tonybet-logo.png" alt="TonyBet">
+        </div>
+
+        <div class="client-logo">
+            <img src="betbrain-logo.png" alt="BetBrain">
+        </div>
+
+        <div class="client-logo">
+            <img src="mundodeportivo-logo.png" alt="Mundo Deportivo">
+        </div>
+
+    </div>
+</div>
     </div>
 </section>
         <section id="services" class="light-background">
