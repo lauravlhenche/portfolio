@@ -1035,6 +1035,56 @@ header nav a {
         max-height: 31px;
     }
 }
+        /* Dos datos profesionales */
+.proof-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 600px;
+    margin: 38px auto 0;
+}
+
+.proof-stat {
+    display: flex;
+    min-height: 58px;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.proof-stat + .proof-stat {
+    border-left: 1px solid rgba(16, 24, 40, 0.14);
+}
+
+.proof-value {
+    color: #245cff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.proof-label {
+    margin-top: 7px;
+    color: #667085;
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .proof-stats {
+        max-width: 310px;
+    }
+
+    .proof-stat {
+        padding: 0 18px;
+    }
+
+    .proof-value {
+        font-size: 1rem;
+    }
+}
 </style>
 
 </head>
@@ -1128,6 +1178,20 @@ header nav a {
         </div>
 
     </div>
+    
+    <div class="proof-stats">
+
+    <div class="proof-stat">
+        <span class="proof-value">460+</span>
+        <span class="proof-label">Projects delivered</span>
+    </div>
+
+    <div class="proof-stat">
+        <span class="proof-value">7+ years</span>
+        <span class="proof-label">Professional experience</span>
+    </div>
+
+</div>
 </div>
     </div>
 </section>
