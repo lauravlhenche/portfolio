@@ -1202,7 +1202,332 @@ header nav a {
     }
 }
 </style>
+/* LARGE SERVICE SECTION */
 
+.service-showcase {
+    padding: 90px 42px 125px;
+    background: #ffffff;
+}
+
+.service-directory {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto 54px;
+}
+
+.service-directory-label {
+    display: block;
+    margin-bottom: 16px;
+    color: #667085;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.service-directory-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.service-directory-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 11px 20px;
+    border: 1px solid #d9e1f1;
+    border-radius: 999px;
+    color: #101828;
+    background: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.service-directory-link:hover {
+    color: #ffffff;
+    background: #2864ff;
+    border-color: #2864ff;
+    transform: translateY(-2px);
+}
+
+.service-directory-content {
+    border-color: #f2cf77;
+}
+
+.service-details {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    gap: 32px;
+}
+
+.service-detail-card {
+    display: grid;
+    grid-template-columns:
+        minmax(205px, 0.8fr)
+        minmax(330px, 1.35fr)
+        minmax(270px, 0.95fr);
+    gap: 42px;
+    align-items: stretch;
+    padding: 42px;
+    border-radius: 28px;
+    scroll-margin-top: 110px;
+}
+
+.service-detail-blue {
+    background: #f2f5ff;
+}
+
+.service-detail-green {
+    background: #f3f7f3;
+}
+
+.service-detail-peach {
+    background: #fff5ee;
+}
+
+.service-detail-yellow {
+    background: #fff9e8;
+}
+
+.service-detail-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-detail-number {
+    margin-bottom: 17px;
+    color: #ef6a5b;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.service-detail-category {
+    display: inline-flex;
+    margin-bottom: 28px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    color: #2860d9;
+    background: #dfe7ff;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.service-category-content {
+    color: #896300;
+    background: #ffecb3;
+}
+
+.service-detail-identity h2 {
+    margin: auto 0 0;
+    color: #101828;
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    line-height: 1.2;
+}
+
+.service-detail-copy {
+    align-self: center;
+}
+
+.service-detail-copy > p {
+    margin: 0 0 27px;
+    color: #344054;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.service-points {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 22px;
+    list-style: none;
+}
+
+.service-points li {
+    position: relative;
+    padding-left: 17px;
+    color: #344054;
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+.service-points li::before {
+    content: "";
+    position: absolute;
+    top: 0.48em;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ef6a5b;
+    box-shadow: 0 0 0 4px rgba(239, 106, 91, 0.12);
+}
+
+.service-review {
+    position: relative;
+    min-height: 220px;
+    padding: 27px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(16, 24, 40, 0.07);
+    border-radius: 21px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.service-review::before {
+    content: "“";
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    color: rgba(40, 100, 255, 0.12);
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.service-review-label {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+    color: #667085;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.service-review blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 28px;
+    color: #344054;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.service-review-author {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.service-review-avatar {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #a63d33;
+    background: #ffe1dc;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.service-review-author div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.service-review-author strong {
+    color: #101828;
+    font-size: 0.82rem;
+}
+
+.service-review-author div span {
+    color: #667085;
+    font-size: 0.72rem;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+    .service-detail-card {
+        grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1.4fr);
+    }
+
+    .service-review {
+        grid-column: 1 / -1;
+        min-height: 190px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .service-showcase {
+        padding: 72px 18px 90px;
+    }
+
+    .service-directory {
+        margin-bottom: 38px;
+    }
+
+    .service-directory-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .service-directory-link {
+        flex-shrink: 0;
+        min-height: 44px;
+        padding: 10px 17px;
+        font-size: 0.8rem;
+    }
+
+    .service-details {
+        gap: 24px;
+    }
+
+    .service-detail-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 30px 24px 24px;
+        border-radius: 23px;
+        scroll-margin-top: 85px;
+    }
+
+    .service-detail-category {
+        margin-bottom: 25px;
+    }
+
+    .service-detail-identity h2 {
+        margin-top: 8px;
+        font-size: 1.55rem;
+    }
+
+    .service-points {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .service-review {
+        grid-column: auto;
+        min-height: 200px;
+        padding: 24px;
+    }
+}
 </head>
 <body>
 
@@ -1311,57 +1636,231 @@ header nav a {
 </div>
     </div>
 </section>
-      <section id="services" class="offer-section">
-    <h2 class="visually-hidden">Services and content types</h2>
+      <!-- SERVICES START -->
 
-    <div class="offer-grid">
+<section id="services" class="service-showcase">
 
-        <article class="offer-card offer-card-blue">
-            <span class="offer-tab offer-tab-service">Core service</span>
+    <nav class="service-directory" aria-label="Services">
+        <span class="service-directory-label">Explore services</span>
 
-            <h3>Translation &amp; Proofreading</h3>
+        <div class="service-directory-links">
+            <a class="service-directory-link service-directory-core"
+               href="#translation">
+                Translation &amp; Proofreading
+            </a>
 
-            <p>
-                English-to-Spanish adaptation. Close attention to accuracy
-                and industry terminology.
-            </p>
+            <a class="service-directory-link service-directory-core"
+               href="#seo-writing">
+                SEO Writing
+            </a>
+
+            <a class="service-directory-link service-directory-content"
+               href="#sportsbook">
+                Sportsbook Content
+            </a>
+
+            <a class="service-directory-link service-directory-content"
+               href="#casino">
+                Casino Content
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="service-details">
+
+        <!-- TRANSLATION -->
+
+        <article id="translation"
+                 class="service-detail-card service-detail-blue">
+
+            <div class="service-detail-identity">
+                <span class="service-detail-number">01</span>
+                <span class="service-detail-category">Core service</span>
+
+                <h2>Translation &amp; Proofreading</h2>
+            </div>
+
+            <div class="service-detail-copy">
+                <p>
+                    English-to-Spanish adaptation. Close attention to
+                    accuracy and industry terminology.
+                </p>
+
+                <ul class="service-points">
+                    <li>Terminology checks</li>
+                    <li>Consistency review</li>
+                    <li>Tone and fluency</li>
+                    <li>Final language QA</li>
+                </ul>
+            </div>
+
+            <aside class="service-review">
+                <span class="service-review-label">Client feedback</span>
+
+                <blockquote>
+                    High quality work. Met and exceeded all our expectations.
+                </blockquote>
+
+                <div class="service-review-author">
+                    <span class="service-review-avatar">CL</span>
+
+                    <div>
+                        <strong>Client name</strong>
+                        <span>Translation project</span>
+                    </div>
+                </div>
+            </aside>
+
         </article>
 
-        <article class="offer-card offer-card-green">
-            <span class="offer-tab offer-tab-service">Core service</span>
 
-            <h3>SEO Writing</h3>
+        <!-- SEO WRITING -->
 
-            <p>
-                Original Spanish content built around search intent.
-                Clear structure and useful internal linking.
-            </p>
+        <article id="seo-writing"
+                 class="service-detail-card service-detail-green">
+
+            <div class="service-detail-identity">
+                <span class="service-detail-number">02</span>
+                <span class="service-detail-category">Core service</span>
+
+                <h2>SEO Writing</h2>
+            </div>
+
+            <div class="service-detail-copy">
+                <p>
+                    Original Spanish content built around search intent.
+                    Clear structure and useful internal linking.
+                </p>
+
+                <ul class="service-points">
+                    <li>Keyword research</li>
+                    <li>Titles and headings</li>
+                    <li>On-page editing</li>
+                    <li>Final SEO review</li>
+                </ul>
+            </div>
+
+            <aside class="service-review">
+                <span class="service-review-label">Client feedback</span>
+
+                <blockquote>
+                    Laura is an exceptional writer. Her command of the Spanish language is impressive. The grammar is flawless and the tone is perfectly suited for my target audience. She delivers ahead of schedule and is very proactive in asking clarifying questions. Highly recommended.
+                </blockquote>
+
+                <div class="service-review-author">
+                    <span class="service-review-avatar">CL</span>
+
+                    <div>
+                        <strong>Client name</strong>
+                        <span>SEO writing project</span>
+                    </div>
+                </div>
+            </aside>
+
         </article>
 
-        <article class="offer-card offer-card-peach">
-            <span class="offer-tab offer-tab-content">Content type</span>
 
-            <h3>Sportsbook Content</h3>
+        <!-- SPORTSBOOK -->
 
-            <p>
-                Match previews, betting guides, market breakdowns,
-                bonus pages, odds content, and editorial pieces.
-            </p>
+        <article id="sportsbook"
+                 class="service-detail-card service-detail-peach">
+
+            <div class="service-detail-identity">
+                <span class="service-detail-number">03</span>
+                <span class="service-detail-category service-category-content">
+                    Content type
+                </span>
+
+                <h2>Sportsbook Content</h2>
+            </div>
+
+            <div class="service-detail-copy">
+                <p>
+                    Match previews, betting guides, market breakdowns,
+                    bonus pages, odds content, and editorial pieces.
+                </p>
+
+                <ul class="service-points">
+                    <li>Regulated-market wording</li>
+                    <li>Odds and market terminology</li>
+                    <li>Clear player-focused explanations</li>
+                    <li>Responsible editorial approach</li>
+                </ul>
+            </div>
+
+            <aside class="service-review">
+                <span class="service-review-label">Client feedback</span>
+
+                <blockquote>
+                    Laura has a fantastic work ethic and listens to all feedback extremely carefully. It’s a pleasure working with her!
+                </blockquote>
+
+                <div class="service-review-author">
+                    <span class="service-review-avatar">CL</span>
+
+                    <div>
+                        <strong>Client name</strong>
+                        <span>Sportsbook content project</span>
+                    </div>
+                </div>
+            </aside>
+
         </article>
 
-        <article class="offer-card offer-card-yellow">
-            <span class="offer-tab offer-tab-content">Content type</span>
 
-            <h3>Casino Content</h3>
+        <!-- CASINO -->
 
-            <p>
-                Casino and slot reviews, game guides, promotional pages,
-                and responsible gambling content.
-            </p>
+        <article id="casino"
+                 class="service-detail-card service-detail-yellow">
+
+            <div class="service-detail-identity">
+                <span class="service-detail-number">04</span>
+                <span class="service-detail-category service-category-content">
+                    Content type
+                </span>
+
+                <h2>Casino Content</h2>
+            </div>
+
+            <div class="service-detail-copy">
+                <p>
+                    Casino and slot reviews, game guides, promotional
+                    pages, and responsible gambling content.
+                </p>
+
+                <ul class="service-points">
+                    <li>Game mechanics and features</li>
+                    <li>RTP and volatility terminology</li>
+                    <li>Bonus terms and conditions</li>
+                    <li>Responsible gambling language</li>
+                </ul>
+            </div>
+
+            <aside class="service-review">
+                <span class="service-review-label">Client feedback</span>
+
+                <blockquote>
+                    We had the pleasure of hiring Laura and couldn’t be more satisfied with her work. She’s exceptionally professional and dedicated, always ensuring we are 100% happy with the final product.
+                </blockquote>
+
+                <div class="service-review-author">
+                    <span class="service-review-avatar">CL</span>
+
+                    <div>
+                        <strong>Client name</strong>
+                        <span>Casino content project</span>
+                    </div>
+                </div>
+            </aside>
+
         </article>
 
     </div>
+
 </section>
+
+<!-- SERVICES END -->
 
         <section id="specialisms">
             <div class="container">
