@@ -1571,6 +1571,40 @@ header nav a {
 .service-detail-peach {
     background: #f5f1ff;
 }
+        .service-directory {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 30px;
+}
+
+.service-directory-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.service-directory-label {
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+    .service-directory {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-directory-group {
+        width: 100%;
+    }
+}
         </style>
 </head>
 <body>
@@ -1688,7 +1722,9 @@ header nav a {
     What I do<span>.</span>
 </h2>
     
-    <nav class="service-directory" aria-label="Services">
+   <nav class="service-directory" aria-label="Services">
+
+    <div class="service-directory-group">
         <span class="service-directory-label">Explore services</span>
 
         <div class="service-directory-links">
@@ -1701,7 +1737,13 @@ header nav a {
                href="#seo-writing">
                 SEO Writing
             </a>
+        </div>
+    </div>
 
+    <div class="service-directory-group">
+        <span class="service-directory-label">Content areas</span>
+
+        <div class="service-directory-links">
             <a class="service-directory-link service-directory-content"
                href="#sportsbook">
                 Sportsbook Content
@@ -1712,7 +1754,9 @@ header nav a {
                 Casino Content
             </a>
         </div>
-    </nav>
+    </div>
+
+</nav>
 
 
     <div class="service-details">
