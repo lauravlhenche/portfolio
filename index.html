@@ -1662,6 +1662,210 @@ header nav a {
         margin-bottom: 55px;
     }
 }
+        /* CONTACT SECTION */
+
+.contact-section {
+    padding: 120px 42px 50px;
+    background: #ffffff;
+}
+
+.contact-panel {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 72px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(500px, 1.15fr);
+    align-items: center;
+    gap: 72px;
+    color: #ffffff;
+    background: #101828;
+    border-radius: 36px;
+}
+
+.contact-kicker {
+    display: block;
+    margin-bottom: 24px;
+    color: #a9bfff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.contact-intro h2 {
+    max-width: 520px;
+    margin: 0 0 25px;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 4.5vw, 4.4rem);
+    font-weight: 700;
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.contact-intro h2 span {
+    color: #4f7cff;
+}
+
+.contact-intro p {
+    max-width: 480px;
+    margin: 0 0 30px;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.contact-email {
+    display: inline-flex;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-email:hover {
+    color: #8eabff;
+    border-color: #8eabff;
+}
+
+.contact-form {
+    padding: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 21px;
+    background: #ffffff;
+    border-radius: 27px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contact-field label {
+    color: #344054;
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+    padding: 14px 15px;
+    color: #101828;
+    background: #f8fafc;
+    border: 1px solid #d9e1ec;
+    border-radius: 13px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.88rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-field input,
+.contact-field select {
+    min-height: 50px;
+}
+
+.contact-field textarea {
+    min-height: 145px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: #2864ff;
+    box-shadow: 0 0 0 4px rgba(40, 100, 255, 0.12);
+}
+
+.contact-field-full,
+.contact-form-footer {
+    grid-column: 1 / -1;
+}
+
+.contact-form-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-form-footer button {
+    min-height: 50px;
+    padding: 13px 23px;
+    flex-shrink: 0;
+    color: #ffffff;
+    background: #2864ff;
+    border: 0;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(40, 100, 255, 0.25);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form-footer button:hover {
+    background: #174fd6;
+    transform: translateY(-2px);
+}
+
+.contact-form-footer span {
+    color: #667085;
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+    .contact-panel {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-intro h2,
+    .contact-intro p {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-section {
+        padding: 85px 18px 28px;
+    }
+
+    .contact-panel {
+        padding: 40px 22px 24px;
+        border-radius: 28px;
+    }
+
+    .contact-form {
+        padding: 23px;
+        grid-template-columns: 1fr;
+        border-radius: 22px;
+    }
+
+    .contact-field,
+    .contact-field-full,
+    .contact-form-footer {
+        grid-column: 1;
+    }
+
+    .contact-form-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-form-footer button {
+        width: 100%;
+    }
+}
         </style>
 </head>
 <body>
@@ -2010,7 +2214,151 @@ header nav a {
 </section>
 
 <!-- SERVICES END -->
+<section id="contact" class="contact-section">
 
+    <div class="contact-panel">
+
+        <div class="contact-intro">
+            <span class="contact-kicker">Contact</span>
+
+            <h2>
+                Tell me about your project<span>.</span>
+            </h2>
+
+            <p>
+                Share a few details about the content, scope, and timeline.
+                I usually reply within one business day.
+            </p>
+
+            <a class="contact-email" href="mailto:YOUR-EMAIL@example.com">
+                Or email me directly →
+            </a>
+        </div>
+
+        <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+        >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New portfolio inquiry"
+            >
+
+            <div class="contact-field">
+                <label for="contact-name">Name</label>
+
+                <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-email">Email</label>
+
+                <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="you@company.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-service">Service</label>
+
+                <select
+                    id="contact-service"
+                    name="service"
+                    required
+                >
+                    <option value="" selected disabled>
+                        Choose a service
+                    </option>
+
+                    <option value="Translation and Proofreading">
+                        Translation &amp; Proofreading
+                    </option>
+
+                    <option value="SEO Writing">
+                        SEO Writing
+                    </option>
+
+                    <option value="Both services">
+                        Both
+                    </option>
+
+                    <option value="Not sure">
+                        Not sure yet
+                    </option>
+                </select>
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-area">Content area</label>
+
+                <select
+                    id="contact-area"
+                    name="content-area"
+                    required
+                >
+                    <option value="" selected disabled>
+                        Choose a content area
+                    </option>
+
+                    <option value="Sportsbook">
+                        Sportsbook
+                    </option>
+
+                    <option value="Casino">
+                        Casino
+                    </option>
+
+                    <option value="Sportsbook and Casino">
+                        Both
+                    </option>
+
+                    <option value="Other iGaming">
+                        Other iGaming
+                    </option>
+                </select>
+            </div>
+
+            <div class="contact-field contact-field-full">
+                <label for="contact-message">Project details</label>
+
+                <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="Tell me what you're working on, the approximate scope, and your preferred timeline."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="contact-form-footer">
+                <button type="submit">
+                    Send project details
+                </button>
+
+                <span>
+                    Your details will only be used to reply to your inquiry.
+                </span>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
         <section id="specialisms">
             <div class="container">
                 <p class="section-label">Specialisms</p>
