@@ -1605,6 +1605,48 @@ header nav a {
         width: 100%;
     }
 }
+        .service-directory {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto 54px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: start;
+    gap: 60px;
+}
+
+.service-directory-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.service-directory-label {
+    margin: 0;
+    text-align: center;
+}
+
+.service-directory-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 850px) {
+    .service-directory {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .service-directory-links {
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+}
         </style>
 </head>
 <body>
