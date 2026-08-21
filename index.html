@@ -2920,6 +2920,56 @@ header nav a {
         gap: 18px;
     }
 }
+        /* CINCO TARJETAS COMPACTAS EN UNA FILA */
+
+.mini-service-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.mini-service-card {
+    min-height: 96px;
+    padding: 16px 17px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.mini-service-number {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    font-size: 0.59rem;
+}
+
+.mini-service-card h3 {
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+    .mini-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+    .mini-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-service-card {
+        min-height: 78px;
+        padding: 14px 16px;
+    }
+}
         </style>
 </head>
 <body>
@@ -3194,45 +3244,34 @@ header nav a {
 
             <div class="mini-service-grid">
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">01</span>
-                    <h3>Casino, sportsbook and game reviews</h3>
-                </article>
+                <div class="mini-service-grid">
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">02</span>
-                    <h3>Betting guides and market explainers</h3>
-                </article>
+    <article class="mini-service-card">
+        <span class="mini-service-number">01</span>
+        <h3>Casino, sportsbook and game reviews</h3>
+    </article>
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">03</span>
-                    <h3>Match previews and evergreen sports content</h3>
-                </article>
+    <article class="mini-service-card">
+        <span class="mini-service-number">02</span>
+        <h3>Betting guides, match previews and market explainers</h3>
+    </article>
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">04</span>
-                    <h3>Bonus, promotion and payment pages</h3>
-                </article>
+    <article class="mini-service-card">
+        <span class="mini-service-number">03</span>
+        <h3>Bonus, promotion, payment and comparison pages</h3>
+    </article>
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">05</span>
-                    <h3>SEO landing, category and comparison pages</h3>
-                </article>
+    <article class="mini-service-card">
+        <span class="mini-service-number">04</span>
+        <h3>Responsible gambling and regulatory content</h3>
+    </article>
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">06</span>
-                    <h3>Responsible gambling and regulatory content</h3>
-                </article>
+    <article class="mini-service-card">
+        <span class="mini-service-number">05</span>
+        <h3>SEO landing pages, editorial content and on-page optimization</h3>
+    </article>
 
-                <article class="mini-service-card">
-                    <span class="mini-service-number">07</span>
-                    <h3>Blog posts and editorial features</h3>
-                </article>
-
-                <article class="mini-service-card">
-                    <span class="mini-service-number">08</span>
-                    <h3>Content updates and on-page optimization</h3>
-                </article>
+</div>
 
             </div>
 
