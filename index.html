@@ -2742,6 +2742,184 @@ header nav a {
         width: auto;
     }
 }
+        /* SERVICIOS DINÁMICOS */
+
+.dynamic-services {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dynamic-services-title {
+    margin: 0 0 27px;
+    color: #101828;
+    font-size: clamp(1.9rem, 2.8vw, 2.3rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.dynamic-services-title span {
+    color: #2864ff;
+}
+
+
+/* ETIQUETAS */
+
+.dynamic-service-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 48px;
+}
+
+.dynamic-service-tab {
+    min-height: 47px;
+    padding: 10px 24px;
+    border: 1px solid #101828;
+    border-radius: 999px;
+    color: #101828;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.dynamic-service-tab:hover {
+    color: #2864ff;
+    border-color: #2864ff;
+    transform: translateY(-2px);
+}
+
+.dynamic-service-tab.is-active {
+    color: #ffffff;
+    background: #2864ff;
+    border-color: #2864ff;
+}
+
+
+/* PANELES */
+
+.dynamic-service-panel {
+    display: none;
+}
+
+.dynamic-service-panel.is-active {
+    display: block;
+    animation: servicePanelIn 0.32s ease;
+}
+
+@keyframes servicePanelIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* TARJETAS BREVES */
+
+.mini-service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    text-align: left;
+}
+
+.mini-service-card {
+    min-height: 145px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    border: 1px solid #dfe3ea;
+    border-radius: 18px;
+    background: #ffffff;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.mini-service-card:hover {
+    border-color: #b8c8ef;
+    box-shadow: 0 13px 30px rgba(16, 24, 40, 0.07);
+    transform: translateY(-3px);
+}
+
+.mini-service-number {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #2864ff;
+    background: #e8eeff;
+    font-size: 0.67rem;
+    font-weight: 700;
+}
+
+.mini-service-card h3 {
+    margin: 0;
+    color: #101828;
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .mini-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+    .dynamic-services-title {
+        font-size: 1.9rem;
+    }
+
+    .dynamic-service-tabs {
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .dynamic-service-tab {
+        min-height: 42px;
+        padding: 9px 17px;
+        font-size: 0.8rem;
+    }
+
+    .mini-service-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .mini-service-card {
+        min-height: 105px;
+        padding: 20px;
+        gap: 18px;
+    }
+}
         </style>
 </head>
 <body>
@@ -2855,185 +3033,214 @@ header nav a {
 
 <section id="services" class="service-showcase">
     
-<div class="clean-services-intro">
+<div class="dynamic-services">
 
-    <h2>What I do<span>.</span></h2>
+    <h2 class="dynamic-services-title">
+        What I do<span>.</span>
+    </h2>
 
-    <nav class="service-choice-row" aria-label="Services">
+    <!-- ETIQUETAS SUPERIORES -->
 
-        <a class="service-choice" href="#translation">
+    <div class="dynamic-service-tabs"
+         role="tablist"
+         aria-label="Services">
+
+        <button class="dynamic-service-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="translation-panel"
+                data-panel="translation-panel">
             Translation
-        </a>
+        </button>
 
-        <a class="service-choice" href="#translation">
+        <button class="dynamic-service-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="proofreading-panel"
+                data-panel="proofreading-panel">
             Proofreading
-        </a>
+        </button>
 
-        <a class="service-choice" href="#seo-writing">
+        <button class="dynamic-service-tab is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="content-writing-panel"
+                data-panel="content-writing-panel">
             Content Writing
-        </a>
+        </button>
 
-    </nav>
+    </div>
 
-    <div class="market-specialisms"
-         aria-label="iGaming specializations">
 
-        <span class="market-specialisms-label">
-            Specialized in
-        </span>
+    <!-- CONTENIDO QUE CAMBIA -->
 
-        <div class="market-specialisms-items">
+    <div class="dynamic-service-panels">
 
-            <div class="market-specialism">
-                <span class="market-specialism-icon">1X2</span>
-                <span>Sportsbook</span>
+
+        <!-- TRANSLATION -->
+
+        <section class="dynamic-service-panel"
+                 id="translation-panel"
+                 role="tabpanel">
+
+            <div class="mini-service-grid">
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">01</span>
+                    <h3>Casino and sportsbook website copy</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">02</span>
+                    <h3>Betting, bonus and payment content</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">03</span>
+                    <h3>Game, market and promotional pages</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">04</span>
+                    <h3>Affiliate and comparison content</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">05</span>
+                    <h3>Responsible gambling and regulatory copy</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">06</span>
+                    <h3>UI, CRM and account content</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">07</span>
+                    <h3>SEO pages, metadata and headings</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">08</span>
+                    <h3>Spanish-market localization</h3>
+                </article>
+
             </div>
 
-            <div class="market-specialism">
-                <span class="market-specialism-icon">777</span>
-                <span>Casino</span>
+        </section>
+
+
+        <!-- PROOFREADING -->
+
+        <section class="dynamic-service-panel"
+                 id="proofreading-panel"
+                 role="tabpanel">
+
+            <div class="mini-service-grid">
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">01</span>
+                    <h3>Spanish grammar, spelling and punctuation</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">02</span>
+                    <h3>iGaming terminology and accuracy</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">03</span>
+                    <h3>Tone, fluency and readability</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">04</span>
+                    <h3>Consistency across pages and campaigns</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">05</span>
+                    <h3>Bonus, payment and wagering terms</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">06</span>
+                    <h3>Responsible gambling and regulatory wording</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">07</span>
+                    <h3>Metadata, headings and internal links</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">08</span>
+                    <h3>Final language QA</h3>
+                </article>
+
             </div>
 
-            <div class="market-specialism">
-                <span class="market-specialism-icon">↗</span>
-                <span>Affiliates</span>
+        </section>
+
+
+        <!-- CONTENT WRITING -->
+
+        <section class="dynamic-service-panel is-active"
+                 id="content-writing-panel"
+                 role="tabpanel">
+
+            <div class="mini-service-grid">
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">01</span>
+                    <h3>Casino, sportsbook and game reviews</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">02</span>
+                    <h3>Betting guides and market explainers</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">03</span>
+                    <h3>Match previews and evergreen sports content</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">04</span>
+                    <h3>Bonus, promotion and payment pages</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">05</span>
+                    <h3>SEO landing, category and comparison pages</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">06</span>
+                    <h3>Responsible gambling and regulatory content</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">07</span>
+                    <h3>Blog posts and editorial features</h3>
+                </article>
+
+                <article class="mini-service-card">
+                    <span class="mini-service-number">08</span>
+                    <h3>Content updates and on-page optimization</h3>
+                </article>
+
             </div>
 
-        </div>
+        </section>
 
     </div>
 
 </div>
-
-  <div class="ig-services-grid">
-
-    <!-- En qué sectores se aplican los dos servicios -->
-
-    <!-- Servicio 01 -->
-    <article id="translation"
-             class="ig-service-card ig-service-card-blue">
-
-        <div class="ig-service-top">
-            <span class="ig-service-type">Core service</span>
-            <span class="ig-service-number">01</span>
-        </div>
-
-        <h2>Translation &amp; Proofreading</h2>
-
-        <p class="ig-service-description">
-            English-to-Spanish adaptation for sportsbook, casino, and affiliate
-            content. Close attention to accuracy and industry terminology.
-        </p>
-
-        <ul class="ig-service-list">
-            <li>Industry terminology</li>
-            <li>Local tone and fluency</li>
-            <li>Consistency review</li>
-            <li>Final language QA</li>
-        </ul>
-
-        <aside class="ig-testimonial">
-            <span class="ig-testimonial-label">Client feedback</span>
-
-            <blockquote>
-                High quality work. Met and exceeded all our expectations.
-            </blockquote>
-
-            <div class="ig-client">
-                <span class="ig-client-avatar">CL</span>
-
-                <div>
-                    <strong>Client name</strong>
-                    <span>Translation project</span>
-                </div>
-            </div>
-        </aside>
-
-    </article>
-
-
-    <!-- Servicio 02 -->
-    <article id="seo-writing"
-             class="ig-service-card ig-service-card-green">
-
-        <div class="ig-service-top">
-            <span class="ig-service-type">Core service</span>
-            <span class="ig-service-number">02</span>
-        </div>
-
-        <h2>SEO Writing</h2>
-
-        <p class="ig-service-description">
-            Original Spanish iGaming content built around search intent.
-            Clear structure and useful internal linking.
-        </p>
-
-        <ul class="ig-service-list">
-            <li>Keyword research</li>
-            <li>Search intent</li>
-            <li>Clear content structure</li>
-            <li>Internal linking</li>
-        </ul>
-
-        <aside class="ig-testimonial">
-            <span class="ig-testimonial-label">Client feedback</span>
-
-            <blockquote>
-                Laura is an exceptional writer. Her command of the Spanish
-                language is impressive. The grammar is flawless and the tone
-                is perfectly suited for my target audience. She delivers ahead
-                of schedule and is very proactive in asking clarifying
-                questions. Highly recommended.
-            </blockquote>
-
-            <div class="ig-client">
-                <span class="ig-client-avatar">CL</span>
-
-                <div>
-                    <strong>Client name</strong>
-                    <span>SEO writing project</span>
-                </div>
-            </div>
-        </aside>
-
-    </article>
-
-</div>
-
-            <div class="service-detail-copy">
-                <p>
-                    Casino and slot reviews, game guides, promotional
-                    pages, and responsible gambling content.
-                </p>
-
-                <ul class="service-points">
-                    <li>Game mechanics and features</li>
-                    <li>RTP and volatility terminology</li>
-                    <li>Bonus terms and conditions</li>
-                    <li>Responsible gambling language</li>
-                </ul>
-            </div>
-
-            <aside class="service-review">
-                <span class="service-review-label">Client feedback</span>
-
-                <blockquote>
-                    We had the pleasure of hiring Laura and couldn’t be more satisfied with her work. She’s exceptionally professional and dedicated, always ensuring we are 100% happy with the final product.
-                </blockquote>
-
-                <div class="service-review-author">
-                    <span class="service-review-avatar">CL</span>
-
-                    <div>
-                        <strong>Client name</strong>
-                        <span>Casino content project</span>
-                    </div>
-                </div>
-            </aside>
-
-        </article>
-
-    </div>
 
 </section>
 
@@ -3305,6 +3512,34 @@ header nav a {
             © 2026 Laura. English-to-Spanish translator and SEO writer.
         </div>
     </footer>
+<script>
+    const dynamicServiceTabs =
+        document.querySelectorAll(".dynamic-service-tab");
 
+    const dynamicServicePanels =
+        document.querySelectorAll(".dynamic-service-panel");
+
+    dynamicServiceTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+
+            dynamicServiceTabs.forEach((otherTab) => {
+                otherTab.classList.remove("is-active");
+                otherTab.setAttribute("aria-selected", "false");
+            });
+
+            dynamicServicePanels.forEach((panel) => {
+                panel.classList.remove("is-active");
+            });
+
+            tab.classList.add("is-active");
+            tab.setAttribute("aria-selected", "true");
+
+            const selectedPanel =
+                document.getElementById(tab.dataset.panel);
+
+            selectedPanel.classList.add("is-active");
+        });
+    });
+</script>
 </body>
 </html>
