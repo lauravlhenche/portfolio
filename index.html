@@ -2618,6 +2618,130 @@ header nav a {
         width: 100%;
     }
 }
+        /* AJUSTE FINAL DE WHAT I DO */
+
+.clean-services-intro {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.clean-services-intro h2 {
+    margin: 0;
+    color: #101828;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    text-align: center;
+}
+
+.clean-services-intro h2 span {
+    color: #2864ff;
+}
+
+
+/* TRES SERVICIOS CENTRADOS */
+
+.service-choice-row {
+    width: 100%;
+    margin: 28px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.service-choice {
+    min-height: 46px;
+    padding: 10px 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #aebbd0;
+    border-radius: 999px;
+    color: #101828;
+    background: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.service-choice:hover {
+    color: #ffffff;
+    background: #2864ff;
+    border-color: #2864ff;
+}
+
+
+/* ESPECIALIZACIONES CENTRADAS */
+
+.market-specialisms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.market-specialisms-label {
+    margin: 0;
+    color: #667085;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.market-specialisms-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px 34px;
+}
+
+.market-specialism {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 700px) {
+    .clean-services-intro h2 {
+        font-size: 2rem;
+    }
+
+    .service-choice-row {
+        max-width: 330px;
+        margin-top: 24px;
+    }
+
+    .service-choice {
+        padding: 9px 18px;
+        font-size: 0.82rem;
+    }
+
+    .market-specialisms-items {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .market-specialism {
+        width: auto;
+    }
+}
         </style>
 </head>
 <body>
@@ -2737,14 +2861,16 @@ header nav a {
 
     <nav class="service-choice-row" aria-label="Services">
 
-        <span class="service-choice-label">Services</span>
+        <a class="service-choice" href="#translation">
+            Translation
+        </a>
 
         <a class="service-choice" href="#translation">
-            Translation &amp; Proofreading
+            Proofreading
         </a>
 
         <a class="service-choice" href="#seo-writing">
-            SEO Writing
+            Content Writing
         </a>
 
     </nav>
@@ -2756,19 +2882,23 @@ header nav a {
             Specialized in
         </span>
 
-        <div class="market-specialism">
-            <span class="market-specialism-icon">1X2</span>
-            <span>Sportsbook</span>
-        </div>
+        <div class="market-specialisms-items">
 
-        <div class="market-specialism">
-            <span class="market-specialism-icon">777</span>
-            <span>Casino</span>
-        </div>
+            <div class="market-specialism">
+                <span class="market-specialism-icon">1X2</span>
+                <span>Sportsbook</span>
+            </div>
 
-        <div class="market-specialism">
-            <span class="market-specialism-icon">↗</span>
-            <span>Affiliates</span>
+            <div class="market-specialism">
+                <span class="market-specialism-icon">777</span>
+                <span>Casino</span>
+            </div>
+
+            <div class="market-specialism">
+                <span class="market-specialism-icon">↗</span>
+                <span>Affiliates</span>
+            </div>
+
         </div>
 
     </div>
