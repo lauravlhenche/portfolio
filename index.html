@@ -2026,6 +2026,309 @@ header nav a {
     color: #08779d;
     background: #dff4fc;
 }
+        /* NUEVA DISTRIBUCIÓN DE SERVICIOS */
+
+.ig-services-grid {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+
+/* BANDA SUPERIOR: IGAMING FOCUS */
+
+.ig-focus-panel {
+    grid-column: 1 / -1;
+    padding: 28px 32px;
+    border: 1px solid #dfe9e2;
+    border-radius: 24px;
+    background: #f7fbf8;
+}
+
+.ig-focus-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.ig-focus-label {
+    flex-shrink: 0;
+    padding: 7px 13px;
+    border-radius: 999px;
+    color: #23864b;
+    background: #e1f5e7;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ig-focus-heading h2 {
+    margin: 0;
+    color: #101828;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.ig-focus-areas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ig-focus-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding-right: 28px;
+    scroll-margin-top: 130px;
+}
+
+.ig-focus-area + .ig-focus-area {
+    padding-right: 0;
+    padding-left: 28px;
+    border-left: 1px solid #dbe5de;
+}
+
+.ig-focus-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #23864b;
+    background: #dff4e5;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.ig-focus-area h3 {
+    margin: 0 0 5px;
+    color: #101828;
+    font-size: 1rem;
+}
+
+.ig-focus-area p {
+    max-width: 460px;
+    margin: 0;
+    color: #667085;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+/* DOS CAJAS VERTICALES */
+
+.ig-service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 38px;
+    border-radius: 28px;
+    scroll-margin-top: 110px;
+}
+
+.ig-service-card-blue {
+    background: #f1f4ff;
+}
+
+.ig-service-card-green {
+    background: #f2f7f3;
+}
+
+.ig-service-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.ig-service-type {
+    display: inline-flex;
+    padding: 7px 13px;
+    border-radius: 999px;
+    color: #2864d9;
+    background: #dfe7ff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ig-service-number {
+    color: #f06a5b;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.ig-service-card h2 {
+    margin: 0 0 18px;
+    color: #101828;
+    font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+    line-height: 1.2;
+}
+
+.ig-service-description {
+    margin: 0 0 25px;
+    color: #344054;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.ig-service-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ig-service-list li {
+    position: relative;
+    padding-left: 18px;
+    color: #344054;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.ig-service-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.48em;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f26a5e;
+    box-shadow: 0 0 0 4px rgba(242, 106, 94, 0.13);
+}
+
+
+/* COMENTARIO DEL CLIENTE */
+
+.ig-testimonial {
+    position: relative;
+    margin-top: 34px;
+    padding: 25px;
+    border: 1px solid rgba(16, 24, 40, 0.08);
+    border-radius: 21px;
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.ig-testimonial::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: rgba(40, 100, 255, 0.12);
+    font-family: Georgia, serif;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.ig-testimonial-label {
+    position: relative;
+    z-index: 1;
+    color: #667085;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ig-testimonial blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 23px 0 26px;
+    color: #344054;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.ig-client {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ig-client-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #b74439;
+    background: #ffe1dc;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.ig-client div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ig-client strong {
+    color: #101828;
+    font-size: 0.82rem;
+}
+
+.ig-client div span {
+    color: #667085;
+    font-size: 0.74rem;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 850px) {
+    .ig-services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .ig-focus-panel {
+        grid-column: auto;
+        padding: 25px 22px;
+    }
+
+    .ig-focus-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ig-focus-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .ig-focus-area {
+        padding: 0 0 20px;
+    }
+
+    .ig-focus-area + .ig-focus-area {
+        padding: 20px 0 0;
+        border-top: 1px solid #dbe5de;
+        border-left: 0;
+    }
+
+    .ig-service-card {
+        padding: 30px 24px;
+        border-radius: 23px;
+    }
+
+    .ig-service-list {
+        grid-template-columns: 1fr;
+    }
+}
         </style>
 </head>
 <body>
@@ -2180,161 +2483,141 @@ header nav a {
 </nav>
 
 
-    <div class="service-details">
+  <div class="ig-services-grid">
 
-        <!-- TRANSLATION -->
+    <!-- En qué sectores se aplican los dos servicios -->
+    <section class="ig-focus-panel" aria-labelledby="igaming-focus-title">
 
-        <article id="translation"
-                 class="service-detail-card service-detail-blue">
+        <div class="ig-focus-heading">
+            <span class="ig-focus-label">iGaming focus</span>
 
-            <div class="service-detail-identity">
-                <span class="service-detail-number">01</span>
-                <span class="service-detail-category">Core service</span>
+            <h2 id="igaming-focus-title">
+                Spanish content for sportsbooks and casinos.
+            </h2>
+        </div>
 
-                <h2>Translation &amp; Proofreading</h2>
-            </div>
+        <div class="ig-focus-areas">
 
-            <div class="service-detail-copy">
-                <p>
-                    English-to-Spanish adaptation. Close attention to
-                    accuracy and industry terminology.
-                </p>
+            <div class="ig-focus-area" id="sportsbook">
+                <span class="ig-focus-icon">1X2</span>
 
-                <ul class="service-points">
-                    <li>Terminology checks</li>
-                    <li>Consistency review</li>
-                    <li>Tone and fluency</li>
-                    <li>Final language QA</li>
-                </ul>
-            </div>
+                <div>
+                    <h3>Sportsbook</h3>
 
-            <aside class="service-review">
-                <span class="service-review-label">Client feedback</span>
-
-                <blockquote>
-                    High quality work. Met and exceeded all our expectations.
-                </blockquote>
-
-                <div class="service-review-author">
-                    <span class="service-review-avatar">CL</span>
-
-                    <div>
-                        <strong>Client name</strong>
-                        <span>Translation project</span>
-                    </div>
+                    <p>
+                        Betting guides, match previews, market breakdowns,
+                        odds content, bonus pages, and editorial pieces.
+                    </p>
                 </div>
-            </aside>
-
-        </article>
-
-
-        <!-- SEO WRITING -->
-
-        <article id="seo-writing"
-                 class="service-detail-card service-detail-green">
-
-            <div class="service-detail-identity">
-                <span class="service-detail-number">02</span>
-                <span class="service-detail-category">Core service</span>
-
-                <h2>SEO Writing</h2>
             </div>
 
-            <div class="service-detail-copy">
-                <p>
-                    Original Spanish content built around search intent.
-                    Clear structure and useful internal linking.
-                </p>
+            <div class="ig-focus-area" id="casino">
+                <span class="ig-focus-icon">777</span>
 
-                <ul class="service-points">
-                    <li>Keyword research</li>
-                    <li>Titles and headings</li>
-                    <li>On-page editing</li>
-                    <li>Final SEO review</li>
-                </ul>
-            </div>
+                <div>
+                    <h3>Casino</h3>
 
-            <aside class="service-review">
-                <span class="service-review-label">Client feedback</span>
-
-                <blockquote>
-                    Laura is an exceptional writer. Her command of the Spanish language is impressive. The grammar is flawless and the tone is perfectly suited for my target audience. She delivers ahead of schedule and is very proactive in asking clarifying questions. Highly recommended.
-                </blockquote>
-
-                <div class="service-review-author">
-                    <span class="service-review-avatar">CL</span>
-
-                    <div>
-                        <strong>Client name</strong>
-                        <span>SEO writing project</span>
-                    </div>
+                    <p>
+                        Casino and slot reviews, game guides, promotional pages,
+                        and responsible gambling content.
+                    </p>
                 </div>
-            </aside>
-
-        </article>
-
-
-        <!-- SPORTSBOOK -->
-
-        <article id="sportsbook"
-                 class="service-detail-card service-detail-peach">
-
-            <div class="service-detail-identity">
-                <span class="service-detail-number">03</span>
-                <span class="service-detail-category service-category-content">
-                    Content type
-                </span>
-
-                <h2>Sportsbook Content</h2>
             </div>
 
-            <div class="service-detail-copy">
-                <p>
-                    Match previews, betting guides, market breakdowns,
-                    bonus pages, odds content, and editorial pieces.
-                </p>
+        </div>
+    </section>
 
-                <ul class="service-points">
-                    <li>Regulated-market wording</li>
-                    <li>Odds and market terminology</li>
-                    <li>Clear player-focused explanations</li>
-                    <li>Responsible editorial approach</li>
-                </ul>
-            </div>
 
-            <aside class="service-review">
-                <span class="service-review-label">Client feedback</span>
+    <!-- Servicio 01 -->
+    <article id="translation"
+             class="ig-service-card ig-service-card-blue">
 
-                <blockquote>
-                    Laura has a fantastic work ethic and listens to all feedback extremely carefully. It’s a pleasure working with her!
-                </blockquote>
+        <div class="ig-service-top">
+            <span class="ig-service-type">Core service</span>
+            <span class="ig-service-number">01</span>
+        </div>
 
-                <div class="service-review-author">
-                    <span class="service-review-avatar">CL</span>
+        <h2>Translation &amp; Proofreading</h2>
 
-                    <div>
-                        <strong>Client name</strong>
-                        <span>Sportsbook content project</span>
-                    </div>
+        <p class="ig-service-description">
+            English-to-Spanish adaptation for sportsbook, casino, and affiliate
+            content. Close attention to accuracy and industry terminology.
+        </p>
+
+        <ul class="ig-service-list">
+            <li>Industry terminology</li>
+            <li>Local tone and fluency</li>
+            <li>Consistency review</li>
+            <li>Final language QA</li>
+        </ul>
+
+        <aside class="ig-testimonial">
+            <span class="ig-testimonial-label">Client feedback</span>
+
+            <blockquote>
+                High quality work. Met and exceeded all our expectations.
+            </blockquote>
+
+            <div class="ig-client">
+                <span class="ig-client-avatar">CL</span>
+
+                <div>
+                    <strong>Client name</strong>
+                    <span>Translation project</span>
                 </div>
-            </aside>
-
-        </article>
-
-
-        <!-- CASINO -->
-
-        <article id="casino"
-                 class="service-detail-card service-detail-yellow">
-
-            <div class="service-detail-identity">
-                <span class="service-detail-number">04</span>
-                <span class="service-detail-category service-category-content">
-                    Content type
-                </span>
-
-                <h2>Casino Content</h2>
             </div>
+        </aside>
+
+    </article>
+
+
+    <!-- Servicio 02 -->
+    <article id="seo-writing"
+             class="ig-service-card ig-service-card-green">
+
+        <div class="ig-service-top">
+            <span class="ig-service-type">Core service</span>
+            <span class="ig-service-number">02</span>
+        </div>
+
+        <h2>SEO Writing</h2>
+
+        <p class="ig-service-description">
+            Original Spanish iGaming content built around search intent.
+            Clear structure and useful internal linking.
+        </p>
+
+        <ul class="ig-service-list">
+            <li>Keyword research</li>
+            <li>Search intent</li>
+            <li>Clear content structure</li>
+            <li>Internal linking</li>
+        </ul>
+
+        <aside class="ig-testimonial">
+            <span class="ig-testimonial-label">Client feedback</span>
+
+            <blockquote>
+                Laura is an exceptional writer. Her command of the Spanish
+                language is impressive. The grammar is flawless and the tone
+                is perfectly suited for my target audience. She delivers ahead
+                of schedule and is very proactive in asking clarifying
+                questions. Highly recommended.
+            </blockquote>
+
+            <div class="ig-client">
+                <span class="ig-client-avatar">CL</span>
+
+                <div>
+                    <strong>Client name</strong>
+                    <span>SEO writing project</span>
+                </div>
+            </div>
+        </aside>
+
+    </article>
+
+</div>
 
             <div class="service-detail-copy">
                 <p>
