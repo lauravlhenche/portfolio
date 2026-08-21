@@ -3963,8 +3963,8 @@ header nav a {
 </section>
 
     </div>
-<section class="word-estimator">
-    <div class="word-estimator-controls">
+<section class="word-estimator" style="display: grid; grid-template-columns: minmax(0, 1fr) 360px; align-items: stretch; gap: 0; width: 100%;">
+    <div class="word-estimator-controls" style="min-width: 0; margin: 0; border-radius: 24px 0 0 24px;">
         <div class="word-estimator-heading">
             <div>
                 <span class="word-estimator-label">Quick estimate</span>
@@ -3993,7 +3993,7 @@ header nav a {
 </div>
         </div>
 
-    <aside class="word-estimator-result">
+    <aside class="word-estimator-result" style="width: auto; min-width: 360px; margin: 0; border-radius: 0 24px 24px 0;">
         <span class="word-estimator-label">Estimated total</span>
         <h3 id="estimate-service-name">Content Writing</h3>
         <strong id="estimate-total">$70</strong>
