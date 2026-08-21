@@ -3377,6 +3377,30 @@ header nav a {
     margin: 0 !important;
     border-radius: 0 20px 20px 0 !important;
 }
+        /* CALCULADORA EN HORIZONTAL EN ORDENADOR */
+
+.word-estimator {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 360px !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
+}
+
+.word-estimator-controls {
+    min-width: 0;
+    margin: 0 !important;
+    border-radius: 24px 0 0 24px !important;
+}
+
+.word-estimator-result {
+    width: auto !important;
+    min-width: 360px;
+    height: 100%;
+    margin: 0 !important;
+    border-radius: 0 24px 24px 0 !important;
+}
 @media (max-width: 850px) {
     .word-estimator {
         grid-template-columns: 1fr !important;
