@@ -3331,7 +3331,42 @@ header nav a {
 }
 
 .word-estimator {
+    width: 100% !important;
+    max-width: none !important;
     margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.32fr) !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+}
+
+.word-estimator-controls {
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    border-radius: 28px 0 0 28px !important;
+}
+
+.word-estimator-result {
+    width: auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 28px 28px 0 !important;
+}
+
+@media (max-width: 850px) {
+    .word-estimator {
+        grid-template-columns: 1fr !important;
+    }
+
+    .word-estimator-controls {
+        border-radius: 24px 24px 0 0 !important;
+    }
+
+    .word-estimator-result {
+        border-radius: 0 0 24px 24px !important;
+    }
 }
 
 .word-count-scale {
