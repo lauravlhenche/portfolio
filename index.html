@@ -3311,35 +3311,61 @@ header nav a {
         text-align: center;
     }
 
-    .word-estimator {
-        grid-template-columns: 1fr;
-        padding: 14px;
-    }
-
-    .word-estimator-controls,
-    .word-estimator-result {
-        padding: 22px;
-    }
-
-    .word-estimator-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
+   .dynamic-service-panels {
+    width: 100%;
+    min-height: 0 !important;
+    margin: 64px auto !important;
 }
-        .dynamic-service-panels {
-    margin-top: 42px !important;
-    margin-bottom: 42px !important;
+
+.dynamic-service-panel.is-active {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.mini-service-grid {
+    width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    justify-content: center !important;
 }
 
 .word-estimator {
-    margin-top: 0 !important;
+    margin: 0 auto !important;
+}
+
+.word-count-scale {
+    width: 100%;
+    margin-top: 16px;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    color: #667085;
+    font-size: 0.82rem;
+}
+
+.word-count-scale span {
+    position: static !important;
+    display: block;
+    transform: none !important;
+}
+
+.word-count-scale span:first-child {
+    text-align: left;
+}
+
+.word-count-scale span:nth-child(2),
+.word-count-scale span:nth-child(3) {
+    text-align: center;
+}
+
+.word-count-scale span:last-child {
+    text-align: right;
 }
 
 @media (max-width: 700px) {
     .dynamic-service-panels {
-        margin-top: 32px !important;
-        margin-bottom: 32px !important;
+        margin: 40px auto !important;
     }
 }
 </style>
@@ -3878,8 +3904,7 @@ header nav a {
             aria-label="Project word count"
         >
 
-        <div class="word-count-scale">
-            <div class="word-count-scale">
+       <div class="word-count-scale">
     <span>500</span>
     <span>2,000</span>
     <span>3,500</span>
