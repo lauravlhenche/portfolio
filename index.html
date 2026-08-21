@@ -2473,6 +2473,151 @@ header nav a {
         padding: 30px 24px;
     }
 }
+        /* CABECERA MÁS PEQUEÑA Y CLARA */
+
+.clean-services-intro {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.clean-services-intro h2 {
+    margin: 0;
+    color: #101828;
+    font-size: clamp(2.35rem, 3.6vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.clean-services-intro h2 span {
+    color: #2864ff;
+}
+
+
+/* BOTONES DE SERVICIOS */
+
+.service-choice-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin: 30px 0 25px;
+}
+
+.service-choice-label,
+.market-specialisms-label {
+    margin-right: 5px;
+    color: #667085;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.service-choice {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 11px 21px;
+    border: 1px solid #cbd6ea;
+    border-radius: 999px;
+    color: #101828;
+    background: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.service-choice:hover {
+    color: #ffffff;
+    background: #2864ff;
+    border-color: #2864ff;
+    transform: translateY(-2px);
+}
+
+
+/* ÁMBITOS DE ESPECIALIZACIÓN */
+
+.market-specialisms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+}
+
+.market-specialism {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #475467;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.market-specialism-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #23864b;
+    background: #e1f5e7;
+    font-size: 0.62rem;
+    font-weight: 800;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 700px) {
+    .clean-services-intro {
+        margin-bottom: 45px;
+        padding: 0 18px;
+    }
+
+    .clean-services-intro h2 {
+        font-size: 2.4rem;
+    }
+
+    .service-choice-row {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .service-choice-label {
+        margin: 0 0 3px;
+    }
+
+    .service-choice {
+        width: 100%;
+        max-width: 310px;
+    }
+
+    .market-specialisms {
+        max-width: 260px;
+        margin: 30px auto 0;
+        justify-content: flex-start;
+    }
+
+    .market-specialisms-label {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .market-specialism {
+        width: 100%;
+    }
+}
         </style>
 </head>
 <body>
@@ -2590,13 +2735,26 @@ header nav a {
 
     <h2>What I do<span>.</span></h2>
 
-    <p class="clean-services-subtitle">
-        English-to-Spanish translation and SEO writing for sportsbooks,
-        casinos, and affiliates.
-    </p>
+    <nav class="service-choice-row" aria-label="Services">
+
+        <span class="service-choice-label">Services</span>
+
+        <a class="service-choice" href="#translation">
+            Translation &amp; Proofreading
+        </a>
+
+        <a class="service-choice" href="#seo-writing">
+            SEO Writing
+        </a>
+
+    </nav>
 
     <div class="market-specialisms"
-         aria-label="iGaming areas of specialization">
+         aria-label="iGaming specializations">
+
+        <span class="market-specialisms-label">
+            Specialized in
+        </span>
 
         <div class="market-specialism">
             <span class="market-specialism-icon">1X2</span>
@@ -2616,7 +2774,6 @@ header nav a {
     </div>
 
 </div>
-
 
   <div class="ig-services-grid">
 
