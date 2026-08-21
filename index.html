@@ -3327,6 +3327,21 @@ header nav a {
         gap: 12px;
     }
 }
+        .dynamic-service-panels {
+    margin-top: 42px !important;
+    margin-bottom: 42px !important;
+}
+
+.word-estimator {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 700px) {
+    .dynamic-service-panels {
+        margin-top: 32px !important;
+        margin-bottom: 32px !important;
+    }
+}
 </style>
     
 </head>
@@ -3460,7 +3475,7 @@ header nav a {
         aria-controls="translation-panel"
         data-panel="translation-panel"
         data-service="Translation"
-        data-rate="0.04">
+        data-rate="0.05">
     Translation
 </button>
 
@@ -3471,7 +3486,7 @@ header nav a {
         aria-controls="proofreading-panel"
         data-panel="proofreading-panel"
         data-service="Proofreading"
-        data-rate="0.02">
+        data-rate="0.03">
     Proofreading
 </button>
 
@@ -3856,7 +3871,7 @@ header nav a {
             id="word-count-slider"
             class="word-count-slider"
             type="range"
-            min="200"
+            min="500"
             max="5000"
             step="100"
             value="1000"
@@ -3864,10 +3879,12 @@ header nav a {
         >
 
         <div class="word-count-scale">
-            <span>200</span>
-            <span>1,000</span>
-            <span>3,000</span>
-            <span>5,000</span>
+            <div class="word-count-scale">
+    <span>500</span>
+    <span>2,000</span>
+    <span>3,500</span>
+    <span>5,000</span>
+</div>
         </div>
     </div>
 
