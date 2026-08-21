@@ -3181,7 +3181,7 @@ header nav a {
 
 /* CALCULADOR */
 
-.word-estimator {
+{
     width: 100%;
     margin-top: 34px;
     padding: 20px;
@@ -3330,7 +3330,7 @@ header nav a {
     justify-content: center !important;
 }
 
-.word-estimator {
+{
     width: 100% !important;
     max-width: none !important;
     margin: 0 auto !important;
@@ -3354,7 +3354,29 @@ header nav a {
     margin: 0 !important;
     border-radius: 0 28px 28px 0 !important;
 }
+.word-estimator {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 360px !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
+}
 
+.word-estimator-controls {
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    border-radius: 20px 0 0 20px !important;
+}
+
+.word-estimator-result {
+    width: auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 20px 20px 0 !important;
+}
 @media (max-width: 850px) {
     .word-estimator {
         grid-template-columns: 1fr !important;
