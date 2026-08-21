@@ -1201,7 +1201,8 @@ header nav a {
         font-size: 1.3rem;
     }
 }
-</style>
+</style>  
+    
     <style>
         .service-showcase-title {
     width: 100%;
@@ -3112,7 +3113,222 @@ header nav a {
     margin-left: auto;
     justify-content: center !important;
 }
-        </style>
+        /* ACERCAR EL CONTENIDO AL TÍTULO */
+
+.dynamic-services-title {
+    margin-bottom: 22px !important;
+}
+
+.dynamic-service-tabs {
+    margin-bottom: 18px !important;
+}
+
+.dynamic-service-panels {
+    margin-top: 0 !important;
+}
+
+.dynamic-service-panel {
+    padding-top: 0 !important;
+}
+
+
+/* PRECIO DE LA CATEGORÍA ACTIVA */
+
+.service-rate-summary {
+    width: fit-content;
+    margin: 0 auto 26px;
+    padding: 10px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    border: 1px solid #dce3f0;
+    border-radius: 999px;
+    background: #f8faff;
+}
+
+.service-rate-label,
+.word-estimator-label {
+    color: #667085;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.service-rate-value {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.service-rate-value strong {
+    color: #2864ff;
+    font-size: 0.96rem;
+}
+
+.service-rate-value span {
+    color: #667085;
+    font-size: 0.73rem;
+}
+
+.service-rate-divider {
+    width: 1px;
+    height: 25px;
+    background: #d8deea;
+}
+
+
+/* CALCULADOR */
+
+.word-estimator {
+    width: 100%;
+    margin-top: 34px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.65fr);
+    gap: 20px;
+    border-radius: 25px;
+    background: #f7f4ee;
+    text-align: left;
+}
+
+.word-estimator-controls {
+    padding: 27px;
+}
+
+.word-estimator-heading {
+    margin-bottom: 31px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.word-estimator-heading h3 {
+    margin: 8px 0 0;
+    color: #101828;
+    font-size: 1.15rem;
+}
+
+.word-estimator-heading > strong {
+    color: #101828;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+
+/* DESLIZADOR */
+
+.word-count-slider {
+    width: 100%;
+    height: 7px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #2864ff;
+}
+
+.word-count-scale {
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    color: #667085;
+    font-size: 0.67rem;
+}
+
+
+/* RESULTADO */
+
+.word-estimator-result {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #e0e5ee;
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.word-estimator-result h3 {
+    margin: 10px 0 7px;
+    color: #101828;
+    font-size: 1rem;
+}
+
+.word-estimator-result > strong {
+    color: #2864ff;
+    font-size: 2.35rem;
+    line-height: 1.1;
+}
+
+.word-estimator-result p {
+    margin: 9px 0 21px;
+    color: #667085;
+    font-size: 0.76rem;
+}
+
+.word-estimator-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: #ffffff;
+    background: #2864ff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.word-estimator-button:hover {
+    background: #194fd9;
+}
+
+.word-estimator-note {
+    max-width: 780px;
+    margin: 13px auto 0;
+    color: #98a2b3;
+    font-size: 0.67rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 760px) {
+    .service-rate-summary {
+        width: 100%;
+        max-width: 330px;
+        flex-wrap: wrap;
+        border-radius: 20px;
+    }
+
+    .service-rate-label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .word-estimator {
+        grid-template-columns: 1fr;
+        padding: 14px;
+    }
+
+    .word-estimator-controls,
+    .word-estimator-result {
+        padding: 22px;
+    }
+
+    .word-estimator-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+</style>
+    
 </head>
 <body>
 
@@ -3238,35 +3454,54 @@ header nav a {
          aria-label="Services">
 
         <button class="dynamic-service-tab"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                aria-controls="translation-panel"
-                data-panel="translation-panel">
-            Translation
-        </button>
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="translation-panel"
+        data-panel="translation-panel"
+        data-service="Translation"
+        data-rate="0.04">
+    Translation
+</button>
 
-        <button class="dynamic-service-tab"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                aria-controls="proofreading-panel"
-                data-panel="proofreading-panel">
-            Proofreading
-        </button>
+<button class="dynamic-service-tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="proofreading-panel"
+        data-panel="proofreading-panel"
+        data-service="Proofreading"
+        data-rate="0.02">
+    Proofreading
+</button>
 
-        <button class="dynamic-service-tab is-active"
-                type="button"
-                role="tab"
-                aria-selected="true"
-                aria-controls="content-writing-panel"
-                data-panel="content-writing-panel">
-            Content Writing
-        </button>
+<button class="dynamic-service-tab is-active"
+        type="button"
+        role="tab"
+        aria-selected="true"
+        aria-controls="content-writing-panel"
+        data-panel="content-writing-panel"
+        data-service="Content Writing"
+        data-rate="0.07">
+    Content Writing
+</button>
 
     </div>
+<div class="service-rate-summary" aria-live="polite">
+    <span class="service-rate-label">Standard rate</span>
 
+    <div class="service-rate-value">
+        <strong id="rate-per-word">$0.07</strong>
+        <span>per word</span>
+    </div>
 
+    <span class="service-rate-divider"></span>
+
+    <div class="service-rate-value">
+        <strong id="rate-per-thousand">$70</strong>
+        <span>per 1,000 words</span>
+    </div>
+</div>
     <!-- CONTENIDO QUE CAMBIA -->
 
     <div class="dynamic-service-panels">
@@ -3606,7 +3841,52 @@ header nav a {
 </section>
 
     </div>
+<section class="word-estimator">
+    <div class="word-estimator-controls">
+        <div class="word-estimator-heading">
+            <div>
+                <span class="word-estimator-label">Quick estimate</span>
+                <h3>Choose your word count</h3>
+            </div>
 
+            <strong id="word-count-output">1,000 words</strong>
+        </div>
+
+        <input
+            id="word-count-slider"
+            class="word-count-slider"
+            type="range"
+            min="200"
+            max="5000"
+            step="100"
+            value="1000"
+            aria-label="Project word count"
+        >
+
+        <div class="word-count-scale">
+            <span>200</span>
+            <span>1,000</span>
+            <span>3,000</span>
+            <span>5,000</span>
+        </div>
+    </div>
+
+    <aside class="word-estimator-result">
+        <span class="word-estimator-label">Estimated total</span>
+        <h3 id="estimate-service-name">Content Writing</h3>
+        <strong id="estimate-total">$70</strong>
+        <p id="estimate-rate-note">Based on $0.07 per word</p>
+
+        <a class="word-estimator-button" href="#contact">
+            Tell me about your project
+        </a>
+    </aside>
+</section>
+
+<p class="word-estimator-note">
+    Estimates are based on word count. The final quote may vary depending
+    on complexity, format, research, and turnaround time.
+</p>
 </div>
 
 </section>
@@ -3886,6 +4166,63 @@ header nav a {
     const dynamicServicePanels =
         document.querySelectorAll(".dynamic-service-panel");
 
+    const ratePerWord =
+        document.getElementById("rate-per-word");
+
+    const ratePerThousand =
+        document.getElementById("rate-per-thousand");
+
+    const wordCountSlider =
+        document.getElementById("word-count-slider");
+
+    const wordCountOutput =
+        document.getElementById("word-count-output");
+
+    const estimateServiceName =
+        document.getElementById("estimate-service-name");
+
+    const estimateTotal =
+        document.getElementById("estimate-total");
+
+    const estimateRateNote =
+        document.getElementById("estimate-rate-note");
+
+    let activeRate = 0.07;
+    let activeService = "Content Writing";
+
+
+    function updateEstimate() {
+        const words = Number(wordCountSlider.value);
+        const total = words * activeRate;
+
+        wordCountOutput.textContent =
+            words.toLocaleString("en-US") + " words";
+
+        estimateTotal.textContent =
+            "$" + total.toFixed(0);
+
+        estimateServiceName.textContent =
+            activeService;
+
+        estimateRateNote.textContent =
+            "Based on $" + activeRate.toFixed(2) + " per word";
+    }
+
+
+    function updateServicePricing(tab) {
+        activeRate = Number(tab.dataset.rate);
+        activeService = tab.dataset.service;
+
+        ratePerWord.textContent =
+            "$" + activeRate.toFixed(2);
+
+        ratePerThousand.textContent =
+            "$" + (activeRate * 1000).toFixed(0);
+
+        updateEstimate();
+    }
+
+
     dynamicServiceTabs.forEach((tab) => {
         tab.addEventListener("click", () => {
 
@@ -3904,9 +4241,24 @@ header nav a {
             const selectedPanel =
                 document.getElementById(tab.dataset.panel);
 
-            selectedPanel.classList.add("is-active");
+            if (selectedPanel) {
+                selectedPanel.classList.add("is-active");
+            }
+
+            updateServicePricing(tab);
         });
     });
+
+
+    wordCountSlider.addEventListener("input", updateEstimate);
+
+
+    const initiallyActiveTab =
+        document.querySelector(".dynamic-service-tab.is-active");
+
+    if (initiallyActiveTab) {
+        updateServicePricing(initiallyActiveTab);
+    }
 </script>
 </body>
 </html>
