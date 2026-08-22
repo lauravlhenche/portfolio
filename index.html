@@ -3135,13 +3135,13 @@ header nav a {
 
 .industry-context {
     width: 100%;
-    margin: -5px auto 27px;
+    margin: -5px auto 42px;
     text-align: center;
 }
 
 .industry-context > span {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     color: #278b55;
     font-size: 0.67rem;
     font-weight: 700;
@@ -3151,10 +3151,36 @@ header nav a {
 
 .industry-context p {
     margin: 0;
-    color: #475467;
-    font-size: 0.84rem;
-    font-weight: 600;
-    letter-spacing: 0.015em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0 13px;
+    color: #278b55;
+    font-size: 0.86rem;
+    font-weight: 650;
+}
+
+.industry-context p span {
+    white-space: nowrap;
+}
+
+.industry-context p i {
+    color: #92cfa9;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .industry-context {
+        max-width: 330px;
+        margin-bottom: 34px;
+    }
+
+    .industry-context p {
+        gap: 7px 10px;
+        line-height: 1.7;
+    }
 }
 
 @media (max-width: 700px) {
@@ -3688,10 +3714,17 @@ header nav a {
     <!-- ETIQUETAS SUPERIORES -->
 <div class="industry-context">
     <span>Spanish iGaming content for</span>
-
+    
     <p>
-        Casinos · Sportsbooks · Affiliates · iGaming agencies
-    </p>
+    <span>Casinos</span>
+    <i>·</i>
+    <span>Sportsbooks</span>
+    <i>·</i>
+    <span>Affiliates</span>
+    <i>·</i>
+    <span>iGaming agencies</span>
+</p>
+    
 </div>
     <div class="dynamic-service-tabs"
          role="tablist"
