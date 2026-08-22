@@ -3133,15 +3133,15 @@ header nav a {
 
 /* ENFOQUE EN IGAMING */
 
-.industry-focus {
+.industry-context {
     width: 100%;
-    margin: -4px auto 25px;
+    margin: -5px auto 27px;
     text-align: center;
 }
 
-.industry-focus-label {
+.industry-context > span {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #278b55;
     font-size: 0.67rem;
     font-weight: 700;
@@ -3149,27 +3149,30 @@ header nav a {
     text-transform: uppercase;
 }
 
-.industry-focus-tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+.industry-context p {
+    margin: 0;
+    color: #475467;
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.015em;
 }
 
-.industry-focus-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 34px;
-    padding: 7px 14px;
-    color: #247448;
-    background: #eef9f2;
-    border: 1px solid #ccebd8;
-    border-radius: 999px;
-    font-size: 0.74rem;
-    font-weight: 650;
-    line-height: 1;
+@media (max-width: 700px) {
+    .industry-context {
+        max-width: 290px;
+        margin-bottom: 23px;
+    }
+
+    .industry-context p {
+        line-height: 1.7;
+    }
+}
+        .pricing-tools .service-rate-summary {
+    padding: 7px 4px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 @media (max-width: 700px) {
@@ -3683,19 +3686,12 @@ header nav a {
     </h2>
 
     <!-- ETIQUETAS SUPERIORES -->
-<div class="industry-focus">
+<div class="industry-context">
+    <span>Spanish iGaming content for</span>
 
-    <span class="industry-focus-label">
-        Spanish iGaming content for
-    </span>
-
-    <div class="industry-focus-tags">
-        <span class="industry-focus-tag">Casinos</span>
-        <span class="industry-focus-tag">Sportsbooks</span>
-        <span class="industry-focus-tag">Affiliates</span>
-        <span class="industry-focus-tag">iGaming agencies</span>
-    </div>
-
+    <p>
+        Casinos · Sportsbooks · Affiliates · iGaming agencies
+    </p>
 </div>
     <div class="dynamic-service-tabs"
          role="tablist"
