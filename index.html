@@ -3131,7 +3131,57 @@ header nav a {
     padding-top: 0 !important;
 }
 
+/* ENFOQUE EN IGAMING */
 
+.industry-focus {
+    width: 100%;
+    margin: -4px auto 25px;
+    text-align: center;
+}
+
+.industry-focus-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #278b55;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.industry-focus-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.industry-focus-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 14px;
+    color: #247448;
+    background: #eef9f2;
+    border: 1px solid #ccebd8;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 650;
+    line-height: 1;
+}
+
+@media (max-width: 700px) {
+    .industry-focus {
+        margin-bottom: 22px;
+    }
+
+    .industry-focus-tag {
+        padding: 7px 11px;
+        font-size: 0.7rem;
+    }
+}
 /* PRECIO DE LA CATEGORÍA ACTIVA */
 
 .service-rate-summary {
@@ -3633,7 +3683,20 @@ header nav a {
     </h2>
 
     <!-- ETIQUETAS SUPERIORES -->
+<div class="industry-focus">
 
+    <span class="industry-focus-label">
+        Spanish iGaming content for
+    </span>
+
+    <div class="industry-focus-tags">
+        <span class="industry-focus-tag">Casinos</span>
+        <span class="industry-focus-tag">Sportsbooks</span>
+        <span class="industry-focus-tag">Affiliates</span>
+        <span class="industry-focus-tag">iGaming agencies</span>
+    </div>
+
+</div>
     <div class="dynamic-service-tabs"
          role="tablist"
          aria-label="Services">
