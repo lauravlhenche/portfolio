@@ -3456,238 +3456,83 @@ header nav a {
 
 /* DESLIZADOR */
 
-.word-count-slider {
-    width: 100%;
-    height: 7px;
-    margin: 0;
-    cursor: pointer;
-    accent-color: #2864ff;
-}
-
-.word-count-scale {
-    margin-top: 13px;
+.estimator-service-picker {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
     display: flex;
-    justify-content: space-between;
-    color: #667085;
-    font-size: 0.67rem;
-}
-
-
-/* RESULTADO */
-
-.word-estimator-result {
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    border: 1px solid #e0e5ee;
-    border-radius: 20px;
-    background: #ffffff;
-}
-
-.word-estimator-result h3 {
-    margin: 10px 0 7px;
-    color: #101828;
-    font-size: 1rem;
-}
-
-.word-estimator-result > strong {
-    color: #2864ff;
-    font-size: 2.35rem;
-    line-height: 1.1;
-}
-
-.word-estimator-result p {
-    margin: 9px 0 21px;
-    color: #667085;
-    font-size: 0.76rem;
-}
-
-.word-estimator-button {
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-height: 43px;
-    padding: 10px 18px;
+    gap: 18px;
+    border-bottom: 1px solid #e0e5ee;
+}
+
+.estimator-service-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.estimator-service-button {
+    padding: 11px 18px;
+    border: 1px solid #101828;
     border-radius: 999px;
+    color: #101828;
+    background: #ffffff;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.estimator-service-button:hover {
+    border-color: #2864ff;
+    color: #2864ff;
+}
+
+.estimator-service-button.is-active {
+    border-color: #2864ff;
     color: #ffffff;
     background: #2864ff;
-    font-size: 0.78rem;
-    font-weight: 600;
-    text-decoration: none;
 }
 
-.word-estimator-button:hover {
-    background: #194fd9;
+.estimator-control-group + .estimator-control-group {
+    margin-top: 30px;
+    padding-top: 27px;
+    border-top: 1px solid #e0e5ee;
 }
 
-.word-estimator-note {
-    max-width: 780px;
-    margin: 13px auto 0;
-    color: #98a2b3;
-    font-size: 0.67rem;
-    line-height: 1.5;
-    text-align: center;
+.estimator-control-group .word-estimator-heading {
+    margin-bottom: 17px !important;
 }
 
-
-/* MÓVIL */
-
-@media (max-width: 760px) {
-    .service-rate-summary {
-        width: 100%;
-        max-width: 330px;
-        flex-wrap: wrap;
-        border-radius: 20px;
-    }
-
-    .service-rate-label {
-        width: 100%;
-        text-align: center;
-    }
-
-   .dynamic-service-panels {
-    width: 100%;
-    min-height: 0 !important;
-    height: auto !important;
-    margin: 32px auto 0 !important;
-    padding: 0 !important;
+.pieces-scale {
+    grid-template-columns: repeat(3, 1fr) !important;
 }
 
-.dynamic-service-panel.is-active {
-    min-height: 0 !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.mini-service-grid {
-    width: 100%;
-    min-height: 0 !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    justify-content: center !important;
-}
-
-.word-estimator {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 32px auto 0 !important;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.32fr) !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-}
-
-.word-estimator-controls {
-    width: auto !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    border-radius: 28px 0 0 28px !important;
-}
-
-.word-estimator-result {
-    width: auto !important;
-    min-width: 0 !important;
-    height: 100% !important;
-    margin: 0 !important;
-    border-radius: 0 28px 28px 0 !important;
-}
-.word-estimator {
-    width: 100%;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 360px !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    margin: 0 auto !important;
-}
-
-.word-estimator-controls {
-    width: auto !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    border-radius: 20px 0 0 20px !important;
-}
-
-.word-estimator-result {
-    width: auto !important;
-    min-width: 0 !important;
-    height: 100% !important;
-    margin: 0 !important;
-    border-radius: 0 20px 20px 0 !important;
-}
-        /* CALCULADORA EN HORIZONTAL EN ORDENADOR */
-
-.word-estimator {
-    width: 100%;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 360px !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    margin: 0 auto !important;
-}
-
-.word-estimator-controls {
-    min-width: 0;
-    margin: 0 !important;
-    border-radius: 24px 0 0 24px !important;
-}
-
-.word-estimator-result {
-    width: auto !important;
-    min-width: 360px;
-    height: 100%;
-    margin: 0 !important;
-    border-radius: 0 24px 24px 0 !important;
-}
-@media (max-width: 850px) {
-    .word-estimator {
-        grid-template-columns: 1fr !important;
-    }
-
-    .word-estimator-controls {
-        border-radius: 24px 24px 0 0 !important;
-    }
-
-    .word-estimator-result {
-        border-radius: 0 0 24px 24px !important;
-    }
-}
-
-.word-count-scale {
-    width: 100%;
-    margin-top: 16px;
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    color: #667085;
-    font-size: 0.82rem;
-}
-
-.word-count-scale span {
-    position: static !important;
-    display: block;
-    transform: none !important;
-}
-
-.word-count-scale span:first-child {
+.pieces-scale span:first-child {
     text-align: left;
 }
 
-.word-count-scale span:nth-child(2),
-.word-count-scale span:nth-child(3) {
+.pieces-scale span:nth-child(2) {
     text-align: center;
 }
 
-.word-count-scale span:last-child {
+.pieces-scale span:last-child {
     text-align: right;
 }
 
-@media (max-width: 700px) {
-    .dynamic-service-panels {
-        margin: 40px auto !important;
+@media (max-width: 850px) {
+    .estimator-service-picker {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .estimator-service-buttons {
+        width: 100%;
+    }
+
+    .estimator-service-button {
+        flex: 1;
     }
 }
 </style>
@@ -4258,51 +4103,120 @@ header nav a {
 </section>
 
     </div>
-<section class="word-estimator" style="display: grid; grid-template-columns: minmax(0, 1fr) 360px; align-items: stretch; gap: 0; width: 100%; margin: 28px auto 0 !important;">
-    <div class="word-estimator-controls" style="min-width: 0; margin: 0; border-radius: 24px 0 0 24px;">
-        <div class="word-estimator-heading">
-            <div>
-                <span class="word-estimator-label">Quick estimate</span>
-                <h3>Choose your word count</h3>
+<section class="word-estimator"
+    style="display:grid; grid-template-columns:minmax(0, 1fr) 360px; align-items:stretch; gap:0; width:100%; margin:28px auto 0 !important;">
+
+    <div class="word-estimator-controls"
+        style="min-width:0; margin:0; border-radius:24px 0 0 24px;">
+
+        <div class="estimator-service-picker">
+
+            <span class="word-estimator-label">Choose a service</span>
+
+            <div class="estimator-service-buttons">
+
+                <button
+                    class="estimator-service-button"
+                    type="button"
+                    data-service="Translation"
+                    data-rate="0.05">
+                    Translation
+                </button>
+
+                <button
+                    class="estimator-service-button"
+                    type="button"
+                    data-service="Proofreading"
+                    data-rate="0.03">
+                    Proofreading
+                </button>
+
+                <button
+                    class="estimator-service-button is-active"
+                    type="button"
+                    data-service="Content Writing"
+                    data-rate="0.07">
+                    Content Writing
+                </button>
+
+            </div>
+        </div>
+
+        <div class="estimator-control-group">
+
+            <div class="word-estimator-heading">
+                <h3>Choose words per piece</h3>
+                <strong id="word-count-output">1,000 words</strong>
             </div>
 
-            <strong id="word-count-output">1,000 words</strong>
+            <input
+                id="word-count-slider"
+                class="word-count-slider"
+                type="range"
+                min="500"
+                max="5000"
+                step="100"
+                value="1000"
+                aria-label="Words per piece"
+            >
+
+            <div class="word-count-scale">
+                <span>500</span>
+                <span>2,000</span>
+                <span>3,500</span>
+                <span>5,000</span>
+            </div>
+
         </div>
 
-        <input
-            id="word-count-slider"
-            class="word-count-slider"
-            type="range"
-            min="500"
-            max="5000"
-            step="100"
-            value="1000"
-            aria-label="Project word count"
-        >
+        <div class="estimator-control-group">
 
-       <div class="word-count-scale">
-    <span>500</span>
-    <span>2,000</span>
-    <span>3,500</span>
-    <span>5,000</span>
-</div>
+            <div class="word-estimator-heading">
+                <h3>Choose number of pieces</h3>
+                <strong id="piece-count-output">1 piece</strong>
+            </div>
+
+            <input
+                id="piece-count-slider"
+                class="word-count-slider"
+                type="range"
+                min="1"
+                max="50"
+                step="1"
+                value="1"
+                aria-label="Number of pieces"
+            >
+
+            <div class="word-count-scale pieces-scale">
+                <span>1</span>
+                <span>25</span>
+                <span>50</span>
+            </div>
+
         </div>
 
-    <aside class="word-estimator-result" style="width: auto; min-width: 360px; margin: 0; border-radius: 0 24px 24px 0;">
+    </div>
+
+    <aside class="word-estimator-result"
+        style="width:auto; min-width:360px; margin:0; border-radius:0 24px 24px 0;">
+
         <span class="word-estimator-label">Estimated total</span>
+
         <h3 id="estimate-service-name">Content Writing</h3>
+
         <strong id="estimate-total">$70</strong>
-        <p id="estimate-rate-note">Based on $0.07 per word</p>
+
+        <p id="estimate-rate-note">
+            1,000 words × 1 piece at $0.07 per word
+        </p>
 
         <a class="word-estimator-button" href="#contact">
-            Tell me about your project
+            Order now
         </a>
-    </aside>
-</section>
 
-<p class="word-estimator-note">
-    Estimates are based on word count. The final quote may vary depending
-    on complexity, format, research, and turnaround time.
+    </aside>
+
+</section>
 </p>
 </div>
 
@@ -4577,11 +4491,15 @@ header nav a {
         </div>
     </footer>
 <script>
+    <script>
     const dynamicServiceTabs =
         document.querySelectorAll(".dynamic-service-tab");
 
     const dynamicServicePanels =
         document.querySelectorAll(".dynamic-service-panel");
+
+    const estimatorServiceButtons =
+        document.querySelectorAll(".estimator-service-button");
 
     const currencyButtons =
         document.querySelectorAll(".currency-button");
@@ -4598,6 +4516,12 @@ header nav a {
     const wordCountOutput =
         document.getElementById("word-count-output");
 
+    const pieceCountSlider =
+        document.getElementById("piece-count-slider");
+
+    const pieceCountOutput =
+        document.getElementById("piece-count-output");
+
     const estimateServiceName =
         document.getElementById("estimate-service-name");
 
@@ -4613,12 +4537,10 @@ header nav a {
             symbol: "$",
             factor: 1
         },
-
         EUR: {
             symbol: "€",
             factor: 0.92
         },
-
         GBP: {
             symbol: "£",
             factor: 0.79
@@ -4628,7 +4550,10 @@ header nav a {
 
     let activeRate = 0.07;
     let activeService = "Content Writing";
-    let activeCurrency = "USD";
+
+    let activeCurrency =
+        document.querySelector(".currency-button.is-active")
+            ?.dataset.currency || "USD";
 
 
     function formatPrice(amount, decimals) {
@@ -4641,10 +4566,17 @@ header nav a {
 
     function updateEstimate() {
         const words = Number(wordCountSlider.value);
-        const total = words * activeRate;
+        const pieces = Number(pieceCountSlider.value);
+        const total = words * pieces * activeRate;
+
+        const pieceText =
+            pieces === 1 ? "piece" : "pieces";
 
         wordCountOutput.textContent =
             words.toLocaleString("en-US") + " words";
+
+        pieceCountOutput.textContent =
+            pieces + " " + pieceText;
 
         estimateTotal.textContent =
             formatPrice(total, 0);
@@ -4653,7 +4585,14 @@ header nav a {
             activeService;
 
         estimateRateNote.textContent =
-            "Based on " + formatPrice(activeRate, 2) + " per word";
+            words.toLocaleString("en-US") +
+            " words × " +
+            pieces +
+            " " +
+            pieceText +
+            " at " +
+            formatPrice(activeRate, 2) +
+            " per word";
     }
 
 
@@ -4668,69 +4607,116 @@ header nav a {
     }
 
 
-    function updateServicePricing(tab) {
-        activeRate = Number(tab.dataset.rate);
-        activeService = tab.dataset.service;
+    function activateService(serviceName) {
+        const selectedTab =
+            Array.from(dynamicServiceTabs).find(
+                tab => tab.dataset.service === serviceName
+            );
+
+        const selectedEstimatorButton =
+            Array.from(estimatorServiceButtons).find(
+                button => button.dataset.service === serviceName
+            );
+
+        dynamicServiceTabs.forEach(tab => {
+            const selected =
+                tab.dataset.service === serviceName;
+
+            tab.classList.toggle("is-active", selected);
+            tab.setAttribute("aria-selected", String(selected));
+        });
+
+        dynamicServicePanels.forEach(panel => {
+            panel.classList.remove("is-active");
+        });
+
+        estimatorServiceButtons.forEach(button => {
+            button.classList.toggle(
+                "is-active",
+                button.dataset.service === serviceName
+            );
+        });
+
+        if (selectedTab) {
+            activeRate = Number(selectedTab.dataset.rate);
+            activeService = selectedTab.dataset.service;
+
+            const selectedPanel =
+                document.getElementById(selectedTab.dataset.panel);
+
+            if (selectedPanel) {
+                selectedPanel.classList.add("is-active");
+            }
+        } else if (selectedEstimatorButton) {
+            activeRate =
+                Number(selectedEstimatorButton.dataset.rate);
+
+            activeService =
+                selectedEstimatorButton.dataset.service;
+        }
 
         updateDisplayedPrices();
     }
 
 
-    dynamicServiceTabs.forEach((tab) => {
+    dynamicServiceTabs.forEach(tab => {
         tab.addEventListener("click", () => {
-
-            dynamicServiceTabs.forEach((otherTab) => {
-                otherTab.classList.remove("is-active");
-                otherTab.setAttribute("aria-selected", "false");
-            });
-
-            dynamicServicePanels.forEach((panel) => {
-                panel.classList.remove("is-active");
-            });
-
-            tab.classList.add("is-active");
-            tab.setAttribute("aria-selected", "true");
-
-            const selectedPanel =
-                document.getElementById(tab.dataset.panel);
-
-            if (selectedPanel) {
-                selectedPanel.classList.add("is-active");
-            }
-
-            updateServicePricing(tab);
+            activateService(tab.dataset.service);
         });
     });
 
 
-    currencyButtons.forEach((button) => {
+    estimatorServiceButtons.forEach(button => {
         button.addEventListener("click", () => {
+            activateService(button.dataset.service);
+        });
+    });
 
+
+    currencyButtons.forEach(button => {
+        button.addEventListener("click", () => {
             activeCurrency = button.dataset.currency;
 
-            currencyButtons.forEach((otherButton) => {
-                otherButton.classList.remove("is-active");
-                otherButton.setAttribute("aria-pressed", "false");
-            });
+            currencyButtons.forEach(otherButton => {
+                const selected =
+                    otherButton === button;
 
-            button.classList.add("is-active");
-            button.setAttribute("aria-pressed", "true");
+                otherButton.classList.toggle(
+                    "is-active",
+                    selected
+                );
+
+                otherButton.setAttribute(
+                    "aria-pressed",
+                    String(selected)
+                );
+            });
 
             updateDisplayedPrices();
         });
     });
 
 
-    wordCountSlider.addEventListener("input", updateEstimate);
+    wordCountSlider.addEventListener(
+        "input",
+        updateEstimate
+    );
+
+    pieceCountSlider.addEventListener(
+        "input",
+        updateEstimate
+    );
 
 
     const initiallyActiveTab =
-        document.querySelector(".dynamic-service-tab.is-active");
+        document.querySelector(
+            ".dynamic-service-tab.is-active"
+        );
 
-    if (initiallyActiveTab) {
-        updateServicePricing(initiallyActiveTab);
-    }
-</script>
+    activateService(
+        initiallyActiveTab?.dataset.service ||
+        "Content Writing"
+    );
 </script>
 </body>
 </html>
