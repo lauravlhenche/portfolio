@@ -3178,7 +3178,65 @@ header nav a {
     background: #d8deea;
 }
 
+/* PRECIO Y SELECTOR DE DIVISA */
 
+.pricing-tools {
+    width: 100%;
+    margin: 0 auto 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pricing-tools .service-rate-summary {
+    margin: 0;
+}
+
+.currency-switcher {
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: #ffffff;
+    border: 1px solid #dce3f0;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.currency-button {
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    color: #101828;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.currency-button:hover {
+    transform: translateY(-1px);
+}
+
+.currency-button.is-active {
+    color: #ffffff;
+    background: #2864ff;
+}
+
+@media (max-width: 700px) {
+    .pricing-tools {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 /* CALCULADOR */
 
 .word-estimator {
@@ -3614,20 +3672,44 @@ header nav a {
 </button>
 
     </div>
-<div class="service-rate-summary" aria-live="polite">
-    <span class="service-rate-label">Standard rate</span>
+<div class="pricing-tools">
 
-    <div class="service-rate-value">
-        <strong id="rate-per-word">$0.07</strong>
-        <span>per word</span>
+    <div class="service-rate-summary" aria-live="polite">
+        <span class="service-rate-label">Standard rate</span>
+
+        <div class="service-rate-value">
+            <strong id="rate-per-word">$0.07</strong>
+            <span>per word</span>
+        </div>
+
+        <span class="service-rate-divider"></span>
+
+        <div class="service-rate-value">
+            <strong id="rate-per-thousand">$70</strong>
+            <span>per 1,000 words</span>
+        </div>
     </div>
 
-    <span class="service-rate-divider"></span>
+    <div class="currency-switcher" aria-label="Choose currency">
+        <button
+            class="currency-button"
+            type="button"
+            data-currency="EUR"
+            aria-pressed="false">€</button>
 
-    <div class="service-rate-value">
-        <strong id="rate-per-thousand">$70</strong>
-        <span>per 1,000 words</span>
+        <button
+            class="currency-button is-active"
+            type="button"
+            data-currency="USD"
+            aria-pressed="true">$</button>
+
+        <button
+            class="currency-button"
+            type="button"
+            data-currency="GBP"
+            aria-pressed="false">£</button>
     </div>
+
 </div>
     <!-- CONTENIDO QUE CAMBIA -->
 
@@ -4293,6 +4375,9 @@ header nav a {
     const dynamicServicePanels =
         document.querySelectorAll(".dynamic-service-panel");
 
+    const currencyButtons =
+        document.querySelectorAll(".currency-button");
+
     const ratePerWord =
         document.getElementById("rate-per-word");
 
@@ -4314,8 +4399,36 @@ header nav a {
     const estimateRateNote =
         document.getElementById("estimate-rate-note");
 
+
+    const currencies = {
+        USD: {
+            symbol: "$",
+            factor: 1
+        },
+
+        EUR: {
+            symbol: "€",
+            factor: 0.92
+        },
+
+        GBP: {
+            symbol: "£",
+            factor: 0.79
+        }
+    };
+
+
     let activeRate = 0.07;
     let activeService = "Content Writing";
+    let activeCurrency = "USD";
+
+
+    function formatPrice(amount, decimals) {
+        const currency = currencies[activeCurrency];
+        const convertedAmount = amount * currency.factor;
+
+        return currency.symbol + convertedAmount.toFixed(decimals);
+    }
 
 
     function updateEstimate() {
@@ -4326,13 +4439,24 @@ header nav a {
             words.toLocaleString("en-US") + " words";
 
         estimateTotal.textContent =
-            "$" + total.toFixed(0);
+            formatPrice(total, 0);
 
         estimateServiceName.textContent =
             activeService;
 
         estimateRateNote.textContent =
-            "Based on $" + activeRate.toFixed(2) + " per word";
+            "Based on " + formatPrice(activeRate, 2) + " per word";
+    }
+
+
+    function updateDisplayedPrices() {
+        ratePerWord.textContent =
+            formatPrice(activeRate, 2);
+
+        ratePerThousand.textContent =
+            formatPrice(activeRate * 1000, 0);
+
+        updateEstimate();
     }
 
 
@@ -4340,13 +4464,7 @@ header nav a {
         activeRate = Number(tab.dataset.rate);
         activeService = tab.dataset.service;
 
-        ratePerWord.textContent =
-            "$" + activeRate.toFixed(2);
-
-        ratePerThousand.textContent =
-            "$" + (activeRate * 1000).toFixed(0);
-
-        updateEstimate();
+        updateDisplayedPrices();
     }
 
 
@@ -4377,6 +4495,24 @@ header nav a {
     });
 
 
+    currencyButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+
+            activeCurrency = button.dataset.currency;
+
+            currencyButtons.forEach((otherButton) => {
+                otherButton.classList.remove("is-active");
+                otherButton.setAttribute("aria-pressed", "false");
+            });
+
+            button.classList.add("is-active");
+            button.setAttribute("aria-pressed", "true");
+
+            updateDisplayedPrices();
+        });
+    });
+
+
     wordCountSlider.addEventListener("input", updateEstimate);
 
 
@@ -4386,6 +4522,7 @@ header nav a {
     if (initiallyActiveTab) {
         updateServicePricing(initiallyActiveTab);
     }
+</script>
 </script>
 </body>
 </html>
