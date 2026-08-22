@@ -3211,6 +3211,105 @@ header nav a {
         font-size: 0.7rem;
     }
 }
+        /* BANDA DE ESPECIALIZACIÓN IGAMING */
+
+.igaming-band {
+    position: relative;
+    left: 50%;
+    width: min(1040px, calc(100vw - 44px));
+    margin: 2px 0 42px;
+    padding: 17px 24px 20px;
+    transform: translateX(-50%);
+    color: #237a49;
+    background: linear-gradient(90deg, #f6fcf8, #eef9f2);
+    border: 1px solid #d4ebdc;
+    border-radius: 22px;
+    box-shadow: 0 12px 34px rgba(39, 139, 85, 0.07);
+}
+
+.igaming-band-title {
+    display: block;
+    margin-bottom: 14px;
+    color: #278b55;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.igaming-band-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.igaming-band-item {
+    min-height: 44px;
+    padding: 3px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.igaming-band-item + .igaming-band-item {
+    border-left: 1px solid #cfe5d7;
+}
+
+.igaming-band-item strong {
+    color: #237a49;
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.igaming-band-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #278b55;
+    background: #dff4e7;
+    border-radius: 50%;
+    font-size: 0.63rem;
+    font-weight: 800;
+}
+
+@media (max-width: 700px) {
+    .igaming-band {
+        width: calc(100vw - 28px);
+        margin-bottom: 34px;
+        padding: 16px;
+    }
+
+    .igaming-band-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .igaming-band-item {
+        padding: 10px 8px;
+        justify-content: flex-start;
+    }
+
+    .igaming-band-item + .igaming-band-item {
+        border-left: 0;
+    }
+
+    .igaming-band-item:nth-child(even) {
+        border-left: 1px solid #cfe5d7;
+    }
+
+    .igaming-band-item:nth-child(n + 3) {
+        border-top: 1px solid #cfe5d7;
+    }
+
+    .igaming-band-item strong {
+        font-size: 0.74rem;
+        white-space: normal;
+    }
+}
 /* PRECIO DE LA CATEGORÍA ACTIVA */
 
 .service-rate-summary {
@@ -3712,19 +3811,36 @@ header nav a {
     </h2>
 
     <!-- ETIQUETAS SUPERIORES -->
-<div class="industry-context">
-    <span>Spanish iGaming content for</span>
-    
-    <p>
-    <span>Casinos</span>
-    <i>·</i>
-    <span>Sportsbooks</span>
-    <i>·</i>
-    <span>Affiliates</span>
-    <i>·</i>
-    <span>iGaming agencies</span>
-</p>
-    
+<div class="igaming-band">
+
+    <span class="igaming-band-title">
+        Spanish iGaming content for
+    </span>
+
+    <div class="igaming-band-grid">
+
+        <div class="igaming-band-item">
+            <span class="igaming-band-icon">777</span>
+            <strong>Casinos</strong>
+        </div>
+
+        <div class="igaming-band-item">
+            <span class="igaming-band-icon">1X2</span>
+            <strong>Sportsbooks</strong>
+        </div>
+
+        <div class="igaming-band-item">
+            <span class="igaming-band-icon">↗</span>
+            <strong>Affiliates</strong>
+        </div>
+
+        <div class="igaming-band-item">
+            <span class="igaming-band-icon">✦</span>
+            <strong>iGaming agencies</strong>
+        </div>
+
+    </div>
+
 </div>
     <div class="dynamic-service-tabs"
          role="tablist"
