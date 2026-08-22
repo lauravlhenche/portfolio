@@ -3535,6 +3535,300 @@ header nav a {
         flex: 1;
     }
 }
+        /* NUEVA CALCULADORA */
+
+.pricing-calculator {
+    width: min(1320px, calc(100% - 48px));
+    margin: 34px auto 0;
+    padding: 38px 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: center;
+    gap: 64px;
+    background: #ffffff;
+}
+
+.pricing-calculator-controls {
+    padding: 34px 38px;
+    background: #faf6f0;
+    border-radius: 18px;
+}
+
+.pricing-service-picker {
+    margin-bottom: 38px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.pricing-small-label {
+    flex-shrink: 0;
+    color: #667085;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.pricing-service-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pricing-service-button {
+    min-height: 48px;
+    padding: 11px 21px;
+    border: 1px solid #101828;
+    border-radius: 999px;
+    color: #101828;
+    background: #ffffff;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pricing-service-button:hover {
+    color: #2864ff;
+    border-color: #2864ff;
+}
+
+.pricing-service-button.is-active {
+    color: #ffffff;
+    border-color: #2864ff;
+    background: #2864ff;
+}
+
+.pricing-control-heading {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.pricing-control-heading h3 {
+    margin: 0;
+    color: #101828;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.pricing-control-heading strong {
+    flex-shrink: 0;
+    color: #101828;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pricing-range {
+    --range-progress: 11.11%;
+
+    width: 100%;
+    height: 10px;
+    margin: 0;
+    display: block;
+    appearance: none;
+    border: 0;
+    border-radius: 999px;
+    outline: none;
+    background:
+        linear-gradient(
+            to right,
+            #2864ff 0%,
+            #2864ff var(--range-progress),
+            #d6d7da var(--range-progress),
+            #d6d7da 100%
+        );
+    cursor: pointer;
+}
+
+.pricing-range::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+    appearance: none;
+    border: 0;
+    border-radius: 50%;
+    background: #2864ff;
+    box-shadow: 0 2px 8px rgba(40, 100, 255, 0.22);
+}
+
+.pricing-range::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 50%;
+    background: #2864ff;
+    box-shadow: 0 2px 8px rgba(40, 100, 255, 0.22);
+}
+
+.pricing-scale {
+    margin-top: 15px;
+    display: grid;
+    color: #667085;
+    font-size: 0.74rem;
+}
+
+.pricing-scale-four {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pricing-scale-three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing-scale span {
+    text-align: center;
+}
+
+.pricing-scale span:first-child {
+    text-align: left;
+}
+
+.pricing-scale span:last-child {
+    text-align: right;
+}
+
+.pricing-control-divider {
+    height: 1px;
+    margin: 34px 0;
+    background: #dfe3ea;
+}
+
+
+/* TARJETA DEL PRECIO */
+
+.pricing-result-card {
+    width: 100%;
+    padding: 34px 26px;
+    text-align: center;
+    border: 1px solid #e1e4e9;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 15px 38px rgba(16, 24, 40, 0.08);
+}
+
+.pricing-result-card h3 {
+    max-width: 220px;
+    margin: 0 auto 18px;
+    color: #101828;
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.pricing-result-card > strong {
+    display: block;
+    margin-bottom: 24px;
+    color: #2864ff;
+    font-size: 2.75rem;
+    line-height: 1;
+}
+
+.pricing-result-card ul {
+    margin: 0 0 28px;
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    text-align: left;
+    list-style: none;
+    border-radius: 16px;
+    background: #f7f7f8;
+}
+
+.pricing-result-card li {
+    position: relative;
+    padding-left: 27px;
+    color: #344054;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.pricing-result-card li::before {
+    content: "✓";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    color: #16a34a;
+    border: 1.5px solid #22c55e;
+    border-radius: 50%;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.pricing-order-button {
+    min-height: 50px;
+    padding: 13px 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 999px;
+    background: #2864ff;
+    box-shadow: 0 10px 23px rgba(40, 100, 255, 0.24);
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.pricing-order-button:hover {
+    color: #ffffff;
+    background: #174ee0;
+    transform: translateY(-2px);
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 900px) {
+    .pricing-calculator {
+        width: min(100% - 32px, 680px);
+        padding: 28px 0;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .pricing-calculator-controls {
+        padding: 28px 22px;
+    }
+
+    .pricing-service-picker {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pricing-result-card {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .pricing-service-buttons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-service-button {
+        width: 100%;
+    }
+
+    .pricing-control-heading {
+        align-items: flex-start;
+    }
+}
 </style>
     
 </head>
@@ -4103,55 +4397,60 @@ header nav a {
 </section>
 
     </div>
-<section class="word-estimator"
-    style="display:grid; grid-template-columns:minmax(0, 1fr) 360px; align-items:stretch; gap:0; width:100%; margin:28px auto 0 !important;">
 
-    <div class="word-estimator-controls"
-        style="min-width:0; margin:0; border-radius:24px 0 0 24px;">
+<section class="pricing-calculator">
 
-        <div class="estimator-service-picker">
+    <div class="pricing-calculator-controls">
 
-            <span class="word-estimator-label">Choose a service</span>
+        <div class="pricing-service-picker">
 
-            <div class="estimator-service-buttons">
+            <span class="pricing-small-label">
+                Choose a service
+            </span>
+
+            <div class="pricing-service-buttons">
 
                 <button
-                    class="estimator-service-button"
+                    class="pricing-service-button"
                     type="button"
-                    data-service="Translation"
-                    data-rate="0.05">
+                    data-service="Translation">
                     Translation
                 </button>
 
                 <button
-                    class="estimator-service-button"
+                    class="pricing-service-button"
                     type="button"
-                    data-service="Proofreading"
-                    data-rate="0.03">
+                    data-service="Proofreading">
                     Proofreading
                 </button>
 
                 <button
-                    class="estimator-service-button is-active"
+                    class="pricing-service-button is-active"
                     type="button"
-                    data-service="Content Writing"
-                    data-rate="0.07">
+                    data-service="Content Writing">
                     Content Writing
                 </button>
 
             </div>
+
         </div>
 
-        <div class="estimator-control-group">
 
-            <div class="word-estimator-heading">
-                <h3>Choose words per piece</h3>
-                <strong id="word-count-output">1,000 words</strong>
+        <div class="pricing-control-group">
+
+            <div class="pricing-control-heading">
+
+                <h3>Choose Word Count</h3>
+
+                <strong id="word-count-output">
+                    1,000 Words
+                </strong>
+
             </div>
 
             <input
                 id="word-count-slider"
-                class="word-count-slider"
+                class="pricing-range"
                 type="range"
                 min="500"
                 max="5000"
@@ -4160,7 +4459,7 @@ header nav a {
                 aria-label="Words per piece"
             >
 
-            <div class="word-count-scale">
+            <div class="pricing-scale pricing-scale-four">
                 <span>500</span>
                 <span>2,000</span>
                 <span>3,500</span>
@@ -4169,16 +4468,25 @@ header nav a {
 
         </div>
 
-        <div class="estimator-control-group">
 
-            <div class="word-estimator-heading">
-                <h3>Choose number of pieces</h3>
-                <strong id="piece-count-output">1 piece</strong>
+        <div class="pricing-control-divider"></div>
+
+
+        <div class="pricing-control-group">
+
+            <div class="pricing-control-heading">
+
+                <h3>Choose Number of Pieces</h3>
+
+                <strong id="piece-count-output">
+                    1 Piece
+                </strong>
+
             </div>
 
             <input
                 id="piece-count-slider"
-                class="word-count-slider"
+                class="pricing-range"
                 type="range"
                 min="1"
                 max="50"
@@ -4187,7 +4495,7 @@ header nav a {
                 aria-label="Number of pieces"
             >
 
-            <div class="word-count-scale pieces-scale">
+            <div class="pricing-scale pricing-scale-three">
                 <span>1</span>
                 <span>25</span>
                 <span>50</span>
@@ -4197,26 +4505,31 @@ header nav a {
 
     </div>
 
-    <aside class="word-estimator-result"
-        style="width:auto; min-width:360px; margin:0; border-radius:0 24px 24px 0;">
 
-        <span class="word-estimator-label">Estimated total</span>
+    <aside class="pricing-result-card">
 
-        <h3 id="estimate-service-name">Content Writing</h3>
+        <h3 id="calculator-service-name">
+            Content Writing
+        </h3>
 
-        <strong id="estimate-total">$70</strong>
+        <strong id="calculator-total">
+            $70
+        </strong>
 
-        <p id="estimate-rate-note">
-            1,000 words × 1 piece at $0.07 per word
-        </p>
+        <ul id="calculator-benefits">
+            <li>Human-written Spanish content</li>
+            <li>Search-intent and keyword focus</li>
+            <li>Clear structure and internal linking</li>
+        </ul>
 
-        <a class="word-estimator-button" href="#contact">
-            Order now
+        <a class="pricing-order-button" href="#contact">
+            Order Now
         </a>
 
     </aside>
 
 </section>
+
 </p>
 </div>
 
@@ -4491,15 +4804,14 @@ header nav a {
         </div>
     </footer>
 <script>
-    <script>
     const dynamicServiceTabs =
         document.querySelectorAll(".dynamic-service-tab");
 
     const dynamicServicePanels =
         document.querySelectorAll(".dynamic-service-panel");
 
-    const estimatorServiceButtons =
-        document.querySelectorAll(".estimator-service-button");
+    const calculatorServiceButtons =
+        document.querySelectorAll(".pricing-service-button");
 
     const currencyButtons =
         document.querySelectorAll(".currency-button");
@@ -4522,14 +4834,14 @@ header nav a {
     const pieceCountOutput =
         document.getElementById("piece-count-output");
 
-    const estimateServiceName =
-        document.getElementById("estimate-service-name");
+    const calculatorServiceName =
+        document.getElementById("calculator-service-name");
 
-    const estimateTotal =
-        document.getElementById("estimate-total");
+    const calculatorTotal =
+        document.getElementById("calculator-total");
 
-    const estimateRateNote =
-        document.getElementById("estimate-rate-note");
+    const calculatorBenefits =
+        document.getElementById("calculator-benefits");
 
 
     const currencies = {
@@ -4537,10 +4849,12 @@ header nav a {
             symbol: "$",
             factor: 1
         },
+
         EUR: {
             symbol: "€",
             factor: 0.92
         },
+
         GBP: {
             symbol: "£",
             factor: 0.79
@@ -4548,8 +4862,38 @@ header nav a {
     };
 
 
-    let activeRate = 0.07;
+    const serviceInformation = {
+        "Translation": {
+            rate: 0.05,
+            benefits: [
+                "English-to-Spanish specialist",
+                "iGaming terminology checks",
+                "Final language quality review"
+            ]
+        },
+
+        "Proofreading": {
+            rate: 0.03,
+            benefits: [
+                "Grammar, spelling and punctuation",
+                "Natural Spanish tone and readability",
+                "Terminology and consistency checks"
+            ]
+        },
+
+        "Content Writing": {
+            rate: 0.07,
+            benefits: [
+                "Human-written Spanish content",
+                "Search-intent and keyword focus",
+                "Clear structure and internal linking"
+            ]
+        }
+    };
+
+
     let activeService = "Content Writing";
+    let activeRate = 0.07;
 
     let activeCurrency =
         document.querySelector(".currency-button.is-active")
@@ -4560,115 +4904,125 @@ header nav a {
         const currency = currencies[activeCurrency];
         const convertedAmount = amount * currency.factor;
 
-        return currency.symbol + convertedAmount.toFixed(decimals);
+        return currency.symbol +
+            convertedAmount.toFixed(decimals);
     }
 
 
-    function updateEstimate() {
+    function updateRangeBackground(slider) {
+        const minimum = Number(slider.min);
+        const maximum = Number(slider.max);
+        const value = Number(slider.value);
+
+        const progress =
+            ((value - minimum) / (maximum - minimum)) * 100;
+
+        slider.style.setProperty(
+            "--range-progress",
+            progress + "%"
+        );
+    }
+
+
+    function updateCalculator() {
         const words = Number(wordCountSlider.value);
         const pieces = Number(pieceCountSlider.value);
         const total = words * pieces * activeRate;
 
-        const pieceText =
-            pieces === 1 ? "piece" : "pieces";
-
         wordCountOutput.textContent =
-            words.toLocaleString("en-US") + " words";
+            words.toLocaleString("en-US") + " Words";
 
         pieceCountOutput.textContent =
-            pieces + " " + pieceText;
+            pieces +
+            (pieces === 1 ? " Piece" : " Pieces");
 
-        estimateTotal.textContent =
-            formatPrice(total, 0);
-
-        estimateServiceName.textContent =
+        calculatorServiceName.textContent =
             activeService;
 
-        estimateRateNote.textContent =
-            words.toLocaleString("en-US") +
-            " words × " +
-            pieces +
-            " " +
-            pieceText +
-            " at " +
-            formatPrice(activeRate, 2) +
-            " per word";
-    }
+        calculatorTotal.textContent =
+            formatPrice(total, 0);
 
+        calculatorBenefits.innerHTML =
+            serviceInformation[activeService].benefits
+                .map(benefit => `<li>${benefit}</li>`)
+                .join("");
 
-    function updateDisplayedPrices() {
-        ratePerWord.textContent =
-            formatPrice(activeRate, 2);
+        if (ratePerWord) {
+            ratePerWord.textContent =
+                formatPrice(activeRate, 2);
+        }
 
-        ratePerThousand.textContent =
-            formatPrice(activeRate * 1000, 0);
+        if (ratePerThousand) {
+            ratePerThousand.textContent =
+                formatPrice(activeRate * 1000, 0);
+        }
 
-        updateEstimate();
+        updateRangeBackground(wordCountSlider);
+        updateRangeBackground(pieceCountSlider);
     }
 
 
     function activateService(serviceName) {
-        const selectedTab =
-            Array.from(dynamicServiceTabs).find(
-                tab => tab.dataset.service === serviceName
-            );
+        activeService = serviceName;
+        activeRate =
+            serviceInformation[serviceName].rate;
 
-        const selectedEstimatorButton =
-            Array.from(estimatorServiceButtons).find(
-                button => button.dataset.service === serviceName
-            );
-
-        dynamicServiceTabs.forEach(tab => {
-            const selected =
-                tab.dataset.service === serviceName;
-
-            tab.classList.toggle("is-active", selected);
-            tab.setAttribute("aria-selected", String(selected));
-        });
-
-        dynamicServicePanels.forEach(panel => {
-            panel.classList.remove("is-active");
-        });
-
-        estimatorServiceButtons.forEach(button => {
+        calculatorServiceButtons.forEach(button => {
             button.classList.toggle(
                 "is-active",
                 button.dataset.service === serviceName
             );
         });
 
-        if (selectedTab) {
-            activeRate = Number(selectedTab.dataset.rate);
-            activeService = selectedTab.dataset.service;
+        dynamicServiceTabs.forEach(tab => {
+            const selected =
+                tab.dataset.service === serviceName;
 
+            tab.classList.toggle(
+                "is-active",
+                selected
+            );
+
+            tab.setAttribute(
+                "aria-selected",
+                String(selected)
+            );
+        });
+
+        dynamicServicePanels.forEach(panel => {
+            panel.classList.remove("is-active");
+        });
+
+        const selectedTab =
+            Array.from(dynamicServiceTabs).find(
+                tab => tab.dataset.service === serviceName
+            );
+
+        if (selectedTab) {
             const selectedPanel =
-                document.getElementById(selectedTab.dataset.panel);
+                document.getElementById(
+                    selectedTab.dataset.panel
+                );
 
             if (selectedPanel) {
                 selectedPanel.classList.add("is-active");
             }
-        } else if (selectedEstimatorButton) {
-            activeRate =
-                Number(selectedEstimatorButton.dataset.rate);
-
-            activeService =
-                selectedEstimatorButton.dataset.service;
         }
 
-        updateDisplayedPrices();
+        updateCalculator();
     }
+
+
+    calculatorServiceButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            activateService(button.dataset.service);
+        });
+    });
 
 
     dynamicServiceTabs.forEach(tab => {
         tab.addEventListener("click", () => {
             activateService(tab.dataset.service);
-        });
-    });
-
-
-    estimatorServiceButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            activateService(button.dataset.service);
         });
     });
 
@@ -4692,31 +5046,28 @@ header nav a {
                 );
             });
 
-            updateDisplayedPrices();
+            updateCalculator();
         });
     });
 
 
     wordCountSlider.addEventListener(
         "input",
-        updateEstimate
+        updateCalculator
     );
 
     pieceCountSlider.addEventListener(
         "input",
-        updateEstimate
+        updateCalculator
     );
 
 
-    const initiallyActiveTab =
+    const initialService =
         document.querySelector(
             ".dynamic-service-tab.is-active"
-        );
+        )?.dataset.service || "Content Writing";
 
-    activateService(
-        initiallyActiveTab?.dataset.service ||
-        "Content Writing"
-    );
+    activateService(initialService);
 </script>
 </body>
 </html>
