@@ -4019,6 +4019,125 @@ header nav a {
         padding: 45px 0 90px !important;
     }
 }
+        /* SELECTED WORK: CATEGORÍAS MÁS DEFINIDAS */
+
+.work-columns {
+    gap: 22px !important;
+    align-items: stretch !important;
+}
+
+/* Marco general de cada categoría */
+.work-group {
+    position: relative;
+    padding: 55px 16px 16px;
+    gap: 16px !important;
+    border: 1px solid;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(16, 24, 40, 0.05);
+    overflow: visible;
+}
+
+/* SEO */
+.work-group-seo {
+    border-color: #cfdcff;
+    background: #f6f8ff;
+}
+
+/* Proofreading */
+.work-group-proofreading {
+    border-color: #ded5fa;
+    background: #faf8ff;
+}
+
+/* Translation */
+.work-group-translation {
+    border-color: #cee8d8;
+    background: #f5faf7;
+}
+
+/* Etiqueta adherida al lateral */
+.work-category {
+    position: absolute;
+    top: 24px;
+    left: -1px;
+    z-index: 2;
+    transform: translateY(-50%);
+
+    margin: 0 !important;
+    padding: 9px 17px 9px 20px !important;
+
+    border: 1px solid;
+    border-left: 0;
+    border-radius: 0 999px 999px 0;
+
+    box-shadow: 0 5px 14px rgba(16, 24, 40, 0.07);
+}
+
+/* Colores de las etiquetas laterales */
+.work-group-seo .work-category {
+    color: #245fe5;
+    border-color: #c7d6ff;
+    background: #e8efff;
+}
+
+.work-group-proofreading .work-category {
+    color: #6f52d5;
+    border-color: #d9cffb;
+    background: #eee9ff;
+}
+
+.work-group-translation .work-category {
+    color: #187a48;
+    border-color: #c7e6d3;
+    background: #e2f4e9;
+}
+
+/* Cajas interiores más corporativas */
+.work-card {
+    position: relative;
+    min-height: 330px;
+    padding: 30px 26px;
+
+    border-color: rgba(152, 162, 179, 0.28);
+    border-radius: 16px;
+    background: #ffffff;
+
+    box-shadow: 0 7px 22px rgba(16, 24, 40, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(40, 100, 255, 0.28);
+    box-shadow: 0 13px 30px rgba(16, 24, 40, 0.08);
+}
+
+/* Adaptación para tablet y móvil */
+@media (max-width: 1000px) {
+    .work-group {
+        padding: 55px 16px 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    .work-columns {
+        gap: 38px !important;
+    }
+
+    .work-group {
+        padding: 52px 13px 13px;
+        border-radius: 20px;
+    }
+
+    .work-card {
+        min-height: 0;
+        padding: 26px 22px;
+    }
+}
 </style>
 </head>
 <body>
