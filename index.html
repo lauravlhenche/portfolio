@@ -4019,123 +4019,167 @@ header nav a {
         padding: 45px 0 90px !important;
     }
 }
-        /* SELECTED WORK: CATEGORÍAS MÁS DEFINIDAS */
+/* SELECTED WORK CAROUSEL */
 
 .work-columns {
-    gap: 22px !important;
-    align-items: stretch !important;
-}
-
-/* Marco general de cada categoría */
-.work-group {
     position: relative;
-    padding: 55px 16px 16px;
-    gap: 16px !important;
-    border: 1px solid;
-    border-radius: 24px;
-    box-shadow: 0 12px 35px rgba(16, 24, 40, 0.05);
-    overflow: visible;
+    display: block !important;
+    overflow: hidden;
 }
 
-/* SEO */
-.work-group-seo {
-    border-color: #cfdcff;
-    background: #f6f8ff;
+/* Oculta la estructura antigua hasta que se construya el carrusel */
+.work-columns > .work-group {
+    display: none;
 }
 
-/* Proofreading */
-.work-group-proofreading {
-    border-color: #ded5fa;
-    background: #faf8ff;
+.work-carousel-track {
+    display: flex;
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
 }
 
-/* Translation */
-.work-group-translation {
-    border-color: #cee8d8;
-    background: #f5faf7;
+.work-carousel-slide {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 12px 4px 22px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
-/* Etiqueta adherida al lateral */
-.work-category {
+/* Cajas */
+.work-carousel-slide .work-card {
+    position: relative;
+    min-height: 355px;
+    padding: 60px 28px 28px;
+
+    border: 1px solid #dce3ee;
+    border-radius: 18px;
+    background: #ffffff;
+
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+}
+
+/* Etiqueta pegada al lateral */
+.work-card-tab {
     position: absolute;
-    top: 24px;
+    top: 26px;
     left: -1px;
-    z-index: 2;
-    transform: translateY(-50%);
 
-    margin: 0 !important;
-    padding: 9px 17px 9px 20px !important;
-
+    padding: 8px 16px 8px 18px;
     border: 1px solid;
     border-left: 0;
     border-radius: 0 999px 999px 0;
 
-    box-shadow: 0 5px 14px rgba(16, 24, 40, 0.07);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
 }
 
-/* Colores de las etiquetas laterales */
-.work-group-seo .work-category {
-    color: #245fe5;
-    border-color: #c7d6ff;
-    background: #e8efff;
+/* SEO */
+.work-card-seo {
+    border-top: 3px solid #87a9ff !important;
 }
 
-.work-group-proofreading .work-category {
-    color: #6f52d5;
+.work-card-seo .work-card-tab {
+    color: #2864ff;
+    border-color: #cbd8ff;
+    background: #eaf0ff;
+}
+
+/* Proofreading */
+.work-card-proofreading {
+    border-top: 3px solid #b5a0f4 !important;
+}
+
+.work-card-proofreading .work-card-tab {
+    color: #7556d9;
     border-color: #d9cffb;
     background: #eee9ff;
 }
 
-.work-group-translation .work-category {
-    color: #187a48;
-    border-color: #c7e6d3;
-    background: #e2f4e9;
+/* Translation */
+.work-card-translation {
+    border-top: 3px solid #82cba0 !important;
 }
 
-/* Cajas interiores más corporativas */
-.work-card {
-    position: relative;
-    min-height: 330px;
-    padding: 30px 26px;
+.work-card-translation .work-card-tab {
+    color: #16814a;
+    border-color: #c7e6d3;
+    background: #e4f6eb;
+}
 
-    border-color: rgba(152, 162, 179, 0.28);
-    border-radius: 16px;
+/* Controles inferiores */
+.work-carousel-controls {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.work-carousel-arrow {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #d5dce8;
+    border-radius: 50%;
+    color: #101828;
     background: #ffffff;
 
-    box-shadow: 0 7px 22px rgba(16, 24, 40, 0.045);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.work-carousel-arrow:hover {
+    color: #ffffff;
+    border-color: #2864ff;
+    background: #2864ff;
+}
+
+.work-carousel-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.work-carousel-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 999px;
+    background: #cbd3df;
+    cursor: pointer;
 
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
+        width 0.25s ease,
+        background 0.25s ease;
 }
 
-.work-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(40, 100, 255, 0.28);
-    box-shadow: 0 13px 30px rgba(16, 24, 40, 0.08);
+.work-carousel-dot.is-active {
+    width: 25px;
+    background: #2864ff;
 }
 
-/* Adaptación para tablet y móvil */
-@media (max-width: 1000px) {
-    .work-group {
-        padding: 55px 16px 16px;
-    }
-}
-
-@media (max-width: 650px) {
-    .work-columns {
-        gap: 38px !important;
+@media (max-width: 900px) {
+    .work-carousel-slide {
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
-    .work-group {
-        padding: 52px 13px 13px;
-        border-radius: 20px;
-    }
-
-    .work-card {
+    .work-carousel-slide .work-card {
         min-height: 0;
-        padding: 26px 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-carousel-track {
+        transition: none;
     }
 }
 </style>
@@ -5564,6 +5608,189 @@ header nav a {
         )?.dataset.service || "Content Writing";
 
     activateService(initialService);
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const viewport = document.querySelector(".work-columns");
+
+    if (!viewport || viewport.dataset.carouselReady === "true") {
+        return;
+    }
+
+    viewport.dataset.carouselReady = "true";
+    viewport.setAttribute("aria-label", "Selected iGaming projects");
+
+    /*
+       El orden determina cómo aparecerán:
+       Translation → SEO Writing → Proofreading
+    */
+    const categories = [
+        {
+            selector: ".work-group-translation",
+            label: "TRANSLATION",
+            cardClass: "work-card-translation"
+        },
+        {
+            selector: ".work-group-seo",
+            label: "SEO WRITING",
+            cardClass: "work-card-seo"
+        },
+        {
+            selector: ".work-group-proofreading",
+            label: "PROOFREADING",
+            cardClass: "work-card-proofreading"
+        }
+    ];
+
+    const projectGroups = categories.map(function (category) {
+        return {
+            label: category.label,
+            cardClass: category.cardClass,
+            cards: Array.from(
+                viewport.querySelectorAll(
+                    category.selector + " .work-card"
+                )
+            )
+        };
+    });
+
+    const numberOfSlides = Math.max(
+        ...projectGroups.map(function (group) {
+            return group.cards.length;
+        })
+    );
+
+    const track = document.createElement("div");
+    track.className = "work-carousel-track";
+
+    for (let position = 0; position < numberOfSlides; position++) {
+        const slide = document.createElement("div");
+        slide.className = "work-carousel-slide";
+
+        projectGroups.forEach(function (group) {
+            const card = group.cards[position];
+
+            if (!card) {
+                return;
+            }
+
+            card.classList.add(group.cardClass);
+
+            const tab = document.createElement("span");
+            tab.className = "work-card-tab";
+            tab.textContent = group.label;
+
+            card.prepend(tab);
+            slide.appendChild(card);
+        });
+
+        track.appendChild(slide);
+    }
+
+    viewport.replaceChildren(track);
+
+    const controls = document.createElement("div");
+    controls.className = "work-carousel-controls";
+
+    const previousButton = document.createElement("button");
+    previousButton.className = "work-carousel-arrow";
+    previousButton.type = "button";
+    previousButton.setAttribute("aria-label", "Previous projects");
+    previousButton.textContent = "←";
+
+    const nextButton = document.createElement("button");
+    nextButton.className = "work-carousel-arrow";
+    nextButton.type = "button";
+    nextButton.setAttribute("aria-label", "Next projects");
+    nextButton.textContent = "→";
+
+    const dotsContainer = document.createElement("div");
+    dotsContainer.className = "work-carousel-dots";
+
+    const dots = [];
+
+    for (let index = 0; index < numberOfSlides; index++) {
+        const dot = document.createElement("button");
+        dot.className = "work-carousel-dot";
+        dot.type = "button";
+        dot.setAttribute(
+            "aria-label",
+            "Show project group " + (index + 1)
+        );
+
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+    }
+
+    controls.appendChild(previousButton);
+    controls.appendChild(dotsContainer);
+    controls.appendChild(nextButton);
+
+    viewport.insertAdjacentElement("afterend", controls);
+
+    let currentSlide = 0;
+    let automaticRotation;
+
+    function showSlide(index) {
+        currentSlide =
+            (index + numberOfSlides) % numberOfSlides;
+
+        track.style.transform =
+            "translateX(-" + currentSlide * 100 + "%)";
+
+        dots.forEach(function (dot, dotIndex) {
+            dot.classList.toggle(
+                "is-active",
+                dotIndex === currentSlide
+            );
+        });
+    }
+
+    function stopRotation() {
+        window.clearInterval(automaticRotation);
+    }
+
+    function startRotation() {
+        stopRotation();
+
+        if (
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches
+        ) {
+            return;
+        }
+
+        automaticRotation = window.setInterval(function () {
+            showSlide(currentSlide + 1);
+        }, 6500);
+    }
+
+    previousButton.addEventListener("click", function () {
+        showSlide(currentSlide - 1);
+        startRotation();
+    });
+
+    nextButton.addEventListener("click", function () {
+        showSlide(currentSlide + 1);
+        startRotation();
+    });
+
+    dots.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+            showSlide(index);
+            startRotation();
+        });
+    });
+
+    viewport.addEventListener("mouseenter", stopRotation);
+    viewport.addEventListener("mouseleave", startRotation);
+    viewport.addEventListener("focusin", stopRotation);
+    viewport.addEventListener("focusout", startRotation);
+
+    showSlide(0);
+    startRotation();
+});
 </script>
 </body>
 </html>
