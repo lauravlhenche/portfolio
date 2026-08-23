@@ -1228,7 +1228,31 @@ header nav a {
 .service-showcase-title span {
     color: #2864ff;
 }
-        
+     .stripe-trust {
+    margin: 14px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #667085;
+    font-size: 0.72rem;
+    line-height: 1.2;
+}
+
+.stripe-trust svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: #635bff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.stripe-trust strong {
+    color: #635bff;
+    font-weight: 700;
+}   
 /* LARGE SERVICE SECTION */
 
 .service-showcase {
@@ -4915,7 +4939,16 @@ header nav a {
         <a class="pricing-order-button" href="#contact">
             Order Now
         </a>
+<p class="stripe-trust">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+        <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+    </svg>
 
+    <span>
+        Secure checkout powered by <strong>Stripe</strong>
+    </span>
+</p>
     </aside>
 
 </section>
