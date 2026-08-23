@@ -4251,38 +4251,34 @@ header nav a {
     }
 }
 </style>
-    <style>
-    /* NUEVAS REGLAS DE LA CALCULADORA */
+   <style>
+    /* REGLAS EXACTAS DE LA CALCULADORA */
 
     .slider-scale {
+        position: relative !important;
+        display: block !important;
         width: 100%;
-        margin-top: 15px;
-        display: grid;
-        align-items: start;
+        height: 30px;
+        margin-top: 10px;
         color: #667085;
         font-size: 0.68rem;
         font-weight: 500;
     }
 
-    .slider-scale-words {
-        grid-template-columns: repeat(10, minmax(0, 1fr));
-    }
-
-    .slider-scale-pieces {
-        grid-template-columns: repeat(11, minmax(0, 1fr));
-    }
-
     .slider-scale span {
-        position: relative;
-        padding-top: 9px;
+        position: absolute !important;
+        top: 9px;
+        left: var(--position) !important;
+        padding: 0;
         text-align: center;
         white-space: nowrap;
+        transform: translateX(-50%);
     }
 
     .slider-scale span::before {
         content: "";
         position: absolute;
-        top: 0;
+        top: -9px;
         left: 50%;
         width: 1px;
         height: 5px;
@@ -4290,7 +4286,7 @@ header nav a {
     }
 
     .slider-scale span:first-child {
-        text-align: left;
+        transform: none;
     }
 
     .slider-scale span:first-child::before {
@@ -4298,7 +4294,7 @@ header nav a {
     }
 
     .slider-scale span:last-child {
-        text-align: right;
+        transform: translateX(-100%);
     }
 
     .slider-scale span:last-child::before {
@@ -4311,17 +4307,17 @@ header nav a {
             font-size: 0.6rem;
         }
 
-        .slider-scale-words span:nth-child(even),
-        .slider-scale-pieces span:nth-child(even) {
-            visibility: hidden;
-        }
-
-        .slider-scale-words span:nth-child(9) {
-            visibility: hidden;
+        .slider-scale-words span:nth-child(even) {
+            display: none;
         }
 
         .slider-scale-words span:last-child {
-            visibility: visible;
+            display: block;
+        }
+
+        .slider-scale-pieces span:nth-child(2),
+        .slider-scale-pieces span:nth-child(4) {
+            display: none;
         }
     }
 </style>
@@ -4955,17 +4951,17 @@ header nav a {
                 aria-label="Words per piece"
             >
 
-           <div class="slider-scale slider-scale-words">
-    <span>500</span>
-    <span>1,000</span>
-    <span>1,500</span>
-    <span>2,000</span>
-    <span>2,500</span>
-    <span>3,000</span>
-    <span>3,500</span>
-    <span>4,000</span>
-    <span>4,500</span>
-    <span>5,000</span>
+     <div class="slider-scale slider-scale-words">
+    <span style="--position: 0%;">500</span>
+    <span style="--position: 11.111%;">1,000</span>
+    <span style="--position: 22.222%;">1,500</span>
+    <span style="--position: 33.333%;">2,000</span>
+    <span style="--position: 44.444%;">2,500</span>
+    <span style="--position: 55.556%;">3,000</span>
+    <span style="--position: 66.667%;">3,500</span>
+    <span style="--position: 77.778%;">4,000</span>
+    <span style="--position: 88.889%;">4,500</span>
+    <span style="--position: 100%;">5,000</span>
 </div>
 
         </div>
@@ -4990,24 +4986,19 @@ header nav a {
                 class="pricing-range"
                 type="range"
                 min="1"
-                max="50"
+                max="25"
                 step="1"
                 value="1"
                 aria-label="Number of pieces"
             >
 
-            <div class="slider-scale slider-scale-pieces">
-    <span>1</span>
-    <span>5</span>
-    <span>10</span>
-    <span>15</span>
-    <span>20</span>
-    <span>25</span>
-    <span>30</span>
-    <span>35</span>
-    <span>40</span>
-    <span>45</span>
-    <span>50</span>
+           <div class="slider-scale slider-scale-pieces">
+    <span style="--position: 0%;">1</span>
+    <span style="--position: 16.667%;">5</span>
+    <span style="--position: 37.5%;">10</span>
+    <span style="--position: 58.333%;">15</span>
+    <span style="--position: 79.167%;">20</span>
+    <span style="--position: 100%;">25</span>
 </div>
 
         </div>
