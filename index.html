@@ -4034,8 +4034,13 @@ header nav a {
 
 .work-carousel-track {
     display: flex;
-    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 6s linear;
     will-change: transform;
+}
+
+/* Las flechas siguen respondiendo rápidamente */
+.work-carousel-track.is-manual {
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .work-carousel-slide {
@@ -5729,7 +5734,9 @@ document.addEventListener("DOMContentLoaded", function () {
     viewport.insertAdjacentElement("afterend", controls);
 
     let currentSlide = 0;
-    let automaticRotation;
+let automaticRotation;
+let firstMovement;
+let manualTransitionTimer;
 
     function showSlide(index) {
         currentSlide =
@@ -5747,41 +5754,56 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function stopRotation() {
-        window.clearInterval(automaticRotation);
+    window.clearInterval(automaticRotation);
+    window.clearTimeout(firstMovement);
+}
+
+function startRotation(firstDelay = 10500) {
+    stopRotation();
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+        return;
     }
 
-    function startRotation() {
-        stopRotation();
-
-        if (
-            window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches
-        ) {
-            return;
-        }
+    firstMovement = window.setTimeout(function () {
+        showSlide(currentSlide + 1);
 
         automaticRotation = window.setInterval(function () {
             showSlide(currentSlide + 1);
-        }, 6500);
-    }
+        }, 10500);
+    }, firstDelay);
+}
+
+function moveManually(index) {
+    window.clearTimeout(manualTransitionTimer);
+
+    track.classList.add("is-manual");
+    showSlide(index);
+
+    manualTransitionTimer = window.setTimeout(function () {
+        track.classList.remove("is-manual");
+    }, 700);
+
+    startRotation();
+}
 
     previousButton.addEventListener("click", function () {
-        showSlide(currentSlide - 1);
-        startRotation();
-    });
+    moveManually(currentSlide - 1);
+});
 
-    nextButton.addEventListener("click", function () {
-        showSlide(currentSlide + 1);
-        startRotation();
-    });
+nextButton.addEventListener("click", function () {
+    moveManually(currentSlide + 1);
+});
 
-    dots.forEach(function (dot, index) {
-        dot.addEventListener("click", function () {
-            showSlide(index);
-            startRotation();
-        });
+dots.forEach(function (dot, index) {
+    dot.addEventListener("click", function () {
+        moveManually(index);
     });
+});
 
     viewport.addEventListener("mouseenter", stopRotation);
     viewport.addEventListener("mouseleave", startRotation);
@@ -5789,7 +5811,7 @@ document.addEventListener("DOMContentLoaded", function () {
     viewport.addEventListener("focusout", startRotation);
 
     showSlide(0);
-    startRotation();
+startRotation(1500);
 });
 </script>
 </body>
