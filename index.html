@@ -3839,7 +3839,162 @@ header nav a {
     text-align: center;
 }
 </style>
-    
+    <style>
+    /* SELECTED WORK */
+
+    .selected-work {
+        padding: 100px 28px 120px;
+        background: #f8f9fc;
+    }
+
+    .selected-work-inner {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .selected-work-title {
+        margin: 0 0 55px;
+        text-align: center;
+        color: #101828;
+        font-size: clamp(2.1rem, 4vw, 3.5rem);
+        line-height: 1.1;
+    }
+
+    .selected-work-title span {
+        color: #2864ff;
+    }
+
+    .work-columns {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        align-items: start;
+    }
+
+    .work-group {
+        display: grid;
+        gap: 18px;
+    }
+
+    .work-category {
+        width: fit-content;
+        margin: 0 auto 3px;
+        padding: 8px 15px;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+    }
+
+    .work-group-seo .work-category {
+        color: #2864ff;
+        background: #eaf0ff;
+    }
+
+    .work-group-proofreading .work-category {
+        color: #7556d9;
+        background: #eee9ff;
+    }
+
+    .work-group-translation .work-category {
+        color: #16814a;
+        background: #e4f6eb;
+    }
+
+    .work-card {
+        min-height: 330px;
+        padding: 29px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dce3ee;
+        border-radius: 23px;
+        background: #ffffff;
+    }
+
+    .work-client {
+        margin: 0 0 16px;
+        color: #667085;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+    }
+
+    .work-card h3 {
+        margin: 0 0 17px;
+        color: #101828;
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .work-description {
+        margin: 0 0 22px;
+        color: #475467;
+        font-size: 0.91rem;
+        line-height: 1.7;
+    }
+
+    .work-scope {
+        margin: 0 0 25px;
+        padding-top: 18px;
+        border-top: 1px solid #edf0f5;
+        color: #667085;
+        font-size: 0.77rem;
+        line-height: 1.65;
+    }
+
+    .work-scope strong {
+        color: #344054;
+    }
+
+    .work-pdf-link {
+        width: fit-content;
+        margin-top: auto;
+        color: #2864ff;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .work-pdf-link:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 1000px) {
+        .work-columns {
+            grid-template-columns: 1fr;
+            gap: 42px;
+        }
+
+        .work-group {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .work-category {
+            grid-column: 1 / -1;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .selected-work {
+            padding: 75px 18px 90px;
+        }
+
+        .selected-work-title {
+            margin-bottom: 42px;
+        }
+
+        .work-group {
+            grid-template-columns: 1fr;
+        }
+
+        .work-card {
+            min-height: 0;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -4545,6 +4700,194 @@ header nav a {
 </section>
 
 <!-- SERVICES END -->
+        <!-- SELECTED WORK START -->
+<section class="selected-work" id="work">
+    <div class="selected-work-inner">
+
+        <h2 class="selected-work-title">
+            Selected iGaming work<span>.</span>
+        </h2>
+
+        <div class="work-columns">
+
+            <!-- SEO WRITING -->
+            <div class="work-group work-group-seo">
+                <p class="work-category">SEO WRITING</p>
+
+                <article class="work-card">
+                    <p class="work-client">BETBRAIN</p>
+
+                    <h3>Allsvenskan Betting Predictions</h3>
+
+                    <p class="work-description">
+                        Long-form Spanish SEO guide analysing recent form,
+                        home and away performance, xG, H2H trends and weather
+                        conditions across 1X2, Over/Under, BTTS and handicap markets.
+                    </p>
+
+                    <p class="work-scope">
+                        <strong>Scope:</strong>
+                        Keyword research · Search intent · Sportsbook terminology · SEO structure
+                    </p>
+
+                    <a
+                        class="work-pdf-link"
+                        href="betbrain-allsvenskan-seo.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View sample PDF <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <p class="work-client">SLOTSCALENDAR</p>
+
+                    <h3>Google Pay Casinos</h3>
+
+                    <p class="work-description">
+                        Spanish SEO guide covering Google Pay deposits and
+                        withdrawals, tokenisation, biometric authentication,
+                        operator compatibility, transaction times and
+                        player-facing payment security.
+                    </p>
+
+                    <p class="work-scope">
+                        <strong>Scope:</strong>
+                        Keyword targeting · Payment terminology · Comparison tables · On-page SEO
+                    </p>
+
+                    <a
+                        class="work-pdf-link"
+                        href="slotscalendar-google-pay-seo.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View sample PDF <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+            </div>
+
+            <!-- PROOFREADING -->
+            <div class="work-group work-group-proofreading">
+                <p class="work-category">PROOFREADING</p>
+
+                <article class="work-card">
+                    <p class="work-client">TONYBET</p>
+
+                    <h3>Nolimit City Slot Reviews</h3>
+
+                    <p class="work-description">
+                        Proofreading of Spanish casino content covering reels,
+                        paylines and ways to win, cascading mechanics, Wilds,
+                        Scatters, multipliers and Free Spins across four
+                        Nolimit City titles.
+                    </p>
+
+                    <p class="work-scope">
+                        <strong>Scope:</strong>
+                        Gameplay terminology · Tone and fluency · Consistency · Final language QA
+                    </p>
+
+                    <a
+                        class="work-pdf-link"
+                        href="tonybet-nolimit-slots-proofreading.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View edited PDF <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <p class="work-client">LEOVEGAS</p>
+
+                    <h3>Casino Review for Spain</h3>
+
+                    <p class="work-description">
+                        Proofreading of a Spanish operator review covering
+                        licensing, SSL security, KYC and account verification,
+                        deposit limits, responsible-gambling tools, game
+                        providers and payment methods.
+                    </p>
+
+                    <p class="work-scope">
+                        <strong>Scope:</strong>
+                        Regulated-market wording · European Spanish · Casino terminology · Style consistency
+                    </p>
+
+                    <a
+                        class="work-pdf-link"
+                        href="leovegas-spain-proofreading.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View edited PDF <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+            </div>
+
+            <!-- TRANSLATION -->
+            <div class="work-group work-group-translation">
+                <p class="work-category">TRANSLATION</p>
+
+                <article class="work-card">
+                    <p class="work-client">PIN-UP</p>
+
+                    <h3>Fencing Betting Guide</h3>
+
+                    <p class="work-description">
+                        English-to-Spanish localisation for the Mexican market
+                        covering pre-match and live odds, match-winner, totals
+                        and handicap markets, betting lines and competition formats.
+                    </p>
+
+                    <p class="work-scope">
+                        <strong>Scope:</strong>
+                        Mexican Spanish · Odds terminology · Market localisation · Keyword adaptation
+                    </p>
+
+                    <a
+                        class="work-pdf-link"
+                        href="pinup-fencing-translation.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View bilingual PDF <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <p class="work-client">SLINGO</p>
+
+                    <h3>Live Beach Soccer Betting</h3>
+
+                    <p class="work-description">
+                        English-to-Spanish localisation for Spain covering
+                        in-play odds movement, 1X2 outcomes, totals, handicaps,
+                        period betting, live scores and real-time market lines.
+                    </p>
+
+                    <p class="work-scope">
+                        <strong>Scope:</strong>
+                        European Spanish · Live-betting terminology · Sportsbook localisation · SEO adaptation
+                    </p>
+
+                    <a
+                        class="work-pdf-link"
+                        href="slingo-beach-soccer-translation.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View bilingual PDF <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- SELECTED WORK END -->
         <section class="specialisms-section" aria-labelledby="specialisms-title">
 
     <div class="specialisms-inner">
