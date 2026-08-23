@@ -5058,6 +5058,323 @@ header nav a {
         right: 18px;
     }
 }
+        /* TRUST SIDEBAR AND TESTIMONIAL CAROUSEL */
+
+.trust-proof-section {
+    padding: 78px 28px 88px;
+    background: #ffffff;
+}
+
+.trust-proof-inner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 330px minmax(0, 1fr);
+    gap: 48px;
+    align-items: stretch;
+}
+
+.trust-proof-sidebar {
+    display: grid;
+    align-content: start;
+    gap: 30px;
+}
+
+.trust-proof-sidebar .upwork-proof-card {
+    width: 100%;
+    margin: 0;
+}
+
+/* REGULACIÓN DEBAJO DE UPWORK */
+
+.trust-proof-sidebar .regulatory-awareness-panel {
+    width: 100%;
+    padding: 43px 21px 22px;
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 14px;
+    border-radius: 19px;
+}
+
+.trust-proof-sidebar .regulatory-frame-badge {
+    left: 18px;
+    font-size: 0.51rem;
+}
+
+.trust-proof-sidebar .spain-flag-icon {
+    width: 23px;
+    height: 15px;
+    flex-basis: 23px;
+}
+
+.trust-proof-sidebar .regulatory-legal-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    font-size: 1.45rem;
+}
+
+.trust-proof-sidebar .regulatory-summary {
+    font-size: 0.74rem;
+    line-height: 1.5;
+}
+
+.trust-proof-sidebar .dgoj-reference-link {
+    margin-top: 11px;
+    font-size: 0.67rem;
+}
+
+.trust-proof-sidebar .regulatory-disclaimer {
+    margin-top: 6px;
+    font-size: 0.55rem;
+    line-height: 1.4;
+}
+
+/* TESTIMONIOS */
+
+.client-testimonials {
+    min-width: 0;
+    min-height: 100%;
+    padding: 43px 47px 32px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dbe3ef;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(16, 24, 40, 0.055);
+}
+
+.client-testimonials-header {
+    margin-bottom: 34px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.testimonials-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #667085;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.client-testimonials-header h2 {
+    margin: 0;
+    color: #101828;
+    font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.client-testimonials-header h2 span {
+    color: #2864ff;
+}
+
+.testimonial-counter {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    color: #98a2b3;
+    font-size: 0.71rem;
+    font-weight: 600;
+}
+
+.testimonial-counter strong {
+    color: #2864ff;
+    font-size: 1.05rem;
+}
+
+.testimonial-viewport {
+    position: relative;
+    min-height: 310px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.client-testimonial {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(28px);
+    pointer-events: none;
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.client-testimonial.is-active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.testimonial-stars {
+    margin-bottom: 22px;
+    color: #f2b300;
+    font-size: 0.95rem;
+    letter-spacing: 0.13em;
+}
+
+.client-testimonial blockquote {
+    position: relative;
+    max-width: 620px;
+    margin: 0;
+    color: #101828;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+}
+
+.client-testimonial blockquote::before {
+    content: "“";
+    position: absolute;
+    top: -43px;
+    right: 2px;
+    color: rgba(40, 100, 255, 0.1);
+    font-family: Georgia, serif;
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.testimonial-meta {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.testimonial-avatar {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 39px;
+    color: #238553;
+    background: #e4f5eb;
+    border: 1px solid #bfe8cf;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.testimonial-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.testimonial-meta strong {
+    color: #101828;
+    font-size: 0.79rem;
+}
+
+.testimonial-meta div span {
+    color: #667085;
+    font-size: 0.69rem;
+}
+
+.testimonial-navigation {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid #e4e9f1;
+}
+
+.testimonial-navigation-text {
+    margin-right: auto;
+    color: #98a2b3;
+    font-size: 0.66rem;
+}
+
+.testimonial-arrow {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    color: #101828;
+    background: #ffffff;
+    border: 1px solid #d7dfeb;
+    border-radius: 50%;
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.testimonial-arrow:hover {
+    color: #ffffff;
+    background: #2864ff;
+    border-color: #2864ff;
+    transform: translateY(-2px);
+}
+
+.testimonial-arrow:focus-visible {
+    outline: 3px solid rgba(40, 100, 255, 0.24);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .trust-proof-inner {
+        max-width: 680px;
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .trust-proof-sidebar {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .client-testimonials {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .trust-proof-section {
+        padding: 66px 18px 75px;
+    }
+
+    .client-testimonials {
+        min-height: 0;
+        padding: 32px 24px 25px;
+    }
+
+    .client-testimonials-header {
+        margin-bottom: 28px;
+    }
+
+    .testimonial-viewport {
+        min-height: 350px;
+    }
+
+    .client-testimonial blockquote {
+        font-size: 1.12rem;
+    }
+
+    .testimonial-navigation-text {
+        display: none;
+    }
+
+    .testimonial-navigation {
+        justify-content: center;
+    }
+}
 </style>
    <style>
     /* REGLAS EXACTAS DE LA CALCULADORA */
@@ -6115,111 +6432,298 @@ header nav a {
     </div>
 </section>
 <!-- WHITE-LABEL PROCESS END -->
-        <!-- TRUST AND REGULATORY PROOF START -->
-<section class="trust-proof-section" aria-labelledby="market-care-title">
+        <!-- TRUST, REGULATION AND TESTIMONIALS START -->
+<section
+    class="trust-proof-section"
+    aria-label="Professional credentials and client testimonials"
+>
     <div class="trust-proof-inner">
 
-        <!-- UPWORK -->
-        <article class="upwork-proof-card">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="trust-proof-sidebar">
 
-            <div class="upwork-attached-label">
-                <span>VERIFIED ON</span>
-                <strong>upwork</strong>
-                <span class="upwork-label-check" aria-hidden="true">✓</span>
-            </div>
+            <!-- UPWORK -->
+            <article class="upwork-proof-card">
 
-            <div
-                class="job-success-ring"
-                aria-label="100 percent Job Success on Upwork"
-            >
-                <svg viewBox="0 0 140 140" aria-hidden="true">
-                    <circle
-                        class="job-success-track"
-                        cx="70"
-                        cy="70"
-                        r="56"
-                        pathLength="100"
-                    ></circle>
-
-                    <circle
-                        class="job-success-progress"
-                        cx="70"
-                        cy="70"
-                        r="56"
-                        pathLength="100"
-                    ></circle>
-                </svg>
-
-                <div class="job-success-copy">
-                    <strong data-job-success-value>0%</strong>
-                    <span>Job Success</span>
+                <div class="upwork-attached-label">
+                    <span>VERIFIED ON</span>
+                    <strong>upwork</strong>
+                    <span class="upwork-label-check" aria-hidden="true">✓</span>
                 </div>
+
+                <div
+                    class="job-success-ring"
+                    aria-label="100 percent Job Success on Upwork"
+                >
+                    <svg viewBox="0 0 140 140" aria-hidden="true">
+                        <circle
+                            class="job-success-track"
+                            cx="70"
+                            cy="70"
+                            r="56"
+                            pathLength="100"
+                        ></circle>
+
+                        <circle
+                            class="job-success-progress"
+                            cx="70"
+                            cy="70"
+                            r="56"
+                            pathLength="100"
+                        ></circle>
+                    </svg>
+
+                    <div class="job-success-copy">
+                        <strong data-job-success-value>0%</strong>
+                        <span>Job Success</span>
+                    </div>
+                </div>
+
+                <span class="top-rated-plus-label">
+                    <span
+                        class="top-rated-plus-icon"
+                        aria-hidden="true"
+                    >✦</span>
+
+                    <span>Top Rated Plus</span>
+                </span>
+
+                <p class="upwork-performance-copy">
+                    <strong>
+                        Ranked among the top 3% of Upwork talent,
+                        with a verified record of successful projects
+                        and long-term client work.
+                    </strong>
+                </p>
+
+                <a
+                    class="upwork-profile-link"
+                    href="https://www.upwork.com/freelancers/lauravanleeuwen?mp_source=share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View verified Upwork profile
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+            </article>
+
+            <!-- REGULACIÓN -->
+            <div class="regulatory-awareness-panel">
+
+                <span class="regulatory-frame-badge">
+                    <span
+                        class="spain-flag-icon"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span>LEGAL &amp; REGULATORY · SPAIN</span>
+                </span>
+
+                <span
+                    class="regulatory-legal-icon"
+                    aria-hidden="true"
+                >§</span>
+
+                <div class="regulatory-compact-copy">
+
+                    <p class="regulatory-summary">
+                        <strong>
+                            I create Spanish iGaming content
+                        </strong>
+                        with compliance in mind. I follow DGOJ guidance, use responsible gambling language and adapt every piece to your requirements.
+
+                    </p>
+
+                    <a
+                        class="dgoj-reference-link"
+                        href="https://www.ordenacionjuego.es/en/dgoj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Official DGOJ reference
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <p class="regulatory-disclaimer">
+                        Content support does not constitute legal advice.
+                    </p>
+
+                </div>
+
             </div>
 
-            <span class="top-rated-plus-label">
-    <span class="top-rated-plus-icon" aria-hidden="true">✦</span>
-    <span>Top Rated Plus</span>
-</span>
+        </div>
 
-<p class="upwork-performance-copy">
-    <strong>
-        Ranked among the top 3% of Upwork talent, with a verified
-        record of successful projects and long-term client work.
-    </strong>
-</p>
-
-            <!-- CAMBIA EL ENLACE POR EL DE TU PERFIL -->
-            <a
-                class="upwork-profile-link"
-                href="https://www.upwork.com/freelancers/lauravanleeuwen?mp_source=share"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View verified Upwork profile
-                <span aria-hidden="true">↗</span>
-            </a>
-
-        </article>
-
-        <!-- REGULATORY AWARENESS -->
-<div class="regulatory-awareness-panel">
-
-    <span class="regulatory-frame-badge">
-        <span class="spain-flag-icon" aria-hidden="true"></span>
-        <span>LEGAL &amp; REGULATORY · SPAIN</span>
-    </span>
-
-    <span class="regulatory-legal-icon" aria-hidden="true">§</span>
-
-    <div class="regulatory-compact-copy">
-
-        <p class="regulatory-summary">
-            <strong>Compliance-aware Spanish iGaming content</strong>
-            shaped around DGOJ guidance, responsible-gambling language
-            and operator-specific requirements.
-        </p>
-
-        <a
-            class="dgoj-reference-link"
-            href="https://www.ordenacionjuego.es/en/dgoj"
-            target="_blank"
-            rel="noopener noreferrer"
+        <!-- TESTIMONIOS -->
+        <section
+            class="client-testimonials"
+            aria-label="Client testimonials"
         >
-            Official DGOJ reference
-            <span aria-hidden="true">↗</span>
-        </a>
 
-        <p class="regulatory-disclaimer">
-            Content support does not constitute legal advice.
-        </p>
+            <div class="client-testimonials-header">
 
-    </div>
+                <div>
+                    <span class="testimonials-label">
+                        CLIENT FEEDBACK
+                    </span>
 
-</div>
+                    <h2>
+                        What clients say<span>.</span>
+                    </h2>
+                </div>
+
+                <span
+                    class="testimonial-counter"
+                    aria-live="polite"
+                >
+                    <strong data-testimonial-current>01</strong>
+                    <span>/ 04</span>
+                </span>
+
+            </div>
+
+            <div class="testimonial-viewport">
+
+                <article class="client-testimonial is-active">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “High quality work. Met and exceeded all
+                        our expectations.”
+                    </blockquote>
+
+                    <div class="testimonial-meta">
+                        <span
+                            class="testimonial-avatar"
+                            aria-hidden="true"
+                        >✓</span>
+
+                        <div>
+                            <strong>Client feedback</strong>
+                            <span>Translation project</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="client-testimonial">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “Laura is an exceptional writer. Her command
+                        of the Spanish language is impressive. The
+                        grammar is flawless and the tone is perfectly
+                        suited for my target audience.”
+                    </blockquote>
+
+                    <div class="testimonial-meta">
+                        <span
+                            class="testimonial-avatar"
+                            aria-hidden="true"
+                        >✓</span>
+
+                        <div>
+                            <strong>Client feedback</strong>
+                            <span>Spanish content writing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="client-testimonial">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “Laura has a fantastic work ethic and listens
+                        to all feedback extremely carefully. It’s a
+                        pleasure working with her.”
+                    </blockquote>
+
+                    <div class="testimonial-meta">
+                        <span
+                            class="testimonial-avatar"
+                            aria-hidden="true"
+                        >✓</span>
+
+                        <div>
+                            <strong>Client feedback</strong>
+                            <span>Sportsbook content project</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="client-testimonial">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “She’s exceptionally professional and dedicated,
+                        always ensuring we are completely happy with
+                        the final product.”
+                    </blockquote>
+
+                    <div class="testimonial-meta">
+                        <span
+                            class="testimonial-avatar"
+                            aria-hidden="true"
+                        >✓</span>
+
+                        <div>
+                            <strong>Client feedback</strong>
+                            <span>Casino content project</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="testimonial-navigation">
+
+                <button
+                    class="testimonial-arrow testimonial-previous"
+                    type="button"
+                    aria-label="Previous testimonial"
+                >
+                    ←
+                </button>
+
+                <span class="testimonial-navigation-text">
+                    Browse client feedback
+                </span>
+
+                <button
+                    class="testimonial-arrow testimonial-next"
+                    type="button"
+                    aria-label="Next testimonial"
+                >
+                    →
+                </button>
+
+            </div>
+
+        </section>
 
     </div>
 </section>
-<!-- TRUST AND REGULATORY PROOF END -->
+<!-- TRUST, REGULATION AND TESTIMONIALS END -->
         <section class="specialisms-section" aria-labelledby="specialisms-title">
 
     <div class="specialisms-inner">
@@ -7038,6 +7542,72 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     observer.observe(upworkCard);
+});
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonialSection =
+        document.querySelector(".client-testimonials");
+
+    if (!testimonialSection) {
+        return;
+    }
+
+    const testimonials = Array.from(
+        testimonialSection.querySelectorAll(".client-testimonial")
+    );
+
+    const previousButton =
+        testimonialSection.querySelector(".testimonial-previous");
+
+    const nextButton =
+        testimonialSection.querySelector(".testimonial-next");
+
+    const currentOutput =
+        testimonialSection.querySelector(
+            "[data-testimonial-current]"
+        );
+
+    let currentTestimonial = 0;
+
+    function showTestimonial(index) {
+        currentTestimonial =
+            (index + testimonials.length) % testimonials.length;
+
+        testimonials.forEach(function (testimonial, testimonialIndex) {
+            const isActive =
+                testimonialIndex === currentTestimonial;
+
+            testimonial.classList.toggle("is-active", isActive);
+            testimonial.setAttribute(
+                "aria-hidden",
+                String(!isActive)
+            );
+        });
+
+        currentOutput.textContent =
+            String(currentTestimonial + 1).padStart(2, "0");
+    }
+
+    previousButton.addEventListener("click", function () {
+        showTestimonial(currentTestimonial - 1);
+    });
+
+    nextButton.addEventListener("click", function () {
+        showTestimonial(currentTestimonial + 1);
+    });
+
+    testimonialSection.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+            showTestimonial(currentTestimonial - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+            showTestimonial(currentTestimonial + 1);
+        }
+    });
+
+    showTestimonial(0);
 });
 </script>
 </body>
