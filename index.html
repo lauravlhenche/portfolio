@@ -4408,6 +4408,346 @@ header nav a {
         padding-left: 6px;
     }
 }
+        /* TRUST AND REGULATORY PROOF */
+
+.trust-proof-section {
+    padding: 105px 28px 115px;
+    background: #f7f9f7;
+}
+
+.trust-proof-inner {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+    gap: 80px;
+    align-items: center;
+}
+
+/* UPWORK CARD */
+
+.upwork-proof-card {
+    position: relative;
+    min-height: 540px;
+    padding: 72px 48px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #d8e7d4;
+    border-radius: 28px;
+    background: linear-gradient(
+        180deg,
+        #fbfef9 0%,
+        #ffffff 100%
+    );
+    box-shadow: 0 18px 45px rgba(16, 24, 40, 0.06);
+}
+
+/* ETIQUETA PEGADA */
+
+.upwork-attached-label {
+    position: absolute;
+    top: 27px;
+    left: -15px;
+    min-height: 48px;
+    padding: 9px 32px 9px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475467;
+    background: #ffffff;
+    border: 1px solid #cfe4c9;
+    box-shadow: 0 7px 18px rgba(16, 24, 40, 0.09);
+    clip-path: polygon(
+        0 0,
+        calc(100% - 15px) 0,
+        100% 50%,
+        calc(100% - 15px) 100%,
+        0 100%
+    );
+}
+
+.upwork-attached-label > span:first-child {
+    font-size: 0.57rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+}
+
+.upwork-attached-label strong {
+    color: #14a800;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.upwork-label-check {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #14a800;
+    border-radius: 50%;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+/* RUEDA */
+
+.job-success-ring {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    margin: 22px auto 26px;
+}
+
+.job-success-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.job-success-track,
+.job-success-progress {
+    fill: none;
+    stroke-width: 10;
+}
+
+.job-success-track {
+    stroke: #e7eee5;
+}
+
+.job-success-progress {
+    stroke: #14a800;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition:
+        stroke-dashoffset 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.upwork-proof-card.is-visible .job-success-progress {
+    stroke-dashoffset: 0;
+}
+
+.job-success-copy {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-success-copy strong {
+    color: #101828;
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.job-success-copy span {
+    margin-top: 8px;
+    color: #667085;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.top-rated-plus-label {
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    color: #a83285;
+    background: #fde8f7;
+    border: 1px solid #f6c8e9;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.upwork-proof-card h3 {
+    margin: 0 0 12px;
+    color: #101828;
+    font-size: 1.28rem;
+}
+
+.upwork-proof-card > p {
+    max-width: 330px;
+    margin: 0;
+    color: #526079;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.upwork-profile-link {
+    margin-top: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #14a800;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.upwork-profile-link:hover {
+    color: #0f7d00;
+}
+
+/* REGULATORY PANEL */
+
+.regulatory-awareness-panel {
+    padding: 18px 0;
+}
+
+.regulatory-eyebrow {
+    margin: 0 0 15px;
+    color: #238553;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.regulatory-awareness-panel > h2 {
+    max-width: 610px;
+    margin: 0 0 22px;
+    color: #101828;
+    font-size: clamp(1.9rem, 3vw, 2.65rem);
+    line-height: 1.14;
+    letter-spacing: -0.04em;
+}
+
+.regulatory-awareness-panel > h2 span {
+    color: #2864ff;
+}
+
+.regulatory-introduction {
+    max-width: 650px;
+    margin: 0 0 36px;
+    color: #526079;
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+.regulatory-points {
+    display: grid;
+    gap: 0;
+}
+
+.regulatory-point {
+    padding: 22px 0;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 17px;
+    border-top: 1px solid #dde5df;
+}
+
+.regulatory-point:last-child {
+    border-bottom: 1px solid #dde5df;
+}
+
+.regulatory-point-icon {
+    width: 31px;
+    height: 31px;
+    display: grid;
+    place-items: center;
+    color: #238553;
+    background: #e4f5eb;
+    border: 1px solid #bfe8cf;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.regulatory-point h3 {
+    margin: 1px 0 6px;
+    color: #101828;
+    font-size: 1rem;
+}
+
+.regulatory-point p {
+    margin: 0;
+    color: #667085;
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
+.dgoj-reference-link {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2864ff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dgoj-reference-link:hover {
+    color: #1746c9;
+}
+
+.regulatory-disclaimer {
+    margin: 12px 0 0;
+    color: #98a2b3;
+    font-size: 0.67rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .trust-proof-inner {
+        max-width: 680px;
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+
+    .upwork-proof-card {
+        min-height: 500px;
+    }
+
+    .regulatory-awareness-panel {
+        padding: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .trust-proof-section {
+        padding: 80px 18px 90px;
+    }
+
+    .upwork-proof-card {
+        min-height: 0;
+        padding: 75px 25px 45px;
+        border-radius: 24px;
+    }
+
+    .upwork-attached-label {
+        left: -7px;
+    }
+
+    .job-success-ring {
+        width: 165px;
+        height: 165px;
+    }
+
+    .regulatory-awareness-panel > h2 {
+        font-size: 1.85rem;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .job-success-progress {
+        stroke-dashoffset: 0;
+        transition: none;
+    }
+}
 </style>
    <style>
     /* REGLAS EXACTAS DE LA CALCULADORA */
@@ -5465,6 +5805,147 @@ header nav a {
     </div>
 </section>
 <!-- WHITE-LABEL PROCESS END -->
+        <!-- TRUST AND REGULATORY PROOF START -->
+<section class="trust-proof-section" aria-labelledby="market-care-title">
+    <div class="trust-proof-inner">
+
+        <!-- UPWORK -->
+        <article class="upwork-proof-card">
+
+            <div class="upwork-attached-label">
+                <span>VERIFIED ON</span>
+                <strong>upwork</strong>
+                <span class="upwork-label-check" aria-hidden="true">✓</span>
+            </div>
+
+            <div
+                class="job-success-ring"
+                aria-label="100 percent Job Success on Upwork"
+            >
+                <svg viewBox="0 0 140 140" aria-hidden="true">
+                    <circle
+                        class="job-success-track"
+                        cx="70"
+                        cy="70"
+                        r="56"
+                        pathLength="100"
+                    ></circle>
+
+                    <circle
+                        class="job-success-progress"
+                        cx="70"
+                        cy="70"
+                        r="56"
+                        pathLength="100"
+                    ></circle>
+                </svg>
+
+                <div class="job-success-copy">
+                    <strong data-job-success-value>0%</strong>
+                    <span>Job Success</span>
+                </div>
+            </div>
+
+            <span class="top-rated-plus-label">
+                Top Rated Plus
+            </span>
+
+            <h3>Verified client performance</h3>
+
+            <p>
+                Ranked among the top 3% of Upwork talent, with a verified
+                record of successful projects and long-term client work.
+            </p>
+
+            <!-- CAMBIA EL ENLACE POR EL DE TU PERFIL -->
+            <a
+                class="upwork-profile-link"
+                href="https://www.upwork.com/freelancers/lauravanleeuwen?mp_source=share"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View verified Upwork profile
+                <span aria-hidden="true">↗</span>
+            </a>
+
+        </article>
+
+        <!-- REGULATORY AWARENESS -->
+        <div class="regulatory-awareness-panel">
+
+            <p class="regulatory-eyebrow">
+                SPANISH REGULATORY AWARENESS
+            </p>
+
+            <h2 id="market-care-title">
+                Content shaped for a regulated market<span>.</span>
+            </h2>
+
+            <p class="regulatory-introduction">
+                I approach Spanish iGaming content with player protection,
+                responsible-gambling language and market-specific requirements
+                in mind.
+            </p>
+
+            <div class="regulatory-points">
+
+                <div class="regulatory-point">
+                    <span class="regulatory-point-icon" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h3>Clear player information</h3>
+                        <p>
+                            Rules, offers and product features explained
+                            accurately and without unnecessary ambiguity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="regulatory-point">
+                    <span class="regulatory-point-icon" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h3>Responsible-gambling language</h3>
+                        <p>
+                            Careful wording around player protection, gambling
+                            risks and safer-play information.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="regulatory-point">
+                    <span class="regulatory-point-icon" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h3>Spanish-market requirements</h3>
+                        <p>
+                            Content adapted to the relevant DGOJ guidance and
+                            each operator’s own compliance brief.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a
+                class="dgoj-reference-link"
+                href="https://www.ordenacionjuego.es/en/dgoj"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View official DGOJ guidance
+                <span aria-hidden="true">↗</span>
+            </a>
+
+            <p class="regulatory-disclaimer">
+                Content support does not constitute legal advice.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+<!-- TRUST AND REGULATORY PROOF END -->
         <section class="specialisms-section" aria-labelledby="specialisms-title">
 
     <div class="specialisms-inner">
@@ -6209,6 +6690,80 @@ dots.forEach(function (dot, index) {
 
     showSlide(0);
 startRotation(1200);
+});
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const upworkCard = document.querySelector(".upwork-proof-card");
+    const percentage = document.querySelector("[data-job-success-value]");
+
+    if (!upworkCard || !percentage) {
+        return;
+    }
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    let animationHasRun = false;
+
+    function showFinalValue() {
+        upworkCard.classList.add("is-visible");
+        percentage.textContent = "100%";
+    }
+
+    function animateUpworkScore() {
+        if (animationHasRun) {
+            return;
+        }
+
+        animationHasRun = true;
+        upworkCard.classList.add("is-visible");
+
+        if (reducedMotion) {
+            percentage.textContent = "100%";
+            return;
+        }
+
+        const duration = 1800;
+        const startingTime = performance.now();
+
+        function updateNumber(currentTime) {
+            const elapsed = currentTime - startingTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const currentValue = Math.round(easedProgress * 100);
+
+            percentage.textContent = currentValue + "%";
+
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            }
+        }
+
+        requestAnimationFrame(updateNumber);
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        showFinalValue();
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    animateUpworkScore();
+                    observer.disconnect();
+                }
+            });
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+    observer.observe(upworkCard);
 });
 </script>
 </body>
