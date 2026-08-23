@@ -4250,6 +4250,164 @@ header nav a {
         transition: none;
     }
 }
+        /* WHITE-LABEL PROCESS */
+
+.white-label-process {
+    padding: 100px 28px 115px;
+    background: #ffffff;
+}
+
+.white-label-process-inner {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.white-label-eyebrow {
+    margin: 0 0 14px;
+    color: #238553;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-align: center;
+}
+
+.white-label-title {
+    margin: 0 auto 70px;
+    color: #101828;
+    font-size: clamp(1.9rem, 2.8vw, 2.3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    text-align: center;
+}
+
+.white-label-title span {
+    color: #2864ff;
+}
+
+.white-label-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.white-label-step {
+    position: relative;
+    padding: 0 42px;
+    text-align: center;
+}
+
+.white-label-step + .white-label-step {
+    border-left: 1px solid #e1e7f0;
+}
+
+.white-label-icon {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 27px;
+    display: grid;
+    place-items: center;
+    border-radius: 22px;
+}
+
+.white-label-icon svg {
+    width: 31px;
+    height: 31px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.white-label-icon.icon-blue {
+    color: #2864ff;
+    background: #eaf0ff;
+}
+
+.white-label-icon.icon-green {
+    color: #238553;
+    background: #e4f5eb;
+}
+
+.white-label-icon.icon-yellow {
+    color: #a66d00;
+    background: #fff1c7;
+}
+
+.white-label-number {
+    position: absolute;
+    top: -11px;
+    right: -12px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #101828;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.white-label-step h3 {
+    margin: 0 0 15px;
+    color: #101828;
+    font-size: 1.15rem;
+    line-height: 1.35;
+}
+
+.white-label-step p {
+    max-width: 330px;
+    margin: 0 auto;
+    color: #526079;
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .white-label-steps {
+        max-width: 620px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .white-label-step {
+        padding: 0 20px 48px;
+    }
+
+    .white-label-step + .white-label-step {
+        border-left: 0;
+        border-top: 1px solid #e1e7f0;
+        padding-top: 48px;
+    }
+
+    .white-label-step:last-child {
+        padding-bottom: 0;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .white-label-process {
+        padding: 75px 18px 85px;
+    }
+
+    .white-label-title {
+        margin-bottom: 55px;
+    }
+
+    .white-label-step {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+}
 </style>
    <style>
     /* REGLAS EXACTAS DE LA CALCULADORA */
@@ -5234,6 +5392,84 @@ header nav a {
     </div>
 </section>
 <!-- SELECTED WORK END -->
+        <!-- WHITE-LABEL PROCESS START -->
+<section class="white-label-process" aria-labelledby="white-label-title">
+    <div class="white-label-process-inner">
+
+        <p class="white-label-eyebrow">WHITE LABEL · ON DEMAND</p>
+
+        <h2 class="white-label-title" id="white-label-title">
+            White-label work. On your terms<span>.</span>
+        </h2>
+
+        <div class="white-label-steps">
+
+            <!-- STEP 01 -->
+            <article class="white-label-step">
+                <div class="white-label-icon icon-blue">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 5h14v10H9l-4 4V5Z"></path>
+                        <path d="M8 9h8M8 12h5"></path>
+                    </svg>
+
+                    <span class="white-label-number">01</span>
+                </div>
+
+                <h3>Tell me what you need</h3>
+
+                <p>
+                    I can help with translation, proofreading or content writing.
+                    You can send me one project, a batch of content or new work
+                    whenever it comes up.
+                </p>
+            </article>
+
+            <!-- STEP 02 -->
+            <article class="white-label-step">
+                <div class="white-label-icon icon-green">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 3h7l4 4v14H7V3Z"></path>
+                        <path d="M14 3v5h5"></path>
+                        <path d="m10 14 2 2 4-4"></path>
+                    </svg>
+
+                    <span class="white-label-number">02</span>
+                </div>
+
+                <h3>Publish it under your brand</h3>
+
+                <p>
+                    I deliver everything white label, with no byline or public
+                    credit to me. It is ready to publish under your name or your
+                    client’s brand.
+                </p>
+            </article>
+
+            <!-- STEP 03 -->
+            <article class="white-label-step">
+                <div class="white-label-icon icon-yellow">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                        <path d="M8 10V7a4 4 0 0 1 7.5-2"></path>
+                        <path d="M12 14v2"></path>
+                    </svg>
+
+                    <span class="white-label-number">03</span>
+                </div>
+
+                <h3>Work with me your way</h3>
+
+                <p>
+                    I do not ask for a retainer or a long-term commitment. You
+                    can book me for one project or come back whenever you need
+                    more support.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!-- WHITE-LABEL PROCESS END -->
         <section class="specialisms-section" aria-labelledby="specialisms-title">
 
     <div class="specialisms-inner">
