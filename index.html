@@ -4251,6 +4251,81 @@ header nav a {
     }
 }
 </style>
+    <style>
+    /* NUEVAS REGLAS DE LA CALCULADORA */
+
+    .slider-scale {
+        width: 100%;
+        margin-top: 15px;
+        display: grid;
+        align-items: start;
+        color: #667085;
+        font-size: 0.68rem;
+        font-weight: 500;
+    }
+
+    .slider-scale-words {
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+    }
+
+    .slider-scale-pieces {
+        grid-template-columns: repeat(11, minmax(0, 1fr));
+    }
+
+    .slider-scale span {
+        position: relative;
+        padding-top: 9px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .slider-scale span::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 5px;
+        background: #b8c0cc;
+    }
+
+    .slider-scale span:first-child {
+        text-align: left;
+    }
+
+    .slider-scale span:first-child::before {
+        left: 0;
+    }
+
+    .slider-scale span:last-child {
+        text-align: right;
+    }
+
+    .slider-scale span:last-child::before {
+        right: 0;
+        left: auto;
+    }
+
+    @media (max-width: 700px) {
+        .slider-scale {
+            font-size: 0.6rem;
+        }
+
+        .slider-scale-words span:nth-child(even),
+        .slider-scale-pieces span:nth-child(even) {
+            visibility: hidden;
+        }
+
+        .slider-scale-words span:nth-child(9) {
+            visibility: hidden;
+        }
+
+        .slider-scale-words span:last-child {
+            visibility: visible;
+        }
+    }
+</style>
+    
 </head>
 <body>
 
@@ -4880,12 +4955,18 @@ header nav a {
                 aria-label="Words per piece"
             >
 
-            <div class="pricing-scale pricing-scale-four">
-                <span>500</span>
-                <span>2,000</span>
-                <span>3,500</span>
-                <span>5,000</span>
-            </div>
+           <div class="slider-scale slider-scale-words">
+    <span>500</span>
+    <span>1,000</span>
+    <span>1,500</span>
+    <span>2,000</span>
+    <span>2,500</span>
+    <span>3,000</span>
+    <span>3,500</span>
+    <span>4,000</span>
+    <span>4,500</span>
+    <span>5,000</span>
+</div>
 
         </div>
 
@@ -4915,11 +4996,19 @@ header nav a {
                 aria-label="Number of pieces"
             >
 
-            <div class="pricing-scale pricing-scale-three">
-                <span>1</span>
-                <span>25</span>
-                <span>50</span>
-            </div>
+            <div class="slider-scale slider-scale-pieces">
+    <span>1</span>
+    <span>5</span>
+    <span>10</span>
+    <span>15</span>
+    <span>20</span>
+    <span>25</span>
+    <span>30</span>
+    <span>35</span>
+    <span>40</span>
+    <span>45</span>
+    <span>50</span>
+</div>
 
         </div>
         <p class="delivery-note">
