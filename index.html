@@ -4034,14 +4034,22 @@ header nav a {
 
 .work-carousel-track {
     display: flex;
-    transition: transform 14s linear;
+    width: 100%;
     will-change: transform;
+    animation: workCarouselLoop 80s linear infinite;
+}
+
+@keyframes workCarouselLoop {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(var(--work-loop-distance));
+    }
 }
 
 /* Las flechas siguen respondiendo rápidamente */
-.work-carousel-track.is-manual {
-    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-}
 
 .work-carousel-slide {
     width: 100%;
@@ -5708,7 +5716,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     viewport.replaceChildren(track);
+const originalSlides = Array.from(track.children);
 
+originalSlides.forEach(function (slide) {
+    const duplicatedSlide = slide.cloneNode(true);
+    duplicatedSlide.setAttribute("aria-hidden", "true");
+    track.appendChild(duplicatedSlide);
+});
+
+track.style.setProperty(
+    "--work-loop-distance",
+    "-" + (numberOfSlides * 100) + "%"
+);
+
+return;
     const controls = document.createElement("div");
     controls.className = "work-carousel-controls";
 
