@@ -6240,7 +6240,7 @@ padding: 0;
     /* HEADER */
 
     .portfolio-header {
-        .portfolio-header::before {
+        .portfolio-header {
     content: "";
     position: absolute;
     top: 0;
@@ -6279,13 +6279,13 @@ padding: 0;
         color: #ffffff;
         background: #2864ff;
         font-size: 0.95rem;
-        font-weight: 800;
+        font-weight: 700;
         box-shadow: 0 7px 18px rgba(40, 100, 255, 0.18);
     }
 
     .portfolio-brand-name {
         font-size: 1.15rem;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: -0.035em;
     }
 
@@ -6326,6 +6326,11 @@ padding: 0;
         background: #2864ff;
         transform: translateY(-2px);
     }
+        .portfolio-brand,
+.portfolio-brand-icon,
+.portfolio-brand-name {
+    font-synthesis: none;
+}
 
     /* PROFILE CARD */
 
@@ -6439,22 +6444,30 @@ padding: 0;
     /* HEADER CENTRADO Y CON ANCHO CONTROLADO */
 
     .portfolio-header {
-        width: calc(100% - 40px) !important;
-        max-width: 1050px !important;
-        min-height: 88px !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
+    width: 100%;
+    min-height: 88px;
+    padding: 0 clamp(24px, 4vw, 72px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    isolation: isolate;
+    background: #f7f1e8;
+}
 
-        display: grid !important;
-        grid-template-columns: auto minmax(0, 1fr) !important;
-        align-items: center !important;
-
-        background: #f8f3eb !important;
-position: relative !important;
-isolation: isolate;
-        box-sizing: border-box !important;
-    }
-
+.portfolio-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #f7f1e8;
+    z-index: -1;
+    pointer-events: none;
+}
     /* Laura. alineado con el inicio del titular */
 
     .portfolio-brand {
