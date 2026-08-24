@@ -6441,65 +6441,100 @@ padding: 0;
     }
 </style>
     <style>
-    /* HEADER CENTRADO Y CON ANCHO CONTROLADO */
+    /* HEADER ALINEADO CON EL TITULAR */
 
-    .portfolio-header {
-    width: 100%;
-    min-height: 88px;
-    padding: 0 clamp(24px, 4vw, 72px);
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    box-sizing: border-box;
-    position: relative;
-    isolation: isolate;
-    background: #f7f1e8;
-}
+    header.portfolio-header {
+        width: min(900px, calc(100% - 40px)) !important;
+        max-width: 900px !important;
+        min-height: 88px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
 
-.portfolio-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    background: #f7f1e8;
-    z-index: -1;
-    pointer-events: none;
-}
-    /* Laura. alineado con el inicio del titular */
+        display: grid !important;
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        align-items: center !important;
 
-    .portfolio-brand {
-        justify-self: start !important;
-        margin: 0 !important;
+        position: relative !important;
+        isolation: isolate;
+        box-sizing: border-box !important;
+        background: #f7f1e8 !important;
     }
 
-    /* Work y Contact alineados con el final del titular */
+    /* Extiende únicamente el fondo crema */
 
-    .portfolio-nav {
+    header.portfolio-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 100vw;
+        transform: translateX(-50%);
+        background: #f7f1e8;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    /* Laura. sobre el comienzo de “If” */
+
+    header.portfolio-header .portfolio-brand {
+        justify-self: start !important;
+        margin: 0 !important;
+        font-weight: 700 !important;
+        font-synthesis: none;
+    }
+
+    header.portfolio-header .portfolio-brand-icon,
+    header.portfolio-header .portfolio-brand-name {
+        font-weight: 700 !important;
+        font-synthesis: none;
+    }
+
+    /* Contact alineado con el final de “translated,” */
+
+    header.portfolio-header .portfolio-nav {
         justify-self: end !important;
         margin: 0 !important;
         display: flex !important;
         align-items: center !important;
-        gap: 12px !important;
+        gap: 10px !important;
     }
 
-    /* Ya no necesitamos la tercera columna invisible */
-
-    .portfolio-header-balance {
+    header.portfolio-header .portfolio-header-balance {
         display: none !important;
     }
 
+    #order {
+        scroll-margin-top: 24px;
+    }
+
     @media (max-width: 700px) {
-        .portfolio-header {
+        header.portfolio-header {
             width: calc(100% - 32px) !important;
             min-height: 72px !important;
-            grid-template-columns: auto minmax(0, 1fr) !important;
         }
 
-        .portfolio-nav {
+        header.portfolio-header .portfolio-brand {
             gap: 7px !important;
+        }
+
+        header.portfolio-header .portfolio-brand-icon {
+            width: 32px !important;
+            height: 32px !important;
+        }
+
+        header.portfolio-header .portfolio-brand-name {
+            font-size: 0.95rem !important;
+        }
+
+        header.portfolio-header .portfolio-nav {
+            gap: 5px !important;
+        }
+
+        header.portfolio-header .portfolio-nav a {
+            min-height: 38px !important;
+            padding: 0 11px !important;
+            font-size: 0.75rem !important;
         }
     }
 </style>
@@ -6517,9 +6552,10 @@ padding: 0;
     </a>
 
     <nav class="portfolio-nav" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <a href="#order">Order</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+</nav>
 
     <span class="portfolio-header-balance" aria-hidden="true"></span>
 
@@ -7078,7 +7114,7 @@ padding: 0;
 
     </div>
 
-<section class="pricing-calculator">
+<section class="pricing-calculator" id="order">
 
     <div class="pricing-calculator-controls">
 
