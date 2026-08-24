@@ -5741,6 +5741,8 @@ background: #f7f1e8;
 }
 
 .testimonial-card-avatar {
+    overflow: hidden;
+padding: 0;
     position: absolute;
     top: -26px;
     left: 50%;
@@ -5760,7 +5762,13 @@ background: #f7f1e8;
     font-weight: 800;
     letter-spacing: 0.04em;
 }
-
+.testimonial-card-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 .testimonial-grid-card blockquote {
     width: 100%;
     margin: 10px 0 22px;
@@ -6927,58 +6935,62 @@ background: #f7f1e8;
 <section class="testimonials-grid" aria-label="Client testimonials">
 
     <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
+        <span class="testimonial-card-avatar">
+    <img src="testimonial-client-1.webp" alt="Nombre del cliente">
+</span>
 
         <blockquote>
-            “High quality work. Met and exceeded all our expectations.”
+            “We needed Spanish betting content that was accurate but still easy to follow. Laura understood the markets, odds and industry terms from day one. Her articles are clear, useful and written for real readers. Finding someone who can do both is not easy.”
         </blockquote>
 
         <div class="testimonial-card-meta">
-            <strong>Client name</strong>
-            <span>Job title · Company</span>
+            <strong>Jorge Palencia</strong>
+            <span>Localization Project Manager · FEVER LABS INC</span>
         </div>
     </article>
 
     <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
+        <span class="testimonial-card-avatar">
+    <img src="testimonial-client-2.webp" alt="Nombre del cliente">
+</span>
 
         <blockquote>
-            “Laura is an exceptional writer. Her command of the Spanish
-            language is impressive, and the tone is perfectly suited
-            to the target audience.”
+            “Working with Laura makes our team stronger. We send her the client brief, and she quickly understands what the Spanish version needs. There is very little back and forth. She knows the casino industry, helps us meet client demand and has become an important part of our growth.”
         </blockquote>
 
         <div class="testimonial-card-meta">
-            <strong>Client name</strong>
-            <span>Job title · Company</span>
+            <strong>Bohdan Cooklin</strong>
+            <span>iGaming SEO Editor · Qream Design</span>
         </div>
     </article>
 
     <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
+        <span class="testimonial-card-avatar">
+    <img src="testimonial-client-3.webp" alt="Nombre del cliente">
+</span>
 
         <blockquote>
-            “Laura has a fantastic work ethic and listens to all feedback
-            extremely carefully. It’s a pleasure working with her.”
+            “Laura really knows betting content. She can take a complex market or set of odds and explain it in a simple way without losing the important details. Her work is always well written, and we rarely need to ask for changes.”
         </blockquote>
 
         <div class="testimonial-card-meta">
-            <strong>Client name</strong>
-            <span>Job title · Company</span>
+            <strong>Sofia Oliveira</strong>
+            <span>Sports Betting Content Manager · Adverte Marketing</span>
         </div>
     </article>
 
     <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
+        <span class="testimonial-card-avatar">
+    <img src="testimonial-client-4.webp" alt="Nombre del cliente">
+</span>
 
         <blockquote>
-            “She’s exceptionally professional and dedicated, always ensuring
-            we are completely happy with the final product.”
+            “She proofreads our Spanish casino content and always follows our tone, guidelines and requirements. She catches the small details and makes the copy feel natural. She is proactive, easy to work with and very reliable, even when we have a last-minute request.”
         </blockquote>
 
         <div class="testimonial-card-meta">
-            <strong>Client name</strong>
-            <span>Job title · Company</span>
+            <strong>Gregorio Punzano</strong>
+            <span>Content & QA Manager · Pro-Mova translation UA</span>
         </div>
     </article>
 
