@@ -6039,6 +6039,165 @@ padding: 0;
         min-height: 400px !important;
     }
 }
+        /* AJUSTE FINAL DEL TESTIMONIO */
+
+.client-rotator {
+    width: 100% !important;
+    max-width: 900px !important;
+    min-height: 450px !important;
+    grid-template-columns: 42px minmax(0, 760px) 42px !important;
+    gap: 18px !important;
+    margin: 0 auto !important;
+}
+
+/* Tarjeta más ancha y menos alta */
+
+.client-rotator-card {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 760px !important;
+    height: auto !important;
+    min-height: 360px !important;
+    padding: 76px 70px 38px !important;
+    align-self: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    border: 1px solid #dfcfbb !important;
+    border-radius: 24px !important;
+    background:
+        linear-gradient(90deg, #2864ff, #7da0ff)
+        top left / 100% 3px no-repeat,
+        #f8f1e7 !important;
+    box-shadow: 0 18px 42px rgba(16, 24, 40, 0.07) !important;
+}
+
+/* Quita 03 / 04 */
+
+.client-rotator-counter {
+    display: none !important;
+}
+
+/* Fotografía más grande y ocupando todo el círculo */
+
+.client-rotator-avatar {
+    top: -51px !important;
+    width: 102px !important;
+    height: 102px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 5px solid #fffaf3 !important;
+    background: #fffaf3 !important;
+    box-sizing: border-box !important;
+}
+
+.client-rotator-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+    transform: scale(1.16);
+}
+
+/* Comillas decorativas discretas */
+
+.client-rotator-card::before {
+    content: "“";
+    position: absolute;
+    top: 68px;
+    left: 48px;
+    color: rgba(40, 100, 255, 0.15);
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+/* Texto más limpio y compacto */
+
+.client-rotator-card blockquote {
+    width: 100% !important;
+    max-width: 610px !important;
+    margin: 23px auto 25px !important;
+    color: #344054 !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    letter-spacing: -0.012em !important;
+    text-align: left !important;
+}
+
+/* Una única línea divisoria */
+
+.client-rotator-divider {
+    width: 100% !important;
+    max-width: 610px !important;
+    margin: 0 auto 22px !important;
+    background: #dfd2c2 !important;
+}
+
+/* Datos del cliente */
+
+.client-rotator-card footer {
+    width: 100% !important;
+    max-width: 610px !important;
+    margin: 0 auto !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+.client-rotator-card footer strong {
+    color: #101828 !important;
+    font-size: 0.94rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+}
+
+.client-rotator-card footer span {
+    color: #667085 !important;
+    font-size: 0.79rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Flechas normales y fuera de la tarjeta */
+
+.client-rotator-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+    font-size: 0.95rem !important;
+}
+
+/* Móvil */
+
+@media (max-width: 760px) {
+    .client-rotator {
+        min-height: 500px !important;
+        grid-template-columns: 36px minmax(0, 1fr) 36px !important;
+        gap: 7px !important;
+    }
+
+    .client-rotator-card {
+        min-height: 410px !important;
+        padding: 68px 28px 32px !important;
+    }
+
+    .client-rotator-avatar {
+        top: -43px !important;
+        width: 86px !important;
+        height: 86px !important;
+    }
+
+    .client-rotator-card::before {
+        top: 65px;
+        left: 21px;
+        font-size: 4rem;
+    }
+
+    .client-rotator-card blockquote {
+        font-size: 0.92rem !important;
+        line-height: 1.65 !important;
+    }
+}
 </style>
 </head>
 <body>
