@@ -5822,7 +5822,187 @@ padding: 0;
     }
 }
 </style>
-    
+    <style>
+    /* TESTIMONIAL ROTATOR */
+
+    /* TESTIMONIAL ROTATOR */
+
+.client-rotator {
+    width: 100%;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 680px) 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 0 auto;
+}
+
+.client-rotator-card {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    padding: 78px 62px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #e3d5c3;
+    border-radius: 24px;
+    background: #f8f1e7;
+    box-shadow: 0 18px 42px rgba(16, 24, 40, 0.06);
+    text-align: center;
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.client-rotator-card.is-changing {
+    opacity: 0;
+    transform: translateY(7px);
+}
+
+.client-rotator-avatar {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    width: 94px;
+    height: 94px;
+    padding: 5px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    border: 1px solid #e3d5c3;
+    border-radius: 50%;
+    background: #fffaf3;
+    box-shadow: 0 9px 22px rgba(16, 24, 40, 0.1);
+}
+
+.client-rotator-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.client-rotator-counter {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    color: #98a2b3;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.client-rotator-counter strong {
+    color: #2864ff;
+    font-size: 0.92rem;
+}
+
+.client-rotator-card blockquote {
+    max-width: 540px;
+    margin: 18px auto 30px;
+    color: #344054;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: -0.01em;
+}
+
+.client-rotator-divider {
+    width: 100%;
+    max-width: 500px;
+    height: 1px;
+    margin: 0 auto 25px;
+    background: #e4d8c8;
+}
+
+.client-rotator-card footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.client-rotator-card footer strong {
+    color: #101828;
+    font-size: 0.94rem;
+    font-weight: 700;
+}
+
+.client-rotator-card footer span {
+    color: #667085;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.client-rotator-arrow {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d7dee9;
+    border-radius: 50%;
+    color: #101828;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.client-rotator-arrow:hover {
+    color: #ffffff;
+    border-color: #2864ff;
+    background: #2864ff;
+    transform: translateY(-2px);
+}
+
+.client-rotator-arrow:focus-visible {
+    outline: 3px solid rgba(40, 100, 255, 0.22);
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .client-rotator {
+        min-height: 540px;
+        grid-template-columns: 38px minmax(0, 1fr) 38px;
+        gap: 9px;
+    }
+
+    .client-rotator-card {
+        min-height: 410px;
+        padding: 70px 25px 35px;
+        border-radius: 21px;
+    }
+
+    .client-rotator-avatar {
+        top: -41px;
+        width: 82px;
+        height: 82px;
+    }
+
+    .client-rotator-card blockquote {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .client-rotator-arrow {
+        width: 38px;
+        height: 38px;
+    }
+}
+</style>
 </head>
 <body>
 
@@ -6934,66 +7114,59 @@ padding: 0;
        <!-- TESTIMONIOS -->
 <section class="testimonials-grid" aria-label="Client testimonials">
 
-    <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar">
-    <img src="testimonial-client-1.webp" alt="Nombre del cliente">
-</span>
+  <div class="client-rotator" data-client-rotator>
 
-        <blockquote>
-            “We needed Spanish betting content that was accurate but still easy to follow. Laura understood the markets, odds and industry terms from day one. Her articles are clear, useful and written for real readers. Finding someone who can do both is not easy.”
+    <button
+        class="client-rotator-arrow client-rotator-prev"
+        type="button"
+        aria-label="Previous testimonial"
+    >
+        ←
+    </button>
+
+    <article class="client-rotator-card">
+
+        <div class="client-rotator-avatar">
+            <img
+                id="rotator-client-image"
+                src="assets/img/testimonial-client-1.webp"
+                alt="Jorge Palencia"
+            >
+        </div>
+
+        <div class="client-rotator-counter">
+            <strong id="rotator-current">01</strong>
+            <span>/ 04</span>
+        </div>
+
+        <blockquote id="rotator-quote">
+            “We needed Spanish betting content that was accurate but still
+            easy to follow. Laura understood the markets, odds and industry
+            terms from day one. Her articles are clear, useful and written
+            for real readers. Finding someone who can do both is not easy.”
         </blockquote>
 
-        <div class="testimonial-card-meta">
-            <strong>Jorge Palencia</strong>
-            <span>Localization Project Manager · FEVER LABS INC</span>
-        </div>
+        <div class="client-rotator-divider"></div>
+
+        <footer>
+            <strong id="rotator-client-name">Jorge Palencia</strong>
+
+            <span id="rotator-client-position">
+                Localization Project Manager · FEVER LABS INC
+            </span>
+        </footer>
+
     </article>
 
-    <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar">
-    <img src="testimonial-client-2.webp" alt="Nombre del cliente">
-</span>
+    <button
+        class="client-rotator-arrow client-rotator-next"
+        type="button"
+        aria-label="Next testimonial"
+    >
+        →
+    </button>
 
-        <blockquote>
-            “Working with Laura makes our team stronger. We send her the client brief, and she quickly understands what the Spanish version needs. There is very little back and forth. She knows the casino industry, helps us meet client demand and has become an important part of our growth.”
-        </blockquote>
-
-        <div class="testimonial-card-meta">
-            <strong>Bohdan Cooklin</strong>
-            <span>iGaming SEO Editor · Qream Design</span>
-        </div>
-    </article>
-
-    <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar">
-    <img src="testimonial-client-3.webp" alt="Nombre del cliente">
-</span>
-
-        <blockquote>
-            “Laura really knows betting content. She can take a complex market or set of odds and explain it in a simple way without losing the important details. Her work is always well written, and we rarely need to ask for changes.”
-        </blockquote>
-
-        <div class="testimonial-card-meta">
-            <strong>Sofia Oliveira</strong>
-            <span>Sports Betting Content Manager · Adverte Marketing</span>
-        </div>
-    </article>
-
-    <article class="testimonial-grid-card">
-        <span class="testimonial-card-avatar">
-    <img src="testimonial-client-4.webp" alt="Nombre del cliente">
-</span>
-
-        <blockquote>
-            “She proofreads our Spanish casino content and always follows our tone, guidelines and requirements. She catches the small details and makes the copy feel natural. She is proactive, easy to work with and very reliable, even when we have a last-minute request.”
-        </blockquote>
-
-        <div class="testimonial-card-meta">
-            <strong>Gregorio Punzano</strong>
-            <span>Content & QA Manager · Pro-Mova translation UA</span>
-        </div>
-    </article>
-
+</div>
 </section>
     </div>
 </section>
@@ -7882,6 +8055,113 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     showTestimonial(0);
+});
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = [
+        {
+            image: "assets/img/testimonial-client-1.webp",
+            name: "Jorge Palencia",
+            position: "Localization Project Manager · FEVER LABS INC",
+            quote: "We needed Spanish betting content that was accurate but still easy to follow. Laura understood the markets, odds and industry terms from day one. Her articles are clear, useful and written for real readers. Finding someone who can do both is not easy."
+        },
+        {
+            image: "assets/img/testimonial-client-2.webp",
+            name: "Bohdan Cooklin",
+            position: "iGaming SEO Editor · Qream Design",
+            quote: "Working with Laura makes our team stronger. We send her the client brief, and she quickly understands what the Spanish version needs. There is very little back and forth. She knows the casino industry, helps us meet client demand and has become an important part of our growth."
+        },
+        {
+            image: "assets/img/testimonial-client-3.webp",
+            name: "Sofia Oliveira",
+            position: "Sports Betting Content Manager · Adverte Marketing",
+            quote: "Laura really knows betting content. She can take a complex market or set of odds and explain it in a simple way without losing the important details. Her work is always well written, and we rarely need to ask for changes."
+        },
+        {
+            image: "assets/img/testimonial-client-4.webp",
+            name: "Gregorio Punzano",
+            position: "Content & QA Manager · Pro-Mova Translation UA",
+            quote: "She proofreads our Spanish casino content and always follows our tone, guidelines and requirements. She catches the small details and makes the copy feel natural. She is proactive, easy to work with and very reliable, even when we have a last-minute request."
+        }
+    ];
+
+    const rotator = document.querySelector("[data-client-rotator]");
+
+    if (!rotator) return;
+
+    const card = rotator.querySelector(".client-rotator-card");
+    const image = document.getElementById("rotator-client-image");
+    const quote = document.getElementById("rotator-quote");
+    const name = document.getElementById("rotator-client-name");
+    const position = document.getElementById("rotator-client-position");
+    const counter = document.getElementById("rotator-current");
+    const previousButton = rotator.querySelector(".client-rotator-prev");
+    const nextButton = rotator.querySelector(".client-rotator-next");
+
+    let currentIndex = 0;
+    let rotationTimer;
+    let changeTimer;
+
+    testimonials.forEach(function (testimonial) {
+        const preloadImage = new Image();
+        preloadImage.src = testimonial.image;
+    });
+
+    function showTestimonial(newIndex) {
+        clearTimeout(changeTimer);
+
+        currentIndex =
+            (newIndex + testimonials.length) % testimonials.length;
+
+        card.classList.add("is-changing");
+
+        changeTimer = setTimeout(function () {
+            const testimonial = testimonials[currentIndex];
+
+            image.src = testimonial.image;
+            image.alt = testimonial.name;
+            quote.textContent = `“${testimonial.quote}”`;
+            name.textContent = testimonial.name;
+            position.textContent = testimonial.position;
+            counter.textContent = String(currentIndex + 1).padStart(2, "0");
+
+            card.classList.remove("is-changing");
+        }, 220);
+    }
+
+    function startRotation() {
+        clearInterval(rotationTimer);
+
+        rotationTimer = setInterval(function () {
+            showTestimonial(currentIndex + 1);
+        }, 3500);
+    }
+
+    previousButton.addEventListener("click", function () {
+        showTestimonial(currentIndex - 1);
+        startRotation();
+    });
+
+    nextButton.addEventListener("click", function () {
+        showTestimonial(currentIndex + 1);
+        startRotation();
+    });
+
+    rotator.addEventListener("mouseenter", function () {
+        clearInterval(rotationTimer);
+    });
+
+    rotator.addEventListener("mouseleave", startRotation);
+
+    rotator.addEventListener("focusin", function () {
+        clearInterval(rotationTimer);
+    });
+
+    rotator.addEventListener("focusout", startRotation);
+
+    showTestimonial(0);
+    startRotation();
 });
 </script>
 </body>
