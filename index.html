@@ -8023,21 +8023,21 @@ padding: 0;
 
 
     const currencies = {
-        USD: {
-            symbol: "$",
-            factor: 1
-        },
+    USD: {
+        symbol: "$",
+        factor: 1
+    },
 
-        EUR: {
-            symbol: "€",
-            factor: 0.92
-        },
+    EUR: {
+        symbol: "€",
+        factor: 0.90
+    },
 
-        GBP: {
-            symbol: "£",
-            factor: 0.79
-        }
-    };
+    GBP: {
+        symbol: "£",
+        factor: 0.80
+    }
+};
 
 
     const serviceInformation = {
@@ -8078,13 +8078,20 @@ padding: 0;
             ?.dataset.currency || "USD";
 
 
-    function formatPrice(amount, decimals) {
-        const currency = currencies[activeCurrency];
-        const convertedAmount = amount * currency.factor;
+function formatPrice(amount, decimals) {
+    const currency = currencies[activeCurrency];
+    const convertedAmount = amount * currency.factor;
 
-        return currency.symbol +
-            convertedAmount.toFixed(decimals);
+    let formattedAmount = convertedAmount.toFixed(decimals);
+
+    if (decimals > 0) {
+        formattedAmount = formattedAmount
+            .replace(/0+$/, "")
+            .replace(/\.$/, "");
     }
+
+    return currency.symbol + formattedAmount;
+}
 
 
     function updateRangeBackground(slider) {
@@ -8127,7 +8134,7 @@ padding: 0;
 
         if (ratePerWord) {
             ratePerWord.textContent =
-                formatPrice(activeRate, 2);
+                formatPrice(activeRate, 3);
         }
 
         if (ratePerThousand) {
