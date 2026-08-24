@@ -3235,7 +3235,9 @@ header nav a {
 }
         .pricing-tools .service-rate-summary {
     padding: 7px 4px !important;
-    background: transparent !important;
+    background: #f8f3eb !important;
+position: relative !important;
+isolation: isolate;
     border: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
@@ -6238,6 +6240,17 @@ padding: 0;
     /* HEADER */
 
     .portfolio-header {
+        .portfolio-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #f8f3eb;
+    z-index: -1;
+}
         width: 100%;
         min-height: 88px;
         padding: 0 clamp(24px, 4vw, 72px);
@@ -6419,6 +6432,59 @@ padding: 0;
             height: 68px !important;
             min-width: 68px !important;
             flex-basis: 68px !important;
+        }
+    }
+</style>
+    <style>
+    /* HEADER CENTRADO Y CON ANCHO CONTROLADO */
+
+    .portfolio-header {
+        width: calc(100% - 40px) !important;
+        max-width: 1050px !important;
+        min-height: 88px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: grid !important;
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        align-items: center !important;
+
+        background: transparent !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Laura. alineado con el inicio del titular */
+
+    .portfolio-brand {
+        justify-self: start !important;
+        margin: 0 !important;
+    }
+
+    /* Work y Contact alineados con el final del titular */
+
+    .portfolio-nav {
+        justify-self: end !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    /* Ya no necesitamos la tercera columna invisible */
+
+    .portfolio-header-balance {
+        display: none !important;
+    }
+
+    @media (max-width: 700px) {
+        .portfolio-header {
+            width: calc(100% - 32px) !important;
+            min-height: 72px !important;
+            grid-template-columns: auto minmax(0, 1fr) !important;
+        }
+
+        .portfolio-nav {
+            gap: 7px !important;
         }
     }
 </style>
