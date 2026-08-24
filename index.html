@@ -5709,6 +5709,110 @@ background: #f7f1e8;
     background: #2864ff;
     border-color: #2864ff;
 }
+       /* CUADRÍCULA DE CUATRO TESTIMONIOS */
+
+.testimonials-grid {
+    width: 100%;
+    max-width: 520px;
+    padding-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 48px;
+    align-self: center;
+    justify-self: center;
+    box-sizing: border-box;
+}
+
+.testimonial-grid-card {
+    position: relative;
+    min-width: 0;
+    min-height: 230px;
+    padding: 40px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    background: #f7f1e8;
+    border: 1px solid #e7dac8;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(80, 55, 25, 0.06);
+}
+
+.testimonial-card-avatar {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    color: #2864ff;
+    background: #fffaf2;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 1px #e7dac8,
+        0 6px 14px rgba(80, 55, 25, 0.09);
+    transform: translateX(-50%);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.testimonial-grid-card blockquote {
+    width: 100%;
+    margin: 10px 0 22px;
+    color: #475467;
+    font-size: 0.76rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.testimonial-card-meta {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    border-top: 1px solid rgba(152, 118, 72, 0.16);
+}
+
+.testimonial-card-meta strong {
+    color: #101828;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.testimonial-card-meta span {
+    color: #667085;
+    font-size: 0.61rem;
+}
+
+/* Tableta */
+@media (max-width: 900px) {
+    .testimonials-grid {
+        max-width: 540px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .testimonials-grid {
+        max-width: 360px;
+        padding-top: 24px;
+        grid-template-columns: 1fr;
+        row-gap: 46px;
+    }
+
+    .testimonial-grid-card {
+        min-height: 205px;
+    }
+}
 </style>
     
 </head>
@@ -6819,149 +6923,66 @@ background: #f7f1e8;
 
         </div>
 
-        <!-- TESTIMONIOS -->
-        <section
-            class="client-testimonials"
-            aria-label="Client testimonials"
-        >
+       <!-- TESTIMONIOS -->
+<section class="testimonials-grid" aria-label="Client testimonials">
 
-            <div class="client-testimonials-header">
+    <article class="testimonial-grid-card">
+        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
 
-                <span
-                    class="testimonial-counter"
-                    aria-live="polite"
-                >
-                    <strong data-testimonial-current>01</strong>
-                    <span>/ 04</span>
-                </span>
+        <blockquote>
+            “High quality work. Met and exceeded all our expectations.”
+        </blockquote>
 
-            </div>
+        <div class="testimonial-card-meta">
+            <strong>Client name</strong>
+            <span>Job title · Company</span>
+        </div>
+    </article>
 
-            <div class="testimonial-viewport">
+    <article class="testimonial-grid-card">
+        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
 
-                <article class="client-testimonial is-active">
-                    <div
-                        class="testimonial-stars"
-                        aria-label="5 out of 5 stars"
-                    >
-                        ★★★★★
-                    </div>
+        <blockquote>
+            “Laura is an exceptional writer. Her command of the Spanish
+            language is impressive, and the tone is perfectly suited
+            to the target audience.”
+        </blockquote>
 
-                    <blockquote>
-                        “High quality work. Met and exceeded all
-                        our expectations.”
-                    </blockquote>
+        <div class="testimonial-card-meta">
+            <strong>Client name</strong>
+            <span>Job title · Company</span>
+        </div>
+    </article>
 
-                   <div class="testimonial-meta">
-    <span class="testimonial-avatar" aria-hidden="true">CL</span>
+    <article class="testimonial-grid-card">
+        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
 
-    <div>
-        <strong>Client name</strong>
-        <span>Job title · Company</span>
-    </div>
-                </article>
+        <blockquote>
+            “Laura has a fantastic work ethic and listens to all feedback
+            extremely carefully. It’s a pleasure working with her.”
+        </blockquote>
 
-                <article class="client-testimonial">
-                    <div
-                        class="testimonial-stars"
-                        aria-label="5 out of 5 stars"
-                    >
-                        ★★★★★
-                    </div>
+        <div class="testimonial-card-meta">
+            <strong>Client name</strong>
+            <span>Job title · Company</span>
+        </div>
+    </article>
 
-                    <blockquote>
-                        “Laura is an exceptional writer. Her command
-                        of the Spanish language is impressive. The
-                        grammar is flawless and the tone is perfectly
-                        suited for my target audience.”
-                    </blockquote>
+    <article class="testimonial-grid-card">
+        <span class="testimonial-card-avatar" aria-hidden="true">CL</span>
 
-                   <div class="testimonial-meta">
-    <span class="testimonial-avatar" aria-hidden="true">CL</span>
+        <blockquote>
+            “She’s exceptionally professional and dedicated, always ensuring
+            we are completely happy with the final product.”
+        </blockquote>
 
-    <div>
-        <strong>Client name</strong>
-        <span>Job title · Company</span>
-    </div>
-                </article>
+        <div class="testimonial-card-meta">
+            <strong>Client name</strong>
+            <span>Job title · Company</span>
+        </div>
+    </article>
 
-                <article class="client-testimonial">
-                    <div
-                        class="testimonial-stars"
-                        aria-label="5 out of 5 stars"
-                    >
-                        ★★★★★
-                    </div>
-
-                    <blockquote>
-                        “Laura has a fantastic work ethic and listens
-                        to all feedback extremely carefully. It’s a
-                        pleasure working with her.”
-                    </blockquote>
-
-                   <div class="testimonial-meta">
-    <span class="testimonial-avatar" aria-hidden="true">CL</span>
-
-    <div>
-        <strong>Client name</strong>
-        <span>Job title · Company</span>
-    </div>
-</div>
-                </article>
-
-                <article class="client-testimonial">
-                    <div
-                        class="testimonial-stars"
-                        aria-label="5 out of 5 stars"
-                    >
-                        ★★★★★
-                    </div>
-
-                    <blockquote>
-                        “She’s exceptionally professional and dedicated,
-                        always ensuring we are completely happy with
-                        the final product.”
-                    </blockquote>
-
-                    <div class="testimonial-meta">
-    <span class="testimonial-avatar" aria-hidden="true">CL</span>
-
-    <div>
-        <strong>Client name</strong>
-        <span>Job title · Company</span>
-    </div>
-</div>
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="testimonial-navigation">
-
-                <button
-                    class="testimonial-arrow testimonial-previous"
-                    type="button"
-                    aria-label="Previous testimonial"
-                >
-                    ←
-                </button>
-
-                <span class="testimonial-navigation-text">
-                    Browse client feedback
-                </span>
-
-                <button
-                    class="testimonial-arrow testimonial-next"
-                    type="button"
-                    aria-label="Next testimonial"
-                >
-                    →
-                </button>
-
-            </div>
-
-        </section>
-
+</section>
     </div>
 </section>
 <!-- TRUST, REGULATION AND TESTIMONIALS END -->
