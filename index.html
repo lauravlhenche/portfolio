@@ -6234,19 +6234,214 @@ padding: 0;
     transform-origin: center 30% !important;
 }
 </style>
+    <style>
+    /* HEADER */
+
+    .portfolio-header {
+        width: 100%;
+        min-height: 88px;
+        padding: 0 clamp(24px, 4vw, 72px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        box-sizing: border-box;
+        background: transparent;
+    }
+
+    .portfolio-brand {
+        justify-self: start;
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        color: #101828;
+        text-decoration: none;
+    }
+
+    .portfolio-brand-icon {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: #ffffff;
+        background: #2864ff;
+        font-size: 0.95rem;
+        font-weight: 800;
+        box-shadow: 0 7px 18px rgba(40, 100, 255, 0.18);
+    }
+
+    .portfolio-brand-name {
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+    }
+
+    .portfolio-brand-name span {
+        color: #2864ff;
+    }
+
+    .portfolio-nav {
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .portfolio-nav a {
+        min-height: 44px;
+        padding: 0 21px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d9e1ef;
+        border-radius: 999px;
+        color: #101828;
+        background: rgba(255, 255, 255, 0.74);
+        font-size: 0.88rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition:
+            color 0.2s ease,
+            border-color 0.2s ease,
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .portfolio-nav a:hover {
+        color: #ffffff;
+        border-color: #2864ff;
+        background: #2864ff;
+        transform: translateY(-2px);
+    }
+
+    /* PROFILE CARD */
+
+    .profile-card {
+        width: min(100%, 430px) !important;
+        min-height: 108px !important;
+        margin: 0 auto 26px !important;
+        padding: 14px 22px 14px 14px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 17px !important;
+        box-sizing: border-box !important;
+        border: 1px solid #dce3ee !important;
+        border-radius: 23px !important;
+        background: rgba(255, 255, 255, 0.88) !important;
+        box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06) !important;
+    }
+
+    /* Funciona tanto si la fotografía está sola como dentro de un contenedor */
+
+    .profile-card > img,
+    .profile-card .profile-photo,
+    .profile-card .profile-avatar {
+        width: 78px !important;
+        height: 78px !important;
+        min-width: 78px !important;
+        flex: 0 0 78px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        border: 0 !important;
+        border-radius: 50% !important;
+        background: #ffffff !important;
+    }
+
+    .profile-card > img,
+    .profile-card .profile-photo img,
+    .profile-card .profile-avatar img {
+        width: 78px !important;
+        height: 78px !important;
+        display: block !important;
+        object-fit: cover !important;
+        object-position: center 22% !important;
+        border-radius: 50% !important;
+    }
+
+    .profile-card strong {
+        color: #101828 !important;
+        font-size: 1.06rem !important;
+        font-weight: 750 !important;
+        line-height: 1.3 !important;
+    }
+
+    .profile-card p {
+        margin: 3px 0 7px !important;
+        color: #667085 !important;
+        font-size: 0.88rem !important;
+        line-height: 1.4 !important;
+    }
+
+    @media (max-width: 700px) {
+        .portfolio-header {
+            min-height: 72px;
+            padding: 0 18px;
+            grid-template-columns: auto minmax(0, 1fr);
+        }
+
+        .portfolio-header-balance {
+            display: none;
+        }
+
+        .portfolio-brand-icon {
+            width: 34px;
+            height: 34px;
+        }
+
+        .portfolio-brand-name {
+            font-size: 1.05rem;
+        }
+
+        .portfolio-nav {
+            justify-self: end;
+            gap: 7px;
+        }
+
+        .portfolio-nav a {
+            min-height: 40px;
+            padding: 0 15px;
+            font-size: 0.8rem;
+        }
+
+        .profile-card {
+            width: min(100%, 380px) !important;
+            min-height: 96px !important;
+            padding: 12px 16px 12px 12px !important;
+            gap: 13px !important;
+        }
+
+        .profile-card > img,
+        .profile-card .profile-photo,
+        .profile-card .profile-avatar,
+        .profile-card .profile-photo img,
+        .profile-card .profile-avatar img {
+            width: 68px !important;
+            height: 68px !important;
+            min-width: 68px !important;
+            flex-basis: 68px !important;
+        }
+    }
+</style>
 </head>
 <body>
 
-<header>
-    <div class="container navigation">
-        <a class="logo" href="#">Laura.</a>
+<header class="portfolio-header">
 
-        <nav>
-            <a href="#services">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+    <a class="portfolio-brand" href="#" aria-label="Laura — Home">
+        <span class="portfolio-brand-icon" aria-hidden="true">L</span>
+
+        <span class="portfolio-brand-name">
+            Laura<span>.</span>
+        </span>
+    </a>
+
+    <nav class="portfolio-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <span class="portfolio-header-balance" aria-hidden="true"></span>
+
 </header>
 
     <main>
