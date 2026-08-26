@@ -6538,6 +6538,144 @@ padding: 0;
         }
     }
 </style>
+    <style>
+    /* FAQ */
+
+    .portfolio-faq {
+        padding: 105px 28px 115px;
+        background: #ffffff;
+    }
+
+    .portfolio-faq-inner {
+        width: 100%;
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+
+    .portfolio-faq-title {
+        margin: 0 auto 60px;
+        color: #101828;
+        font-size: clamp(2.2rem, 4vw, 3.35rem);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+        text-align: center;
+    }
+
+    .portfolio-faq-title span {
+        color: #2864ff;
+    }
+
+    .portfolio-faq-list {
+        border-top: 1px solid #dce2eb;
+    }
+
+    .portfolio-faq-item {
+        margin: 0;
+        border-bottom: 1px solid #dce2eb;
+    }
+
+    .portfolio-faq-item summary {
+        position: relative;
+        min-height: 82px;
+        padding: 26px 68px 26px 0;
+        display: flex;
+        align-items: center;
+        color: #101828;
+        font-size: 1.05rem;
+        font-weight: 600;
+        line-height: 1.45;
+        cursor: pointer;
+        list-style: none;
+        transition: color 0.2s ease;
+    }
+
+    .portfolio-faq-item summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .portfolio-faq-item summary::after {
+        content: "+";
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        color: #2864ff;
+        background: #f4f7ff;
+        border: 1px solid #d7e1ff;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        font-weight: 500;
+        transform: translateY(-50%);
+        transition:
+            color 0.2s ease,
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .portfolio-faq-item[open] summary {
+        color: #2864ff;
+    }
+
+    .portfolio-faq-item[open] summary::after {
+        content: "−";
+        color: #ffffff;
+        background: #2864ff;
+        border-color: #2864ff;
+    }
+
+    .portfolio-faq-answer {
+        max-width: 850px;
+        padding: 0 68px 28px 0;
+    }
+
+    .portfolio-faq-answer p {
+        margin: 0;
+        color: #667085;
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .portfolio-faq-item summary:focus-visible {
+        outline: 3px solid rgba(40, 100, 255, 0.2);
+        outline-offset: 4px;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 700px) {
+        .portfolio-faq {
+            padding: 78px 20px 88px;
+        }
+
+        .portfolio-faq-title {
+            margin-bottom: 42px;
+            font-size: 2.15rem;
+        }
+
+        .portfolio-faq-item summary {
+            min-height: 74px;
+            padding: 22px 52px 22px 0;
+            font-size: 0.95rem;
+        }
+
+        .portfolio-faq-item summary::after {
+            right: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        .portfolio-faq-answer {
+            padding: 0 42px 24px 0;
+        }
+
+        .portfolio-faq-answer p {
+            font-size: 0.87rem;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -7772,7 +7910,117 @@ padding: 0;
 </div>
 </section>
 <section id="contact" class="contact-section">
+<!-- FAQ START -->
+<section class="portfolio-faq" id="faq" aria-labelledby="faq-title">
 
+    <div class="portfolio-faq-inner">
+
+        <h2 class="portfolio-faq-title" id="faq-title">
+            Frequently asked questions<span>.</span>
+        </h2>
+
+        <div class="portfolio-faq-list">
+
+            <details class="portfolio-faq-item">
+                <summary>How soon will my order be ready?</summary>
+
+                <div class="portfolio-faq-answer">
+                    <p>
+                        A single standard-length text is usually ready within
+                        24 hours. I can also deliver up to five full articles
+                        within three days. This applies to content writing,
+                        translation and proofreading. For larger or more
+                        complex projects, I will confirm the delivery time
+                        before I start.
+                    </p>
+                </div>
+            </details>
+
+            <details class="portfolio-faq-item">
+                <summary>Do you offer free revisions?</summary>
+
+                <div class="portfolio-faq-answer">
+                    <p>
+                        Yes. Revisions are included in the original price.
+                        Just email me with the changes you need, and I will
+                        take care of them.
+                    </p>
+                </div>
+            </details>
+
+            <details class="portfolio-faq-item">
+                <summary>
+                    Do you work with offshore or non-Spanish-licensed operators?
+                </summary>
+
+                <div class="portfolio-faq-answer">
+                    <p>
+                        Yes, depending on the project and target market.
+                        I never hide or misstate an operator’s licensing
+                        status. Content intended for Spanish players cannot
+                        present an operator without a Spanish licence as
+                        authorised in the country.
+                    </p>
+                </div>
+            </details>
+
+            <details class="portfolio-faq-item">
+                <summary>What types of iGaming content do you cover?</summary>
+
+                <div class="portfolio-faq-answer">
+                    <p>
+                        I mainly work with sportsbooks and online casinos.
+                        This includes betting guides, match previews, game
+                        and operator reviews, bonus pages, payment content,
+                        landing pages and affiliate comparisons. I can also
+                        help with poker, esports betting, lottery, crypto
+                        casino and responsible gambling content.
+                    </p>
+                </div>
+            </details>
+
+            <details class="portfolio-faq-item">
+                <summary>
+                    Is it legal to publish casino and betting content in Spain?
+                </summary>
+
+                <div class="portfolio-faq-answer">
+                    <p>
+                        Yes. SEO articles, guides, reviews, comparisons and
+                        other informational gambling content can be published.
+                        The key is how the content is used. Pages intended for
+                        Spanish players should only promote operators authorised
+                        by the DGOJ. Affiliate links, bonus offers and calls to
+                        action such as “Play now” may qualify as commercial
+                        communications, so Spanish advertising and responsible
+                        gambling rules must be followed.
+                    </p>
+                </div>
+            </details>
+
+            <details class="portfolio-faq-item">
+                <summary>
+                    Why choose white-label content, translation or proofreading?
+                </summary>
+
+                <div class="portfolio-faq-answer">
+                    <p>
+                        White-label support gives you specialist help without
+                        hiring someone full-time. I work quietly behind your
+                        brand, follow your style and deliver finished files
+                        that are ready to publish. Your client sees the final
+                        work as part of your service, and you only order and
+                        pay for what you need.
+                    </p>
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FAQ END -->
     <div class="contact-panel">
 
         <div class="contact-intro">
