@@ -9853,6 +9853,214 @@ function formatPrice(amount, decimals) {
 
     activateService(initialService);
 </script>
+        <script>
+/* ORDER DIALOG */
+
+const CHECKOUT_ENDPOINT = "";
+
+const orderDialog =
+    document.getElementById("order-dialog");
+
+const openOrderDialogButton =
+    document.getElementById("open-order-dialog");
+
+const closeOrderDialogButton =
+    document.getElementById("close-order-dialog");
+
+const orderDetailsForm =
+    document.getElementById("order-details-form");
+
+const orderPaymentNote =
+    document.getElementById("order-payment-note");
+
+const orderDeadline =
+    document.getElementById("order-deadline");
+
+
+function updateOrderSummary() {
+    const wordsPerPiece =
+        Number(wordCountSlider.value);
+
+    const pieces =
+        Number(pieceCountSlider.value);
+
+    const totalWords =
+        wordsPerPiece * pieces;
+
+    const total =
+        totalWords * activeRate;
+
+
+    document.getElementById(
+        "order-summary-service"
+    ).textContent = activeService;
+
+
+    document.getElementById(
+        "order-summary-scope"
+    ).textContent =
+        `${pieces} ${pieces === 1 ? "piece" : "pieces"} × ` +
+        `${wordsPerPiece.toLocaleString("en-US")} words`;
+
+
+    document.getElementById(
+        "order-summary-words"
+    ).textContent =
+        totalWords.toLocaleString("en-US");
+
+
+    document.getElementById(
+        "order-summary-total"
+    ).textContent =
+        `${formatPrice(total, 0)} ${activeCurrency}`;
+}
+
+
+/* Prevents users from selecting a past deadline */
+
+if (orderDeadline) {
+    const today = new Date();
+
+    const localToday = [
+        today.getFullYear(),
+        String(today.getMonth() + 1).padStart(2, "0"),
+        String(today.getDate()).padStart(2, "0")
+    ].join("-");
+
+    orderDeadline.min = localToday;
+}
+
+
+/* Opens the order window */
+
+openOrderDialogButton?.addEventListener(
+    "click",
+    () => {
+        updateOrderSummary();
+        orderPaymentNote.hidden = true;
+        orderDialog.showModal();
+    }
+);
+
+
+/* Closes the window using the X button */
+
+closeOrderDialogButton?.addEventListener(
+    "click",
+    () => {
+        orderDialog.close();
+    }
+);
+
+
+/* Closes the window when clicking outside it */
+
+orderDialog?.addEventListener(
+    "click",
+    event => {
+        if (event.target === orderDialog) {
+            orderDialog.close();
+        }
+    }
+);
+
+
+/* Prepares the order for Stripe */
+
+orderDetailsForm?.addEventListener(
+    "submit",
+    async event => {
+        event.preventDefault();
+
+        if (!orderDetailsForm.reportValidity()) {
+            return;
+        }
+
+        /*
+         * Until Stripe is connected, this message
+         * will be displayed instead of charging.
+         */
+
+        if (!CHECKOUT_ENDPOINT) {
+            orderPaymentNote.textContent =
+                "Your order is ready. Secure payment will be connected next.";
+
+            orderPaymentNote.hidden = false;
+            return;
+        }
+
+
+        const submitButton =
+            orderDetailsForm.querySelector(
+                "button[type='submit']"
+            );
+
+        const wordsPerPiece =
+            Number(wordCountSlider.value);
+
+        const pieces =
+            Number(pieceCountSlider.value);
+
+        const formValues =
+            Object.fromEntries(
+                new FormData(orderDetailsForm)
+            );
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Opening secure checkout…";
+
+
+        try {
+            const response = await fetch(
+                CHECKOUT_ENDPOINT,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        service: activeService,
+                        wordsPerPiece,
+                        pieces,
+                        currency: activeCurrency,
+                        ...formValues
+                    })
+                }
+            );
+
+
+            if (!response.ok) {
+                throw new Error(
+                    "Checkout could not be created"
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+            window.location.href =
+                data.url;
+
+        } catch (error) {
+            orderPaymentNote.textContent =
+                "Secure checkout could not be opened. Please try again.";
+
+            orderPaymentNote.hidden = false;
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Continue to secure payment";
+        }
+    }
+);
+</script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
     const viewport = document.querySelector(".work-columns");
