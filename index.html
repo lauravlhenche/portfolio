@@ -8,7 +8,7 @@
     rel="icon"
     type="image/png"
     sizes="64x64"
-    href="favicon-lion-yellow-v2.png?v=2"
+    href="favicon-lion-yellow-v2.png?v=3"
 >
 <link
     rel="preload"
@@ -7655,6 +7655,48 @@ footer.site-footer .site-footer-nav a:hover {
             margin-top: 3px !important;
             font-size: 0.58rem !important;
         }
+    }
+</style>
+    <style>
+    /* BOTONES DEL FOOTER */
+
+    footer.site-footer a[href="#order"],
+    footer.site-footer a[href="#work"],
+    footer.site-footer a[href="#faq"],
+    footer.site-footer a[href="#contact"] {
+        color: #245cff !important;
+        background-color: #ffffff !important;
+        border: 1px solid #dce3ef !important;
+        box-shadow: none !important;
+        transition:
+            color 0.2s ease,
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            transform 0.2s ease !important;
+    }
+
+    footer.site-footer a[href="#order"]:hover,
+    footer.site-footer a[href="#work"]:hover,
+    footer.site-footer a[href="#faq"]:hover,
+    footer.site-footer a[href="#contact"]:hover,
+    footer.site-footer a[href="#order"]:focus-visible,
+    footer.site-footer a[href="#work"]:focus-visible,
+    footer.site-footer a[href="#faq"]:focus-visible,
+    footer.site-footer a[href="#contact"]:focus-visible {
+        color: #ffffff !important;
+        background-color: #245cff !important;
+        border-color: #245cff !important;
+        box-shadow: 0 8px 18px rgba(36, 92, 255, 0.22) !important;
+        transform: translateY(-1px) !important;
+    }
+
+    footer.site-footer a[href="#order"]:active,
+    footer.site-footer a[href="#work"]:active,
+    footer.site-footer a[href="#faq"]:active,
+    footer.site-footer a[href="#contact"]:active {
+        box-shadow: none !important;
+        transform: translateY(0) !important;
     }
 </style>
 </head>
