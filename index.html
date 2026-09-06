@@ -9087,6 +9087,151 @@ button.pricing-order-button:focus-visible {
 
 </section>
 <!-- FAQ END -->
+
+        <!-- ORDER DIALOG START -->
+
+<dialog
+    class="order-dialog"
+    id="order-dialog"
+    aria-labelledby="order-dialog-title"
+>
+    <div class="order-dialog-card">
+
+        <button
+            class="order-dialog-close"
+            id="close-order-dialog"
+            type="button"
+            aria-label="Close order form"
+        >
+            &times;
+        </button>
+
+        <span class="order-dialog-kicker">
+            Your order
+        </span>
+
+        <h2 id="order-dialog-title">
+            Tell me what you need<span>.</span>
+        </h2>
+
+        <div class="order-summary">
+
+            <div>
+                <span>Service</span>
+                <strong id="order-summary-service"></strong>
+            </div>
+
+            <div>
+                <span>Scope</span>
+                <strong id="order-summary-scope"></strong>
+            </div>
+
+            <div>
+                <span>Total words</span>
+                <strong id="order-summary-words"></strong>
+            </div>
+
+            <div>
+                <span>Total</span>
+                <strong id="order-summary-total"></strong>
+            </div>
+
+        </div>
+
+        <form id="order-details-form">
+
+            <div class="order-form-grid">
+
+                <label>
+                    Content area
+
+                    <select name="contentArea" required>
+                        <option value="">Choose an area</option>
+                        <option>Casino</option>
+                        <option>Sportsbook</option>
+                        <option>Affiliate content</option>
+                        <option>iGaming agency</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+                <label>
+                    Target market
+
+                    <input
+                        name="targetMarket"
+                        type="text"
+                        placeholder="e.g. Spain or Mexico"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Preferred deadline
+
+                    <input
+                        name="deadline"
+                        id="order-deadline"
+                        type="date"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Shared file link <span>(optional)</span>
+
+                    <input
+                        name="fileLink"
+                        type="url"
+                        placeholder="Google Drive, Dropbox…"
+                    >
+                </label>
+
+            </div>
+
+            <label>
+                Project instructions
+
+                <textarea
+                    name="instructions"
+                    rows="4"
+                    placeholder="Topic, tone, keywords and anything else I should know"
+                    required
+                ></textarea>
+            </label>
+
+            <label class="order-terms">
+                <input
+                    name="termsAccepted"
+                    type="checkbox"
+                    required
+                >
+
+                <span>
+                    I have reviewed the order summary and accept the terms.
+                </span>
+            </label>
+
+            <button
+                class="order-payment-button"
+                type="submit"
+            >
+                Continue to secure payment
+            </button>
+
+            <p
+                class="order-payment-note"
+                id="order-payment-note"
+                role="status"
+                hidden
+            ></p>
+
+        </form>
+
+    </div>
+</dialog>
+
+<!-- ORDER DIALOG END -->
         
         <section id="contact" class="contact-section">
     <div class="contact-panel">
