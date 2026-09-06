@@ -6679,6 +6679,84 @@ border: 1px solid #cfe5d7;
             font-size: 0.87rem;
         }
     }
+        /* CONTACTO MÁS COMPACTO */
+
+.contact-section {
+    padding: 62px 28px 66px !important;
+    background:
+        radial-gradient(
+            circle at 75% 18%,
+            rgba(40, 100, 255, 0.12),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #111a2a 0%,
+            #172238 100%
+        ) !important;
+}
+
+.contact-panel {
+    width: min(100%, 1040px) !important;
+    margin: 0 auto !important;
+    gap: 58px !important;
+    align-items: center !important;
+}
+
+/* Título con el mismo tamaño que los demás */
+
+.contact-panel > :first-child h2 {
+    max-width: 330px !important;
+    margin-bottom: 18px !important;
+    font-size: clamp(1.9rem, 2.8vw, 2.3rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.035em !important;
+}
+
+/* Tarjeta del formulario */
+
+.contact-panel > :last-child {
+    padding: 26px 28px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16) !important;
+}
+
+/* Campos más bajos */
+
+.contact-panel input,
+.contact-panel select {
+    min-height: 42px !important;
+    height: 42px !important;
+}
+
+.contact-panel textarea {
+    min-height: 94px !important;
+    height: 94px !important;
+}
+
+.contact-panel button[type="submit"] {
+    min-height: 42px !important;
+    padding: 0 20px !important;
+}
+
+@media (max-width: 700px) {
+    .contact-section {
+        padding: 54px 20px 58px !important;
+    }
+
+    .contact-panel {
+        gap: 34px !important;
+    }
+
+    .contact-panel > :last-child {
+        padding: 22px 20px !important;
+    }
+
+    .contact-panel textarea {
+        min-height: 110px !important;
+        height: 110px !important;
+    }
+}
 </style>
 </head>
 <body>
