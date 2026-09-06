@@ -7702,11 +7702,14 @@ footer.site-footer .site-footer-nav a:hover {
     <style>
     /* HEADER AZUL MARINO */
 
-    header.portfolio-header {
-        background-color: #101828 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-        box-shadow: 0 5px 18px rgba(16, 24, 40, 0.08) !important;
-    }
+header.portfolio-header {
+    background: #101828 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+    /* Extiende el fondo por toda la pantalla */
+    box-shadow: 0 0 0 100vmax #101828 !important;
+    clip-path: inset(0 -100vmax);
+}
 
     header.portfolio-header .portfolio-brand {
         gap: 8px !important;
