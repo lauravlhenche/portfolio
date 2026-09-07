@@ -302,6 +302,16 @@ nav a {
         margin: 0 auto;
         text-align: center;
     }
+        
+        .email-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.email-link:hover {
+    color: #ffc72c;
+}
 
     .hero-content h1 {
         margin-left: auto;
@@ -10590,7 +10600,12 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
 <div class="site-footer-bottom">
-    <span>Based in Spain · Working worldwide · <a href="mailto:laura@spanishigamingstudio.com">laura@spanishigamingstudio.com</a> </span>
+    <span>
+  Based in Spain · Working worldwide · 
+  <a class="email-link" href="mailto:laura@spanishigamingstudio.com">
+    laura@spanishigamingstudio.com
+  </a>
+</span>
 
     <span>
         <a class="footer-privacy-link" href="privacy-policy.html">
