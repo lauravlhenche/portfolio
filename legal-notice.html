@@ -496,6 +496,15 @@
                 width: 100%;
             }
         }
+        .email-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.email-link:hover {
+  color: #ffc72c;
+}
     </style>
 </head>
 
@@ -755,16 +764,27 @@
             </nav>
         </div>
 
-        <div class="site-footer-bottom">
-            <span>Based in Spain · Working worldwide</span>
+<div class="site-footer-bottom">
+   <span>
+  Based in Spain · Working worldwide · 
+  <a class="email-link" href="mailto:laura@spanishigamingstudio.com">
+    laura@spanishigamingstudio.com
+  </a>
+</span>
 
-            <div class="site-footer-legal">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-                <a href="legal-notice.html" aria-current="page">Legal Notice</a>
-                <span>© 2026 Spanish iGaming Studio. All rights reserved.</span>
-            </div>
-        </div>
+    <span>
+        <a class="footer-privacy-link" href="privacy-policy.html">Privacy Policy</a>
+        <span aria-hidden="true"> · </span>
+
+        <a class="footer-privacy-link" href="terms-of-service.html">Terms of Service</a>
+        <span aria-hidden="true"> · </span>
+
+        <a class="footer-privacy-link" href="legal-notice.html">Legal Notice</a>
+        <span aria-hidden="true"> · </span>
+
+        © 2026 Spanish iGaming Studio. All rights reserved.
+    </span>
+</div>
     </footer>
 
 </body>
