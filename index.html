@@ -7987,6 +7987,18 @@ body:has(.order-dialog[open]) {
     padding-bottom: 20px !important;
 }
 </style>
+    <style>
+.footer-privacy-link {
+    color: #b9c2d0;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-privacy-link:hover {
+    color: #ffffff;
+}
+</style>
 </head>
 <body>
 
@@ -10579,7 +10591,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="site-footer-bottom">
         <span>Based in Spain · Working worldwide</span>
-        <span>© 2026 Spanish iGaming Studio. All rights reserved.</span>
+        <span>
+    <a class="footer-privacy-link" href="privacy-policy.html">Privacy Policy</a>
+    <span aria-hidden="true"> · </span>
+    © 2026 Spanish iGaming Studio. All rights reserved.
+</span>
     </div>
 
 </footer>
