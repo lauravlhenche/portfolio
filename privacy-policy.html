@@ -565,6 +565,15 @@
                 box-shadow: none;
             }
         }
+footer .email-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer .email-link:hover {
+    color: #ffc72c;
+}
     </style>
 </head>
 
@@ -1018,7 +1027,12 @@
         </div>
 
         <div class="site-footer-bottom">
-            <span>Based in Spain · Working worldwide · laura@spanishigamingstudio.com</span>
+                <span>
+  Based in Spain · Working worldwide · 
+  <a class="email-link" href="mailto:laura@spanishigamingstudio.com">
+    laura@spanishigamingstudio.com
+  </a>
+</span>
 
             <div class="site-footer-legal">
                 <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
