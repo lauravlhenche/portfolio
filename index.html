@@ -8008,6 +8008,63 @@ body:has(.order-dialog[open]) {
 .footer-privacy-link:hover {
     color: #ffffff;
 }
+/* Footer contact and legal information */
+
+.site-footer-location {
+    color: #8f9bad;
+    font-size: 0.77rem;
+    line-height: 1.5;
+}
+
+.site-footer-location a {
+    color: #d5dbe5;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-footer-location a:hover {
+    color: #ffffff;
+}
+
+.site-footer-legal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.site-footer-legal a {
+    color: #d5dbe5;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-footer-legal a:hover {
+    color: #ffffff;
+}
+
+.site-footer-copyright {
+    color: #8f9bad;
+    white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+    .site-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .site-footer-legal {
+        flex-wrap: wrap;
+    }
+
+    .site-footer-copyright {
+        white-space: normal;
+    }
+}
 </style>
 </head>
 <body>
@@ -10589,6 +10646,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 Spanish iGaming content, translation and proofreading.
             </p>
 
+<div class="site-footer-location">
+    Based in Spain · Working worldwide ·
+    <a href="mailto:laura@spanishigamingstudio.com">
+        laura@spanishigamingstudio.com
+    </a>
+</div>
+            
         </div>
 
         <nav class="site-footer-nav" aria-label="Footer navigation">
@@ -10599,37 +10663,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 
-    <div class="site-footer-bottom">
-        
-    <span>
-  Based in Spain · Working worldwide · 
-  <a class="email-link" href="mailto:laura@spanishigamingstudio.com">
-    laura@spanishigamingstudio.com
-  </a>
-</span>
+<div class="site-footer-bottom">
 
-<span>
-    <a class="footer-privacy-link" href="privacy-policy.html">
-        Privacy Policy
-    </a>
+    <div class="site-footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="legal-notice.html">Legal Notice</a>
+    </div>
 
-    <span aria-hidden="true"> · </span>
+    <span class="site-footer-copyright">
+        © 2026 Spanish iGaming Studio. All rights reserved.
+    </span>
 
-    <a class="footer-privacy-link" href="terms-of-service.html">
-        Terms of Service
-    </a>
-
-    <span aria-hidden="true"> · </span>
-
-    <a class="footer-privacy-link" href="legal-notice.html">
-        Legal Notice
-    </a>
-
-    <span aria-hidden="true"> · </span>
-
-    © 2026 Spanish iGaming Studio. All rights reserved.
-</span>
-    
 </div>
 
 </footer>
