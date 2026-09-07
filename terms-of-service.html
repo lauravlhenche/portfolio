@@ -826,7 +826,133 @@ footer .email-link:hover {
         white-space: normal;
     }
 }
-        
+        /* SAME FOOTER FORMAT AS PRIVACY POLICY */
+
+.site-footer {
+    padding: 46px 28px 24px;
+    color: #ffffff;
+    background: #101828;
+}
+
+.site-footer-inner,
+.site-footer-bottom {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+}
+
+.site-footer-inner {
+    padding-bottom: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.site-footer-main {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.site-footer-main .site-footer-description {
+    max-width: 360px;
+    margin: 0;
+    color: #aeb9cc;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    white-space: nowrap;
+}
+
+.site-footer-location {
+    color: #8f9bad;
+    font-size: 0.77rem;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.site-footer-location a {
+    color: #d5dbe5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-nav,
+.site-footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #8f9bad;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.77rem;
+}
+
+.site-footer-legal {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.site-footer-legal a {
+    color: #b9c2d0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-footer-legal a:hover,
+.site-footer-location a:hover {
+    color: #ffffff;
+}
+
+.site-footer-copyright {
+    color: #8f9bad;
+    white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+    .site-footer {
+        padding: 40px 20px 22px;
+    }
+
+    .site-footer-inner {
+        padding-bottom: 28px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .site-footer-main .site-footer-description,
+    .site-footer-location {
+        white-space: normal;
+    }
+
+    .footer-nav,
+    .site-footer-nav,
+    .site-footer-legal {
+        flex-wrap: wrap;
+    }
+
+    .site-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .site-footer-copyright {
+        white-space: normal;
+    }
+}
     </style>
 </head>
 
