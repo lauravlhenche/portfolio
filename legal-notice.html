@@ -699,6 +699,28 @@
         gap: 8px;
     }
 }
+        /* Keep the Legal Notice footer on one line on desktop */
+
+@media (min-width: 761px) {
+    .site-footer-main {
+        flex: 0 0 390px;
+    }
+
+    .site-footer-description {
+        max-width: none;
+        white-space: nowrap;
+    }
+
+    .site-footer-bottom > span:first-child {
+        white-space: nowrap;
+    }
+
+    .site-footer-legal {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        gap: 14px;
+    }
+}
     </style>
 </head>
 
