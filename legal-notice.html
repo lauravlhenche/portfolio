@@ -505,6 +505,200 @@
 .email-link:hover {
   color: #ffc72c;
 }
+        /* LEGAL NOTICE — SAME DESIGN AS TERMS OF SERVICE */
+
+.site-header-inner {
+    min-height: 88px;
+}
+
+/* Title area */
+
+.legal-hero {
+    padding: 64px 24px;
+    text-align: center;
+    background: #f7f1e8;
+}
+
+.legal-hero h1 {
+    margin: 0;
+    color: #101828;
+    font-size: clamp(1.9rem, 2.8vw, 2.3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+/* Legal content */
+
+.legal-section {
+    padding: 64px 32px 90px;
+    background: #ffffff;
+}
+
+.legal-content {
+    width: min(806px, 100%);
+    margin: 0 auto;
+    padding: 64px 58px;
+    background: #ffffff;
+    border: 1px solid #d8dee8;
+    border-radius: 22px;
+    box-shadow: 0 14px 38px rgba(16, 24, 40, 0.06);
+}
+
+.legal-introduction {
+    margin: 0 0 38px;
+    padding: 20px 24px;
+    background: #f7f1e8;
+    border-left: 2px solid #ffc83d;
+    border-radius: 0 14px 14px 0;
+}
+
+.back-home {
+    width: min(806px, 100%);
+    margin: 40px auto 0;
+}
+
+/* Footer */
+
+.site-footer {
+    padding: 46px 28px 24px;
+    color: #ffffff;
+    background: #101828;
+    border-top: 0;
+}
+
+.site-footer-inner,
+.site-footer-bottom {
+    width: min(1050px, 100%);
+    margin: 0 auto;
+}
+
+.site-footer-inner {
+    padding-bottom: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand,
+.footer-brand .brand-name-main {
+    color: #ffffff;
+}
+
+.footer-brand .brand-name-studio {
+    color: #ffc83d;
+}
+
+.site-footer-description {
+    color: #b9c2d0;
+    font-size: 0.88rem;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-nav a {
+    min-height: 44px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #245cff;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+    color: #ffffff;
+    background: #245cff;
+    border-color: #245cff;
+    box-shadow: 0 8px 20px rgba(36, 92, 255, 0.28);
+    transform: translateY(-1px);
+}
+
+.site-footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #8f9bad;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.77rem;
+}
+
+.site-footer-bottom a,
+.site-footer-legal a {
+    color: #d5dbe5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-footer-bottom a:hover,
+.site-footer-legal a:hover {
+    color: #ffffff;
+}
+
+.site-footer-legal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+    .legal-hero {
+        padding: 48px 20px;
+    }
+
+    .legal-section {
+        padding: 40px 20px 62px;
+    }
+
+    .legal-content {
+        padding: 40px 28px;
+        border-radius: 18px;
+    }
+
+    .site-footer {
+        padding: 38px 20px 22px;
+    }
+
+    .site-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .footer-nav,
+    .site-footer-legal {
+        flex-wrap: wrap;
+    }
+
+    .site-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
     </style>
 </head>
 
@@ -738,7 +932,7 @@
                 >
                     <img
                         class="footer-logo"
-                        src="lion-logo-blue.png"
+                        src="lion-logo-yellow-v1.webp"
                         alt=""
                         width="54"
                         height="54"
@@ -765,25 +959,21 @@
         </div>
 
 <div class="site-footer-bottom">
-   <span>
-  Based in Spain · Working worldwide · 
-  <a class="email-link" href="mailto:laura@spanishigamingstudio.com">
-    laura@spanishigamingstudio.com
-  </a>
-</span>
 
     <span>
-        <a class="footer-privacy-link" href="privacy-policy.html">Privacy Policy</a>
-        <span aria-hidden="true"> · </span>
-
-        <a class="footer-privacy-link" href="terms-of-service.html">Terms of Service</a>
-        <span aria-hidden="true"> · </span>
-
-        <a class="footer-privacy-link" href="legal-notice.html">Legal Notice</a>
-        <span aria-hidden="true"> · </span>
-
-        © 2026 Spanish iGaming Studio. All rights reserved.
+        Based in Spain · Working worldwide ·
+        <a href="mailto:laura@spanishigamingstudio.com">
+            laura@spanishigamingstudio.com
+        </a>
     </span>
+
+    <div class="site-footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="legal-notice.html" aria-current="page">Legal Notice</a>
+        <span>© 2026 Spanish iGaming Studio. All rights reserved.</span>
+    </div>
+
 </div>
     </footer>
 
