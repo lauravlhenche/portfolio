@@ -4098,7 +4098,7 @@ isolation: isolate;
     display: flex;
     width: 100%;
     will-change: transform;
-    animation: workCarouselLoop 80s linear infinite;
+    transition: transform 0.45s ease;
 }
 
 @keyframes workCarouselLoop {
@@ -8192,6 +8192,15 @@ body:has(.order-dialog[open]) {
         white-space: normal;
     }
 }
+        @media (max-width: 850px) {
+    .hero-statement {
+        max-width: 360px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center !important;
+        text-wrap: balance;
+    }
+}
 </style>
 </head>
 <body>
@@ -10398,21 +10407,6 @@ document.addEventListener("DOMContentLoaded", function () {
         track.appendChild(slide);
     }
 
-    viewport.replaceChildren(track);
-const originalSlides = Array.from(track.children);
-
-originalSlides.forEach(function (slide) {
-    const duplicatedSlide = slide.cloneNode(true);
-    duplicatedSlide.setAttribute("aria-hidden", "true");
-    track.appendChild(duplicatedSlide);
-});
-
-track.style.setProperty(
-    "--work-loop-distance",
-    "-" + (numberOfSlides * 100) + "%"
-);
-
-return;
     const controls = document.createElement("div");
     controls.className = "work-carousel-controls";
 
@@ -10507,6 +10501,7 @@ function moveManually(index) {
         track.classList.remove("is-manual");
     }, 700);
 
+if (window.innerWidth > 900) {
     startRotation();
 }
 
@@ -10530,7 +10525,10 @@ dots.forEach(function (dot, index) {
     viewport.addEventListener("focusout", startRotation);
 
     showSlide(0);
-startRotation(1200);
+
+if (window.innerWidth > 900) {
+    startRotation(1200);
+}
 });
 </script>
     <script>
