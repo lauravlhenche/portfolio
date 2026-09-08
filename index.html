@@ -9646,15 +9646,19 @@ body:has(.order-dialog[open]) {
                     >
                 </label>
 
-                <label>
-                    Shared file link <span>(optional)</span>
+<label>
+    Project files <span>(optional)</span>
 
-                    <input
-                        name="fileLink"
-                        type="url"
-                        placeholder="Google Drive, Dropbox…"
-                    >
-                </label>
+    <input
+        name="fileLink"
+        type="url"
+        placeholder="Paste a Google Drive or Dropbox link"
+    >
+
+    <small>
+        Please make sure I have permission to access the files.
+    </small>
+</label>
 
             </div>
 
@@ -9664,7 +9668,7 @@ body:has(.order-dialog[open]) {
                 <textarea
                     name="instructions"
                     rows="4"
-                    placeholder="Topic, tone, keywords and anything else I should know"
+                    placeholder="Tell me about the topic, tone, keywords, target audience, etc."
                     required
                 ></textarea>
             </label>
