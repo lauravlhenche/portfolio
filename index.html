@@ -8541,6 +8541,61 @@ body:has(.order-dialog[open]) {
     }
 }
 </style>
+
+<style>
+/* FORCE THE ENTIRE ORDER SECTION INTO ONE CENTRED COLUMN */
+
+.pricing-calculator {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 80px auto 0 !important;
+    padding: 0 !important;
+}
+
+.order-walkthrough-intro {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    align-self: center !important;
+    width: min(860px, calc(100% - 40px)) !important;
+    max-width: none !important;
+    margin: 0 auto 70px !important;
+    text-align: center !important;
+}
+
+.pricing-calculator-controls {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    align-self: center !important;
+    width: min(760px, calc(100% - 40px)) !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+}
+
+.pricing-result-card {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    align-self: center !important;
+    width: min(430px, calc(100% - 40px)) !important;
+    margin: 70px auto 0 !important;
+}
+
+@media (max-width: 650px) {
+    .order-walkthrough-intro,
+    .pricing-calculator-controls {
+        width: calc(100% - 28px) !important;
+    }
+
+    .pricing-result-card {
+        width: calc(100% - 28px) !important;
+    }
+}
+</style>
     
 </head>
 <body>
