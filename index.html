@@ -8632,7 +8632,93 @@ body:has(.order-dialog[open]) {
 }
 </style>
 
-</head>
+<style>
+@media (max-width: 650px) {
+
+    /* CENTRAR LA INTRODUCCIÓN DE CONTACTO */
+
+    .contact-intro {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .contact-intro h2,
+    .contact-intro p,
+    .contact-intro .contact-kicker,
+    .contact-intro .contact-email,
+    .contact-intro a {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    .contact-form-footer {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* CENTRAR TODO EL FOOTER */
+
+    .site-footer-inner,
+    .site-footer-main,
+    .site-footer-bottom {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .site-footer-brand {
+        justify-content: center !important;
+    }
+
+    .site-footer-main p {
+        text-align: center !important;
+    }
+
+    .site-footer-nav,
+    .site-footer-legal {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        text-align: center !important;
+    }
+
+    .site-footer-copyright {
+        display: block;
+        width: 100%;
+        text-align: center !important;
+    }
+
+    /* COLOCAR LAS PESTAÑAS EN MEDIO DEL ESPACIO */
+
+    .dynamic-service-tabs {
+        justify-content: center !important;
+        margin-top: 110px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .dynamic-service-panel.is-active {
+        padding-top: 40px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .dynamic-service-panels {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* REDUCIR A LA MITAD EL ESPACIO ANTES DEL PEDIDO */
+
+    .pricing-calculator {
+        margin-top: 40px !important;
+    }
+}
+</style>
     
 </head>
 <body>
