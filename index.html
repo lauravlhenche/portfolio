@@ -8202,6 +8202,86 @@ body:has(.order-dialog[open]) {
     }
 }
 </style>
+    <style>
+/* ORDER WALKTHROUGH */
+
+.order-step-heading {
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.order-step-heading > div {
+    display: grid;
+    gap: 3px;
+}
+
+.order-step-heading h3 {
+    margin: 0;
+    color: #101828;
+    font-size: 1.05rem;
+    line-height: 1.25;
+}
+
+.order-step-number {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: grid;
+    place-items: center;
+    color: #2864ff;
+    background: #eaf0ff;
+    border-radius: 50%;
+    font-size: 0.68rem;
+    font-weight: 800;
+}
+
+.order-step-label {
+    color: #667085;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.order-step-help {
+    margin: 0 0 20px 46px;
+    color: #667085;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.pricing-calculator-controls .pricing-service-picker {
+    margin-bottom: 20px;
+}
+
+.pricing-calculator-controls > .pricing-tools {
+    margin: 0 0 38px;
+    justify-content: flex-start;
+}
+
+.pricing-calculator-controls > .pricing-control-group {
+    padding-left: 46px;
+}
+
+@media (max-width: 900px) {
+    .pricing-calculator-controls > .pricing-tools {
+        margin-bottom: 34px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-calculator-controls > .pricing-control-group {
+        padding-left: 0;
+    }
+
+    .pricing-calculator-controls .service-rate-summary {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+</style>
 </head>
 <body>
 
@@ -8418,43 +8498,6 @@ body:has(.order-dialog[open]) {
     Content Writing
 </button>
 
-    </div>
-<div class="pricing-tools">
-
-    <div class="service-rate-summary" aria-live="polite">
-        <span class="service-rate-label">Standard rate</span>
-
-        <div class="service-rate-value">
-            <strong id="rate-per-word">$0.07</strong>
-            <span>per word</span>
-        </div>
-
-        <span class="service-rate-divider"></span>
-
-        <div class="service-rate-value">
-            <strong id="rate-per-thousand">$70</strong>
-            <span>per 1,000 words</span>
-        </div>
-    </div>
-
-    <div class="currency-switcher" aria-label="Choose currency">
-        <button
-            class="currency-button"
-            type="button"
-            data-currency="EUR"
-            aria-pressed="false">€</button>
-
-        <button
-            class="currency-button is-active"
-            type="button"
-            data-currency="USD"
-            aria-pressed="true">$</button>
-
-        <button
-            class="currency-button"
-            type="button"
-            data-currency="GBP"
-            aria-pressed="false">£</button>
     </div>
 
 </div>
@@ -8801,12 +8844,21 @@ body:has(.order-dialog[open]) {
 <section class="pricing-calculator" id="order">
 
     <div class="pricing-calculator-controls">
+        
+<div class="order-step-heading">
+    <span class="order-step-number">01</span>
 
+    <div>
+        <span class="order-step-label">Step 1</span>
+        <h3>Choose a service</h3>
+    </div>
+</div>
+
+<p class="order-step-help">
+    Select the service you need. The standard rate will update automatically.
+</p>
+        
         <div class="pricing-service-picker">
-
-            <span class="pricing-small-label">
-                Choose a service
-            </span>
 
             <div class="pricing-service-buttons">
 
@@ -8835,81 +8887,129 @@ body:has(.order-dialog[open]) {
 
         </div>
 
+<div class="pricing-tools">
 
-        <div class="pricing-control-group">
+    <div class="service-rate-summary" aria-live="polite">
+        <span class="service-rate-label">Standard rate</span>
 
-            <div class="pricing-control-heading">
-
-                <h3>Words per piece</h3>
-
-                <strong id="word-count-output">
-                    1,000 Words
-                </strong>
-
-            </div>
-
-            <input
-                id="word-count-slider"
-                class="pricing-range"
-                type="range"
-                min="500"
-                max="5000"
-                step="100"
-                value="1000"
-                aria-label="Words per piece"
-            >
-
-     <div class="slider-scale slider-scale-words">
-    <span style="--position: 0%;">500</span>
-    <span style="--position: 11.111%;">1,000</span>
-    <span style="--position: 22.222%;">1,500</span>
-    <span style="--position: 33.333%;">2,000</span>
-    <span style="--position: 44.444%;">2,500</span>
-    <span style="--position: 55.556%;">3,000</span>
-    <span style="--position: 66.667%;">3,500</span>
-    <span style="--position: 77.778%;">4,000</span>
-    <span style="--position: 88.889%;">4,500</span>
-    <span style="--position: 100%;">5,000</span>
-</div>
-
+        <div class="service-rate-value">
+            <strong id="rate-per-word">$0.07</strong>
+            <span>per word</span>
         </div>
 
+        <span class="service-rate-divider"></span>
 
-        <div class="pricing-control-divider"></div>
+        <div class="service-rate-value">
+            <strong id="rate-per-thousand">$70</strong>
+            <span>per 1,000 words</span>
+        </div>
+    </div>
 
+    <div class="currency-switcher" aria-label="Choose currency">
+        <button
+            class="currency-button"
+            type="button"
+            data-currency="EUR"
+            aria-pressed="false"
+        >
+            €
+        </button>
 
-        <div class="pricing-control-group">
+        <button
+            class="currency-button is-active"
+            type="button"
+            data-currency="USD"
+            aria-pressed="true"
+        >
+            $
+        </button>
 
-            <div class="pricing-control-heading">
+        <button
+            class="currency-button"
+            type="button"
+            data-currency="GBP"
+            aria-pressed="false"
+        >
+            £
+        </button>
+    </div>
 
-                <h3>Choose number of pieces</h3>
+</div>
+        
+<!-- NUMBER OF PIECES -->
 
-                <strong id="piece-count-output">
-                    1 Piece
-                </strong>
-            </div>
+<div class="pricing-control-group">
 
-            <input
-                id="piece-count-slider"
-                class="pricing-range"
-                type="range"
-                min="1"
-                max="25"
-                step="1"
-                value="1"
-                aria-label="Number of pieces"
-            >
+    <div class="pricing-control-heading">
 
-           <div class="slider-scale slider-scale-pieces">
-    <span style="--position: 0%;">1</span>
-    <span style="--position: 16.667%;">5</span>
-    <span style="--position: 37.5%;">10</span>
-    <span style="--position: 58.333%;">15</span>
-    <span style="--position: 79.167%;">20</span>
-    <span style="--position: 100%;">25</span>
+        <h3>02 · Number of pieces</h3>
+
+        <strong id="piece-count-output">
+            1 Piece
+        </strong>
+
+    </div>
+
+    <input
+        id="piece-count-slider"
+        class="pricing-range"
+        type="range"
+        min="1"
+        max="25"
+        step="1"
+        value="1"
+        aria-label="Number of pieces"
+    >
+
+    <div class="slider-scale slider-scale-pieces">
+        <span style="--position: 0%;">1</span>
+        <span style="--position: 16.667%;">5</span>
+        <span style="--position: 37.5%;">10</span>
+        <span style="--position: 58.333%;">15</span>
+        <span style="--position: 79.167%;">20</span>
+        <span style="--position: 100%;">25</span>
+    </div>
+
 </div>
 
+<div class="pricing-control-divider heavily"></div>
+
+<!-- WORDS PER PIECE -->
+
+<div class="pricing-control-group">
+
+    <div class="pricing-control-heading">
+
+        <h3>03 · Words per piece</h3>
+
+        <strong id="word-count-output">
+            1,000 Words
+        </strong>
+
+    </div>
+
+    <input
+        id="word-count-slider"
+        class="pricing-range"
+        type="range"
+        min="500"
+        max="5000"
+        step="100"
+        value="1000"
+        aria-label="Words per piece"
+    >
+
+    <div class="slider-scale slider-scale-words">
+        <span style="--position: 0%;">500</span>
+        <span style="--position: 11.111%;">1,000</span>
+        <span style="--position: 22.222%;">1,500</span>
+        <span style="--position: 33.333%;">2,000</span>
+        <span style="--position: 44.444%;">2,500</span
+
         </div>
+    
+    </div>
+        
         <p class="delivery-note">
     Once I receive your order, I’ll get in touch to confirm a delivery timeline that works for you.
 </p>
