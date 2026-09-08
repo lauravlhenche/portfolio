@@ -8283,34 +8283,43 @@ body:has(.order-dialog[open]) {
 }
 </style>
     <style>
-/* ORDER: CLEAR VERTICAL STEP-BY-STEP DESIGN */
+
+        <style>
+/* CLEAN ORDER WALKTHROUGH */
 
 .pricing-calculator {
-    display: block;
-    width: min(920px, calc(100% - 40px));
-    margin: 70px auto 0;
-    padding: 0;
-    background: transparent;
+    display: block !important;
+    width: min(860px, calc(100% - 40px)) !important;
+    margin: 80px auto 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
 }
 
+/* INTRODUCTION */
+
 .order-walkthrough-intro {
-    max-width: 680px;
-    margin: 0 auto 60px;
+    width: 100%;
+    margin: 0 auto 70px;
+    padding: 0;
     text-align: center;
+    background: #ffffff !important;
 }
 
 .order-walkthrough-kicker {
     display: block;
-    color: #2864ff;
-    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: #7b8493;
+    font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.14em;
 }
 
 .order-walkthrough-intro h2 {
-    margin: 10px 0 14px;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.1;
+    margin: 0 0 14px;
+    color: #111827;
+    font-size: 2rem;
+    line-height: 1.15;
+    white-space: nowrap;
 }
 
 .order-walkthrough-intro h2 span {
@@ -8320,268 +8329,215 @@ body:has(.order-dialog[open]) {
 .order-walkthrough-intro p {
     margin: 0;
     color: #657188;
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 
+/* MAIN CONTAINER */
+
 .pricing-calculator-controls {
-    padding: 0;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
+    display: block !important;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* STEP LABELS */
+
+.order-step-number {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 8px !important;
+    color: #b08200 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    font-size: 0.8rem !important;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.order-step-number::before {
+    content: "STEP ";
+}
+
+.order-step-label,
+.calculator-step-copy small {
+    display: none !important;
 }
 
 /* STEP 1 */
 
 .order-step-heading {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.order-step-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    flex: 0 0 54px;
-    border-radius: 50%;
-    background: #2864ff;
-    color: #ffffff;
-    font-size: 0.85rem;
-    font-weight: 800;
-}
-
-.order-step-label,
-.calculator-step-copy small {
-    display: block;
-    margin-bottom: 4px;
-    color: #2864ff;
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.13em;
+    display: block !important;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .order-step-heading h3 {
     margin: 0;
-    font-size: 1.55rem;
+    color: #111827;
+    font-size: 1.65rem;
 }
 
 .order-step-help {
-    margin: 14px 0 26px 72px;
+    margin: 12px auto 28px !important;
+    text-align: center;
     color: #657188;
 }
 
 .pricing-calculator-controls .pricing-service-picker {
-    margin: 0 0 18px 72px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 22px !important;
+}
+
+.pricing-service-button {
+    border: 0 !important;
+    background: #f1f3f6 !important;
+    box-shadow: none !important;
+}
+
+.pricing-service-button.is-active {
+    color: #ffffff !important;
+    background: #2864ff !important;
 }
 
 .pricing-calculator-controls > .pricing-tools {
-    width: calc(100% - 72px);
-    margin: 0 0 56px 72px;
-    padding: 0 0 56px;
-    border-bottom: 1px solid #d9e1ef;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 0 70px !important;
+    background: transparent !important;
+    border-bottom: 1px solid #dfe3ea;
+}
+
+.service-rate-summary {
+    background: transparent !important;
 }
 
 /* STEPS 2 AND 3 */
 
 .pricing-calculator-controls > .pricing-control-group {
-    margin: 0;
-    padding: 0 0 56px;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 70px 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid #dfe3ea !important;
+    border-radius: 0 !important;
 }
 
 .pricing-control-heading {
-    align-items: center;
-    margin-bottom: 30px;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 0 20px !important;
 }
 
 .calculator-step-title {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+    display: block !important;
     margin: 0;
+    text-align: center;
 }
 
 .calculator-step-copy {
-    display: flex;
-    flex-direction: column;
+    display: block !important;
 }
 
 .calculator-step-copy > span {
-    font-size: 1.55rem;
+    color: #111827;
+    font-size: 1.65rem;
     line-height: 1.2;
 }
 
 .pricing-control-heading > strong {
-    font-size: 1.05rem;
+    justify-self: end;
+    margin-top: 22px;
+    color: #111827;
+    font-size: 1rem;
+}
+
+.pricing-range,
+.pricing-control-group input[type="range"] {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
 }
 
 .pricing-calculator-controls > .pricing-control-divider {
-    height: 1px;
-    margin: 0 0 56px;
-    background: #d9e1ef;
+    display: none !important;
 }
 
-/* DELIVERY AND FINAL PRICE */
+/* DELIVERY MESSAGE */
 
 .delivery-note {
-    margin: 0;
-    padding: 22px 26px;
+    width: 100%;
+    margin: 38px auto 0 !important;
+    padding: 20px 24px !important;
     text-align: center;
-    background: #f7f1e8;
-    border: 0;
-    border-radius: 14px;
+    color: #657188;
+    background: #f7f8fa !important;
+    border: 0 !important;
+    border-radius: 12px;
 }
+
+/* FINAL PRICE CARD */
 
 .pricing-result-card {
-    max-width: 430px;
-    margin: 56px auto 0;
-    padding: 40px 32px;
+    width: min(430px, 100%);
+    margin: 70px auto 0 !important;
 }
 
-/* BRING SERVICE DETAILS CLOSER TO THEIR TABS */
-
-.dynamic-services .dynamic-service-panel {
-    padding-top: 18px !important;
-}
+/* MOBILE */
 
 @media (max-width: 650px) {
     .pricing-calculator {
-        width: calc(100% - 28px);
-        margin-top: 50px;
+        width: calc(100% - 28px) !important;
+        margin-top: 55px !important;
     }
 
     .order-walkthrough-intro {
-        margin-bottom: 44px;
+        margin-bottom: 55px;
     }
 
-    .order-step-help {
-        margin-left: 0;
+    .order-walkthrough-intro h2 {
+        font-size: clamp(1.05rem, 5vw, 2rem);
     }
 
     .pricing-calculator-controls .pricing-service-picker {
-        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pricing-service-button {
+        width: 100%;
     }
 
     .pricing-calculator-controls > .pricing-tools {
-        width: 100%;
-        margin-left: 0;
+        flex-direction: column;
+        padding-bottom: 55px !important;
     }
 
-    .pricing-control-heading {
-        align-items: flex-start;
-        gap: 18px;
-    }
-
-    .pricing-control-heading > strong {
-        margin-top: 15px;
+    .pricing-calculator-controls > .pricing-control-group {
+        padding: 55px 0 !important;
     }
 
     .order-step-heading h3,
     .calculator-step-copy > span {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
-    .pricing-result-card {
-        margin-top: 42px;
-        padding: 34px 22px;
-    }
-}
-</style>
-    
-<style>
-/* FINAL ALIGNMENT ADJUSTMENTS */
-
-/* Main order heading: same visual size as “What I do” */
-.order-walkthrough-intro {
-    max-width: none;
-    margin-bottom: 60px;
-    padding: 0;
-    background: #ffffff !important;
-}
-
-.order-walkthrough-intro h2 {
-    margin: 8px 0 12px;
-    font-size: 2rem;
-    white-space: nowrap;
-}
-
-/* Centre all of Step 1 */
-.order-step-heading {
-    justify-content: center;
-}
-
-.order-step-help {
-    margin: 14px auto 26px;
-    text-align: center;
-}
-
-.pricing-calculator-controls .pricing-service-picker {
-    justify-content: center;
-    margin: 0 auto 18px;
-}
-
-.pricing-calculator-controls > .pricing-tools {
-    width: max-content;
-    max-width: 100%;
-    margin: 0 auto 56px;
-    padding-bottom: 56px;
-}
-
-/* Centre the headings for Steps 2 and 3 */
-.pricing-control-heading {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 32px;
-}
-
-.calculator-step-title {
-    justify-content: center;
-}
-
-.pricing-control-heading > strong {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin: 0;
-    transform: translateY(-50%);
-}
-
-/* More room between the last slider and delivery message */
-.delivery-note {
-    margin-top: 34px;
-}
-
-/* Keep the whole order area white */
-.pricing-calculator,
-.pricing-calculator-controls {
-    background: #ffffff !important;
-}
-
-@media (max-width: 650px) {
-    .order-walkthrough-intro h2 {
-        font-size: clamp(1.05rem, 4.7vw, 2rem);
-    }
-
-    .pricing-control-heading {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pricing-control-heading > strong {
-        position: static;
-        align-self: flex-end;
-        margin-top: 18px;
-        transform: none;
-    }
-
-    .pricing-calculator-controls > .pricing-tools {
-        width: 100%;
+    .delivery-note {
+        margin-top: 30px !important;
     }
 }
 </style>
