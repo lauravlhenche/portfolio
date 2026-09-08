@@ -10406,7 +10406,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         track.appendChild(slide);
     }
-
+    
+viewport.replaceChildren(track);
+    
     const controls = document.createElement("div");
     controls.className = "work-carousel-controls";
 
