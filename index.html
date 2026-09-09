@@ -3900,6 +3900,36 @@ isolation: isolate;
     line-height: 1.6;
     text-align: center;
 }
+
+.site-footer-author-profiles {
+    width: min(100%, 1050px);
+    margin: 14px auto 0;
+    color: #778397;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.site-footer-author-profiles a {
+    color: #9aa6b9;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-footer-author-profiles a:hover,
+.site-footer-author-profiles a:focus-visible {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .site-footer-author-profiles {
+        text-align: center;
+    }
+}
+        
 </style>
     <style>
     /* SELECTED WORK */
@@ -10005,7 +10035,7 @@ body:has(.order-dialog[open]) {
             <span id="rotator-client-position">
                 Localization Project Manager · FEVER LABS INC
             </span>
-        </footer>
+        
 
     </article>
 
@@ -11469,6 +11499,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </div>
 
+<div class="site-footer-author-profiles">
+    Author profiles:
+    <a
+        href="https://www.casino.com/es/laura-van-leeuwen/"
+        target="_blank"
+        rel="me noopener"
+    >Casino.com</a>
+    <span aria-hidden="true">·</span>
+    <a
+        href="https://www.bettingtop10.com/authors/laura-van-leeuwen/"
+        target="_blank"
+        rel="me noopener"
+    >BettingTop10</a>
+</div>
+    
 </footer>
 
 <!-- FOOTER END -->
