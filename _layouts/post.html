@@ -322,6 +322,34 @@
       }
 
     }
+    .quick-answer {
+  margin: 0 0 38px;
+  padding: 22px 24px;
+
+  background: var(--cream);
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 14px 14px 0;
+}
+
+.quick-answer-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--navy);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.quick-answer p {
+  margin: 0;
+
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
 
   </style>
 </head>
@@ -392,6 +420,13 @@
 
       <article class="article-card">
 
+{% if page.quick_answer %}
+<div class="quick-answer">
+  <span class="quick-answer-label">Quick answer</span>
+  <p>{{ page.quick_answer }}</p>
+</div>
+{% endif %}
+        
         {{ content }}
 
       </article>
