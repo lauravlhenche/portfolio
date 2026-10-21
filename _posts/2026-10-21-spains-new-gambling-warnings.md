@@ -5,7 +5,7 @@ date: 2026-10-21
 meta_title: "Spain's New Gambling Warnings: What to Review Before Dec 2026"
 description: "A translator's view on Spain's 2026 gambling warning rules: what changed, what the research shows, and what I'd check before a campaign goes live."
 category: "Spanish iGaming Insights"
-quick_answer: "From 5 December 2026, Spain requires new mandatory warning wording and strict placement rules for gambling ads. As someone who reviews English-to-Spanish iGaming content for a living, I'm using the months before that date to check every asset against the new text, the channel-specific placement rules, and the claims sitting next to them."
+quick_answer: "From 5 December 2026, Spain will require new mandatory warning wording for gambling ads. The rules set strict limits on where the warning appears, how long it stays visible, and which typeface it uses."
 ---
 
 I've spent years translating and reviewing campaign copy for operators entering the Spanish gambling market, and I can tell you this update is one of the more detailed ones I've seen from the DGOJ. 
