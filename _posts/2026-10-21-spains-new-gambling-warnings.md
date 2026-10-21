@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Spain’s New Gambling Warnings: What I’d Review in an iGaming Campaign"
+title: "Spain's New Gambling Warnings: What I'd Review Before 5 December 2026"
 date: 2026-10-21
-description: "A practical look at what I would review in an iGaming campaign aimed at the Spanish market."
+meta_title: "Spain's New Gambling Warnings: What to Review Before Dec 2026"
+description: "A translator's view on Spain's 2026 gambling warning rules: what changed, what the research shows, and what I'd check before a campaign goes live."
 category: "Spanish iGaming Insights"
 ---
 
