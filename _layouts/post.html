@@ -351,6 +351,56 @@
   line-height: 1.65;
 }
 
+    .article-card table {
+  width: 100%;
+  margin: 28px 0 32px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.article-card th {
+  padding: 14px 16px;
+
+  background: var(--cream);
+  color: var(--navy);
+
+  font-weight: 700;
+  text-align: left;
+}
+
+.article-card td {
+  padding: 14px 16px;
+
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.article-card th:first-child,
+.article-card td:first-child {
+  width: 30%;
+}
+
+.article-card tr:nth-child(even) td {
+  background: #fafbfc;
+}
+    @media (max-width: 600px) {
+  .article-card {
+    overflow-x: auto;
+  }
+
+  .article-card table {
+    min-width: 600px;
+  }
+}
+    
   </style>
 </head>
 
