@@ -56,7 +56,7 @@ I'd treat any specific percentage or comparison figure from this presentation ca
 
 Here's where my own perspective comes in, separate from what was reported. 
 
-When I review an ad or a promotional email for the Spanish market, I'm not thinking about whether the law was technically followed. I'm thinking about what a player actually understands after reading it. That means looking at: 
+Alongside the compliance review, I look at what a player will get from the message. I'm thinking about what a player actually understands after reading it. That means looking at: 
 
 - the headline
 - the offer terms
@@ -66,7 +66,7 @@ A headline promising a bonus means something different depending on whether the 
 
 I'd also want the warning messages mentioned in the DGOJ's presentation **to sit naturally within the copy, not bolted on as an afterthought that nobody reads**.
 
-To be clear, I'm not suggesting the conference proved that any particular writing approach improves conversion or compliance outcomes. Nobody presented that data, and I wouldn't claim it. 
+To be clear, I'm not suggesting the conference proved that any particular writing approach improves conversion or compliance outcomes. I haven’t seen anything in the coverage that shows which wording gets better results.
 
 What I'm describing is a professional habit: when regulation tightens around how an offer gets communicated, the practical fix usually isn't a legal disclaimer. It's making **the whole message easier to follow** in the first place.
 
@@ -86,7 +86,7 @@ Justo Sancho, the DGOJ's Director of the Safe Gaming Control Division, spoke abo
 
 Consultant Sander Hoogendoorn offered a counterpoint, [according to AZARplus](https://www.azarplus.com/gaming-in-spain-reune-al-sector-en-una-jornada-de-debate-analisis-y-reivindicacion-ante-el-nuevo-escenario-regulatorio/), warning that **an overly rigid rollout could create operational friction and, in a worst case, push some users toward unlicensed platforms instead**.
 
-I'll say plainly that I don't have a confirmed implementation date for operators from the sources I reviewed. 
+The DGOJ’s update of 21 October gives a clearer timeline: the cross-operator system is in testing and will take full effect **on 26 March 2027**. It will operate alongside the existing per-operator deposit limits.
 
 Approval by the Council of Ministers, DGOJ technical rollout, and the date operators must actually have the system live are three separate milestones, and I'd want to see each one dated individually before writing anything definitive for a client.
 
@@ -116,7 +116,7 @@ Jdigital's concern, Hinojosa said, was about how that obligation gets applied in
 
 He called **unauthorized gambling "the real elephant in the room"** and announced a white paper planned for December, built around the slogan "evaluate before legislating."
 
-That's the [reported position](https://www.gamingintelligence.com/es/marketing/75923-melilla-gaming-in-spain/). 
+That's the reported position.
 
 My own view, as someone who writes for licensed operators, is narrower and more practical: content can't solve a structural problem like unlicensed competition. 
 
@@ -124,21 +124,17 @@ What licensed operators can do through their Spanish iGaming content is **make t
 
 I wouldn't claim that clearer copy stops someone from using an unlicensed site. That's not a claim the conference supports, and it's not one I'd make on my own authority either.
 
-## What's the issue with registration, KYC and abandonment?
+## Why the sign-up journey caught my attention
 
-Gmonitor's session looked at the Spanish onboarding journey:
+Gmonitor had a session on the programme about signing up in Spain: 
 
 - registration
-- identity verification
-- where users drop off
+- identity checks
+- where people give up along the way
 
-This connects directly to something I care about: **consistent terminology through a sign-up flow**. 
+That caught my eye. I’d want to check **whether the wording is easy to follow from one step to the next**. 
 
-But I'd also flag that copy is only one variable here. 
-
-Abandonment during KYC is often shaped by document requirements, verification turnaround time and interface design, not just the words on the page. 
-
-I wouldn't want to overstate what better copy alone can fix in that funnel.
+If the app calls something one thing and the help page calls it something else, that’s something I’d pick up on.
 
 ## What I'd review in your Spanish iGaming content after this coverage
 
