@@ -56,15 +56,11 @@ I'd treat any specific percentage or comparison figure from this presentation ca
 
 Here's where my own perspective comes in, separate from what was reported. 
 
-Alongside the compliance review, I look at what a player will get from the message. I'm thinking about what a player actually understands after reading it. That means looking at: 
-
-- the headline
-- the offer terms
-- the activation instructions as one unit, not three separate pieces written by three different teams.
+I also think about what the player takes away from the message. I read **the headline, the offer terms and the steps to claim it together**, to see whether it all makes sense.
 
 A headline promising a bonus means something different depending on whether the qualifying conditions are two lines down or buried in a linked terms page. 
 
-I'd also want the warning messages mentioned in the DGOJ's presentation **to sit naturally within the copy, not bolted on as an afterthought that nobody reads**.
+I’d also look at how the warnings appear on the page. Can you read them easily, and **is the offer still clear when you see everything together?**
 
 To be clear, I'm not suggesting the conference proved that any particular writing approach improves conversion or compliance outcomes. I haven’t seen anything in the coverage that shows which wording gets better results.
 
@@ -87,8 +83,6 @@ Justo Sancho, the DGOJ's Director of the Safe Gaming Control Division, spoke abo
 Consultant Sander Hoogendoorn offered a counterpoint, [according to AZARplus](https://www.azarplus.com/gaming-in-spain-reune-al-sector-en-una-jornada-de-debate-analisis-y-reivindicacion-ante-el-nuevo-escenario-regulatorio/), warning that **an overly rigid rollout could create operational friction and, in a worst case, push some users toward unlicensed platforms instead**.
 
 The DGOJ’s update of 21 October gives a clearer timeline: the cross-operator system is in testing and will take full effect **on 26 March 2027**. It will operate alongside the existing per-operator deposit limits.
-
-Approval by the Council of Ministers, DGOJ technical rollout, and the date operators must actually have the system live are three separate milestones, and I'd want to see each one dated individually before writing anything definitive for a client.
 
 ### Which Spanish messages would I want to review?
 
@@ -174,7 +168,7 @@ The DGOJ has stated that the complete impact assessment of Royal Decree 958/2020
 
 ### What is Spain's joint deposit limit system?
 
-Approved by the Council of Ministers on 23 June, it sets a single global deposit limit across every online gambling operator where a person holds an account, managed by the DGOJ, replacing the previous model where each operator set its own independent limit.
+The new system puts a shared deposit limit across a player’s accounts with licensed operators in Spain. The DGOJ will manage it, and each operator’s own limits will still apply. It takes full effect on 26 March 2027.
 
 ### How does this conference coverage affect Spanish iGaming content and translations?
 
