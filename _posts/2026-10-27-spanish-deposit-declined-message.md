@@ -33,7 +33,7 @@ These joint limits run alongside the existing operator-level limits, not instead
 
 A player can still have a personal deposit limit set with one specific operator, and now there's also a combined ceiling the DGOJ tracks across all of them.
 
-The system entered testing in October 2026 and is scheduled to become fully mandatory on 26 March 2027, [per the DGOJ FAQ](https://ordenacionjuego.es/preguntas-frecuentes?faq). 
+The system entered testing in October 2026 and is scheduled to become fully mandatory on 25 March 2027, [per the DGOJ FAQ](https://ordenacionjuego.es/preguntas-frecuentes?faq). 
 
 I covered the wider context, including industry pushback on the proportionality of these limits, in [my piece on the Gaming in Spain conference](https://spanishigamingstudio.com/blog/gaming-in-spain-2026/). 
 
@@ -93,7 +93,7 @@ Consistency here isn't a style preference. It's what lets a player actually foll
 
 Let's say I've confirmed the cause: the player's deposit would push them past their joint limit. Here's a hypothetical message I might propose as a starting point:
 
-"No podemos procesar este depósito porque superaría tu límite conjunto semanal. Puedes consultar o modificar tus límites en el Portal del Jugador."
+"No podemos procesar este depósito porque superaría tu límite semanal conjunto para los operadores de juego autorizados en España. Puedes consultar tus límites en el Portal del Jugador."
 
 I'd treat that as a draft, not a finished answer. 
 
@@ -186,7 +186,7 @@ If your landing page talks about deposit limits in different terms than the prod
 
 This is where I think **marketing, product, and localization teams benefit from sharing one approved glossary** rather than each writing Spanish iGaming content in isolation. 
 
-I wouldn't claim that fixing this wording alone reduces cart abandonment or lifts conversion. I have no data to back that up. 
+I wouldn’t claim that changing the wording alone means fewer players will leave the deposit process.
 
 What I can say is that it closes a gap between what you promise and what the player sees, and that matters on its own terms, especially under Spanish gambling laws that require operators to explain joint limits clearly.
 
@@ -223,7 +223,7 @@ They're personal limits that apply across every licensed online gambling operato
 
 ### When do the joint deposit limits become mandatory?
 
-The system is in testing now and becomes fully mandatory on 26 March 2027, according to the DGOJ FAQ.
+The system is in testing now and becomes fully mandatory on 25 March 2027, according to the DGOJ FAQ.
 
 ### Do operators have to explain why a deposit was declined?
 
